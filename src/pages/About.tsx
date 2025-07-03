@@ -26,7 +26,10 @@ const About = () => {
               Gission Global Investment Limited was founded on a simple belief: every business deserves access to world-class financial expertise. What started as a vision to democratize corporate finance has grown into a trusted partnership with companies across infrastructure, energy, and emerging sectors.
             </p>
             <p className="font-futura text-lg leading-relaxed text-charcoal-black" style={{ lineHeight: '1.6' }}>
-              We've facilitated over $2 billion in funding, completed 100+ strategic projects, and maintained a 98% client satisfaction rate. But numbers only tell part of our story. The real measure of our success lies in the transformational growth we've enabled for our clients.
+              We've facilitated over <span className="font-semibold text-primary-yellow">$2+ billion in funding</span>, completed <span className="font-semibold text-primary-yellow">100+ strategic projects</span>, and maintained a <span className="font-semibold text-primary-yellow">98% client satisfaction rate</span>. But numbers only tell part of our story. The real measure of our success lies in the transformational growth we've enabled for our clients.
+            </p>
+            <p className="font-futura text-lg leading-relaxed text-charcoal-black" style={{ lineHeight: '1.6' }}>
+              From helping a Lagos-based startup secure their first major funding round to facilitating a $300M infrastructure project that powers thousands of homes, we're not just moving money—we're building futures.
             </p>
           </div>
         </div>
@@ -112,6 +115,264 @@ const About = () => {
               <p className="font-futura text-base text-charcoal-black/80 leading-relaxed">
                 Our solutions create measurable value that drives growth and transforms industries.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Success Stories Section */}
+      <section className="py-20 lg:py-24 bg-light-gray">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 className="font-caslon font-semibold text-3xl md:text-4xl text-charcoal-black mb-16 text-center fade-in-up">
+            Stories of Transformation
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Success Story 1 */}
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up">
+              <div className="text-primary-yellow font-futura font-bold text-sm mb-4">INFRASTRUCTURE</div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">$300M Akwa Ibom Refinery</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed mb-6">
+                Secured critical funding for Nigeria's first modular refinery, creating 2,000+ jobs and advancing energy independence across West Africa.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="font-futura text-sm text-primary-yellow font-semibold">Impact: 2,000+ Jobs</span>
+                <svg className="w-5 h-5 text-primary-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Success Story 2 */}
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up stagger-delay-1">
+              <div className="text-primary-yellow font-futura font-bold text-sm mb-4">RENEWABLE ENERGY</div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">Lagos Waste-to-Energy</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed mb-6">
+                Pioneered sustainable energy solutions, converting 500 tons of waste daily into clean electricity for 100,000 homes.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="font-futura text-sm text-primary-yellow font-semibold">Impact: 100k Homes</span>
+                <svg className="w-5 h-5 text-primary-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+
+            {/* Success Story 3 */}
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up stagger-delay-2">
+              <div className="text-primary-yellow font-futura font-bold text-sm mb-4">FINTECH</div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">Series A Growth Capital</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed mb-6">
+                Helped an emerging fintech startup secure $50M Series A funding, enabling financial inclusion for 1M+ underbanked users.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="font-futura text-sm text-primary-yellow font-semibold">Impact: 1M+ Users</span>
+                <svg className="w-5 h-5 text-primary-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Leadership Preview Section */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-caslon font-semibold text-3xl md:text-4xl text-charcoal-black mb-6 fade-in-up">
+              Meet the Visionaries Behind Our Success
+            </h2>
+            <p className="font-futura text-lg text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
+              Our leadership team combines decades of experience in corporate finance, strategic consulting, and international business development.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Team Member Preview 1 */}
+            <div className="text-center fade-in-up">
+              <div className="w-32 h-32 bg-light-gray rounded-full mx-auto mb-6 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                  alt="Mike Adesokan" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-2">Mike Adesokan</h3>
+              <p className="font-futura text-base text-primary-yellow mb-3">Chief Executive Officer</p>
+              <p className="font-futura text-sm text-charcoal-black/70 leading-relaxed">
+                15+ years in corporate finance and strategic investments across emerging markets.
+              </p>
+            </div>
+
+            {/* Team Member Preview 2 */}
+            <div className="text-center fade-in-up stagger-delay-1">
+              <div className="w-32 h-32 bg-light-gray rounded-full mx-auto mb-6 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612e2c3?w=400&h=400&fit=crop&crop=face" 
+                  alt="Rebecca Adesokan" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-2">Rebecca Adesokan</h3>
+              <p className="font-futura text-base text-primary-yellow mb-3">Executive Director</p>
+              <p className="font-futura text-sm text-charcoal-black/70 leading-relaxed">
+                Expert in public-private partnerships and infrastructure financing.
+              </p>
+            </div>
+
+            {/* Team Member Preview 3 */}
+            <div className="text-center fade-in-up stagger-delay-2">
+              <div className="w-32 h-32 bg-light-gray rounded-full mx-auto mb-6 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" 
+                  alt="Adeola Emmanuel" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-2">Adeola Emmanuel</h3>
+              <p className="font-futura text-base text-primary-yellow mb-3">Business Development Manager</p>
+              <p className="font-futura text-sm text-charcoal-black/70 leading-relaxed">
+                Specialist in emerging markets and innovative sector growth opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center fade-in-up stagger-delay-3">
+            <Button className="btn-secondary">
+              Meet Our Full Team
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards & Recognition Section */}
+      <section className="py-20 lg:py-24 bg-light-gray">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 className="font-caslon font-semibold text-3xl md:text-4xl text-charcoal-black mb-16 text-center fade-in-up">
+            Recognition & Credentials
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Award 1 */}
+            <div className="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-lg text-charcoal-black mb-2">SEC Licensed</h3>
+              <p className="font-futura text-sm text-charcoal-black/70">Securities & Exchange Commission Nigeria</p>
+            </div>
+
+            {/* Award 2 */}
+            <div className="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up stagger-delay-1">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-lg text-charcoal-black mb-2">ISO Certified</h3>
+              <p className="font-futura text-sm text-charcoal-black/70">Quality Management Systems</p>
+            </div>
+
+            {/* Award 3 */}
+            <div className="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up stagger-delay-2">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M12 7a3 3 0 00-3 3v1a3 3 0 006 0v-1a3 3 0 00-3-3zm0 0V4.5M15 7V4.5" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-lg text-charcoal-black mb-2">Global Partners</h3>
+              <p className="font-futura text-sm text-charcoal-black/70">Singapore, Kuwait, UAE</p>
+            </div>
+
+            {/* Award 4 */}
+            <div className="bg-white rounded-lg p-8 text-center shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 fade-in-up stagger-delay-3">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-lg text-charcoal-black mb-2">ESG Compliant</h3>
+              <p className="font-futura text-sm text-charcoal-black/70">Environmental, Social & Governance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sustainability & Social Impact Section */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-caslon font-semibold text-3xl md:text-4xl text-charcoal-black mb-6 fade-in-up">
+              Building a Better Tomorrow
+            </h2>
+            <p className="font-futura text-lg text-charcoal-black/80 max-w-4xl mx-auto fade-in-up stagger-delay-1">
+              We believe business success and social responsibility go hand in hand. Our commitment to sustainability and community impact drives every decision we make.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Environmental Impact */}
+            <div className="bg-light-gray rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 fade-in-up">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">Clean Energy Focus</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed">
+                <span className="font-semibold text-primary-yellow">60%</span> of our portfolio investments are in renewable energy and sustainable infrastructure projects.
+              </p>
+            </div>
+
+            {/* Social Impact */}
+            <div className="bg-light-gray rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 fade-in-up stagger-delay-1">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">Community Development</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed">
+                Our projects have created <span className="font-semibold text-primary-yellow">10,000+</span> direct and indirect jobs across Africa and the Middle East.
+              </p>
+            </div>
+
+            {/* Governance */}
+            <div className="bg-light-gray rounded-lg p-8 text-center hover:shadow-lg transition-all duration-300 fade-in-up stagger-delay-2">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="font-futura font-semibold text-xl text-charcoal-black mb-4">Ethical Standards</h3>
+              <p className="font-futura text-base text-charcoal-black/80 leading-relaxed">
+                Maintaining <span className="font-semibold text-primary-yellow">100%</span> compliance with international ESG standards and transparent reporting practices.
+              </p>
+            </div>
+          </div>
+
+          {/* Impact Stats */}
+          <div className="bg-charcoal-black rounded-lg p-8 md:p-12 text-center fade-in-up stagger-delay-3">
+            <h3 className="font-caslon font-semibold text-2xl md:text-3xl text-white mb-8">Our Collective Impact</h3>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div>
+                <div className="font-caslon font-bold text-3xl md:text-4xl text-primary-yellow mb-2">500MW</div>
+                <div className="font-futura text-sm text-white/80">Clean Energy Generated</div>
+              </div>
+              <div>
+                <div className="font-caslon font-bold text-3xl md:text-4xl text-primary-yellow mb-2">10K+</div>
+                <div className="font-futura text-sm text-white/80">Jobs Created</div>
+              </div>
+              <div>
+                <div className="font-caslon font-bold text-3xl md:text-4xl text-primary-yellow mb-2">3</div>
+                <div className="font-futura text-sm text-white/80">Continents</div>
+              </div>
+              <div>
+                <div className="font-caslon font-bold text-3xl md:text-4xl text-primary-yellow mb-2">15+</div>
+                <div className="font-futura text-sm text-white/80">Years of Impact</div>
+              </div>
             </div>
           </div>
         </div>
