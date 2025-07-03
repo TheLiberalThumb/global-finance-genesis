@@ -190,8 +190,12 @@
     @apply border-2 border-charcoal-black text-charcoal-black bg-white 
            hover:bg-charcoal-black hover:text-white
            px-8 py-4 rounded-full font-inter font-semibold text-lg
-           transition-all duration-300 hover:scale-105 min-h-[56px]
-           shadow-sm hover:shadow-medium;
+           transition-all duration-300 hover:scale-105 min-h-[56px];
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .btn-secondary:hover {
+    box-shadow: var(--shadow-medium);
   }
   
   /* Header Animations */
@@ -224,9 +228,14 @@
   
   /* Card System */
   .wealthsimple-card {
-    @apply bg-white rounded-3xl p-8 shadow-medium hover:shadow-large
+    @apply bg-white rounded-3xl p-8 
            transition-all duration-300 hover:-translate-y-2
            border border-light-gray/50;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .wealthsimple-card:hover {
+    box-shadow: var(--shadow-large);
   }
   
   .service-card {
