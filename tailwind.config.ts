@@ -19,6 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'caslon': ['Adobe Caslon Pro', 'Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
+				'futura': ['Futura', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 				'playfair': ['Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
 				'inter': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
 			},

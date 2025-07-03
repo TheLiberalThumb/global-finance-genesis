@@ -1,4 +1,4 @@
-/* Wealthsimple Typography System */
+/* Wealthsimple Exact Typography System */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -119,18 +119,25 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
+    font-size: 18px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-family: 'Adobe Caslon Pro', 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.02em;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
   }
 }
 
@@ -187,10 +194,11 @@
   /* Wealthsimple Button System */
   .btn-primary {
     @apply bg-primary text-charcoal-black hover:bg-primary/90 
-           px-8 py-4 rounded-3xl font-medium text-base
+           px-8 py-4 rounded-3xl font-medium
            transition-all duration-300 hover:scale-105 
            min-h-[56px];
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.01em;
     box-shadow: var(--shadow-medium);
@@ -204,9 +212,10 @@
   .btn-secondary {
     @apply border border-charcoal-black text-charcoal-black bg-white 
            hover:bg-charcoal-black hover:text-white
-           px-8 py-4 rounded-3xl font-medium text-base
+           px-8 py-4 rounded-3xl font-medium
            transition-all duration-300 hover:scale-105 min-h-[56px];
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.01em;
     box-shadow: var(--shadow-subtle);
@@ -266,44 +275,68 @@
            transition-all duration-300;
   }
   
-  /* Wealthsimple Typography System */
+  /* Wealthsimple Exact Typography System */
   .heading-xl {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    @apply font-bold text-6xl md:text-7xl lg:text-8xl 
-           leading-tight text-charcoal-black;
-    letter-spacing: -0.03em;
+    font-family: 'Adobe Caslon Pro', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 80px;
     line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: hsl(var(--charcoal-black));
   }
   
   .heading-lg {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    @apply font-semibold text-3xl md:text-4xl lg:text-5xl 
-           leading-tight text-charcoal-black;
-    letter-spacing: -0.025em;
+    font-family: 'Adobe Caslon Pro', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 48px;
     line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: hsl(var(--charcoal-black));
   }
   
   .heading-md {
-    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    @apply font-medium text-2xl md:text-3xl 
-           leading-tight text-charcoal-black;
-    letter-spacing: -0.02em;
+    font-family: 'Adobe Caslon Pro', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 500;
+    font-size: 32px;
     line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: hsl(var(--charcoal-black));
   }
   
   .body-text {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    @apply text-lg md:text-xl leading-relaxed text-charcoal-black;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
+    font-size: 18px;
     line-height: 1.6;
     letter-spacing: -0.01em;
+    color: hsl(var(--charcoal-black));
   }
   
   .caption-text {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    @apply text-sm leading-relaxed text-charcoal-black/70;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
+    font-size: 14px;
     line-height: 1.5;
+    color: hsl(var(--charcoal-black) / 0.7);
+  }
+
+  /* Mobile Typography Adjustments */
+  @media (max-width: 768px) {
+    .heading-xl {
+      font-size: 48px;
+    }
+    
+    .heading-lg {
+      font-size: 32px;
+    }
+    
+    .heading-md {
+      font-size: 24px;
+    }
+    
+    .body-text {
+      font-size: 16px;
+    }
   }
 }
 
