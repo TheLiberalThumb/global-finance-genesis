@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Gission Brand Colors */
+    /* Wealthsimple-Inspired Brand Colors */
     --primary-yellow: 51 100% 50%;        /* #FFDA00 - Main brand color */
     --warm-red: 15 100% 60%;              /* #FF6B35 - Accent highlights */
     --contemporary-blue: 212 100% 40%;    /* #0066CC - Trust elements */
@@ -15,8 +15,8 @@
     --light-gray: 0 0% 96%;              /* #F5F5F5 - Section backgrounds */
     --soft-gray: 0 0% 98%;               /* #F9F9F9 - Subtle backgrounds */
     
-    /* Design System Mappings */
-    --background: 0 0% 100%;
+    /* Wealthsimple Design System Mappings */
+    --background: 0 0% 100%;             /* Pure white background */
     --foreground: var(--charcoal-black);
 
     --card: 0 0% 100%;
@@ -26,7 +26,7 @@
     --popover-foreground: var(--charcoal-black);
 
     --primary: var(--primary-yellow);
-    --primary-foreground: var(--charcoal-black);
+    --primary-foreground: 0 0% 100%;     /* White text on yellow */
 
     --secondary: var(--light-gray);
     --secondary-foreground: var(--charcoal-black);
@@ -37,15 +37,21 @@
     --accent: var(--contemporary-blue);
     --accent-foreground: 0 0% 100%;
     
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--soft-gray)));
-    --section-gradient: linear-gradient(180deg, hsl(var(--light-gray)), hsl(0 0% 100%));
+    /* Wealthsimple-style gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --hero-highlight: var(--primary-yellow);
+    
+    /* Shadows */
+    --shadow-subtle: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-large: 0 8px 24px rgba(0,0,0,0.2);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 94%;
+    --ring: var(--primary-yellow);
 
     --radius: 0.5rem;
 
@@ -148,17 +154,24 @@
   .stagger-delay-3 { animation-delay: 0.3s; }
   .stagger-delay-4 { animation-delay: 0.4s; }
   
-  /* Button Variants */
+  /* Wealthsimple Button Variants */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 
-           px-8 py-4 rounded-3xl font-inter font-semibold text-lg
-           transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply bg-primary text-white hover:bg-primary/90 
+           px-8 py-3 rounded-2xl font-inter font-semibold text-base
+           transition-all duration-300 hover:scale-105 min-h-[44px]
+           shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
-           px-8 py-4 rounded-3xl font-inter font-semibold text-lg
-           transition-all duration-300 hover:scale-105;
+    @apply border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white
+           px-8 py-3 rounded-2xl font-inter font-semibold text-base
+           transition-all duration-300 hover:scale-105 min-h-[44px]
+           shadow-sm hover:shadow-md;
+  }
+  
+  /* Header Styles */
+  .header-shadow {
+    box-shadow: var(--shadow-subtle);
   }
   
   /* Card Hover Effects */
