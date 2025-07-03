@@ -2,49 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gission Global Investment Design System - Wealthsimple Inspired */
+/* Wealthsimple-Inspired Design System - Minimal Color Palette */
 
 @layer base {
   :root {
-    /* Wealthsimple-Inspired Brand Colors */
-    --primary-yellow: 51 100% 50%;        /* #FFDA00 - Main brand color */
-    --warm-red: 15 100% 60%;              /* #FF6B35 - Accent highlights */
-    --contemporary-blue: 212 100% 40%;    /* #0066CC - Trust elements */
-    --charcoal-black: 0 0% 10%;          /* #1A1A1A - Primary text */
-    --medium-gray: 0 0% 40%;             /* #666666 - Secondary text */
-    --light-gray: 0 0% 96%;              /* #F5F5F5 - Section backgrounds */
-    --soft-gray: 0 0% 98%;               /* #F9F9F9 - Subtle backgrounds */
+    /* Wealthsimple Restricted Color Palette */
+    --primary-yellow: 51 100% 50%;        /* #FFDA00 - Primary brand color */
+    --charcoal-black: 0 0% 10%;          /* #1A1A1A - Primary text & dark sections */
+    --pure-white: 0 0% 100%;             /* #FFFFFF - Backgrounds & cards */
+    --light-gray: 0 0% 96%;              /* #F5F5F5 - Subtle background variations */
     
-    /* Wealthsimple Design System Mappings */
-    --background: 0 0% 100%;             /* Pure white background */
+    /* Design System Mappings */
+    --background: var(--pure-white);
     --foreground: var(--charcoal-black);
 
-    --card: 0 0% 100%;
+    --card: var(--pure-white);
     --card-foreground: var(--charcoal-black);
 
-    --popover: 0 0% 100%;
+    --popover: var(--pure-white);
     --popover-foreground: var(--charcoal-black);
 
     --primary: var(--primary-yellow);
-    --primary-foreground: 0 0% 100%;     /* White text on yellow */
+    --primary-foreground: var(--pure-white);
 
     --secondary: var(--light-gray);
     --secondary-foreground: var(--charcoal-black);
 
     --muted: var(--light-gray);
-    --muted-foreground: var(--medium-gray);
+    --muted-foreground: var(--charcoal-black);
 
-    --accent: var(--contemporary-blue);
-    --accent-foreground: 0 0% 100%;
+    --accent: var(--primary-yellow);
+    --accent-foreground: var(--charcoal-black);
     
     /* Wealthsimple-style gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
-    --hero-highlight: var(--primary-yellow);
+    --hero-gradient: linear-gradient(135deg, hsl(var(--pure-white)) 0%, hsl(var(--light-gray)) 100%);
+    --dark-section: var(--charcoal-black);
     
-    /* Shadows */
-    --shadow-subtle: 0 2px 4px rgba(0,0,0,0.1);
-    --shadow-medium: 0 4px 12px rgba(0,0,0,0.15);
-    --shadow-large: 0 8px 24px rgba(0,0,0,0.2);
+    /* Wealthsimple Shadows */
+    --shadow-subtle: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 20px rgba(0,0,0,0.15);
+    --shadow-large: 0 8px 32px rgba(0,0,0,0.2);
+    --shadow-yellow: 0 4px 20px rgba(255, 218, 0, 0.3);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -126,15 +124,16 @@
 }
 
 @layer components {
-  /* Gission Custom Components */
+  /* Wealthsimple Design Components */
   .hero-gradient {
     background: var(--hero-gradient);
   }
   
-  .section-gradient {
-    background: var(--section-gradient);
+  .dark-section {
+    background: hsl(var(--dark-section));
   }
   
+  /* Strategic Animations */
   .floating-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -149,45 +148,115 @@
     transform: translateY(30px);
   }
   
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  /* Animation Delays */
   .stagger-delay-1 { animation-delay: 0.1s; }
   .stagger-delay-2 { animation-delay: 0.2s; }
   .stagger-delay-3 { animation-delay: 0.3s; }
   .stagger-delay-4 { animation-delay: 0.4s; }
+  .stagger-delay-5 { animation-delay: 0.5s; }
   
-  /* Wealthsimple Button Variants */
+  /* Wealthsimple Button System */
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90 
-           px-8 py-3 rounded-2xl font-inter font-semibold text-base
-           transition-all duration-300 hover:scale-105 min-h-[44px]
-           shadow-md hover:shadow-lg;
+    @apply bg-primary text-charcoal-black hover:bg-primary/90 
+           px-8 py-4 rounded-full font-inter font-semibold text-lg
+           transition-all duration-300 hover:scale-105 hover:shadow-yellow
+           min-h-[56px] border-2 border-transparent;
   }
   
   .btn-secondary {
-    @apply border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white
-           px-8 py-3 rounded-2xl font-inter font-semibold text-base
-           transition-all duration-300 hover:scale-105 min-h-[44px]
-           shadow-sm hover:shadow-md;
+    @apply border-2 border-charcoal-black text-charcoal-black bg-white 
+           hover:bg-charcoal-black hover:text-white
+           px-8 py-4 rounded-full font-inter font-semibold text-lg
+           transition-all duration-300 hover:scale-105 min-h-[56px]
+           shadow-sm hover:shadow-medium;
   }
   
-  /* Header Styles */
+  /* Header Animations */
   .header-shadow {
     box-shadow: var(--shadow-subtle);
+    transition: box-shadow 0.3s ease-in-out;
   }
   
-  /* Card Hover Effects */
-  .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  .logo-hover {
+    @apply transition-all duration-300 hover:scale-110 hover:shadow-yellow;
+  }
+  
+  .nav-link {
+    @apply relative overflow-hidden transition-colors duration-300;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 
+           transition-transform duration-300 origin-left;
+  }
+  
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+  
+  /* Card System */
+  .wealthsimple-card {
+    @apply bg-white rounded-3xl p-8 shadow-medium hover:shadow-large
+           transition-all duration-300 hover:-translate-y-2
+           border border-light-gray/50;
   }
   
   .service-card {
-    @apply bg-white rounded-lg p-6 shadow-md hover:shadow-xl
-           transition-all duration-300 hover:-translate-y-2
-           border-t-4 border-primary-yellow;
+    @apply wealthsimple-card border-t-4 border-primary;
+  }
+  
+  .stat-card {
+    @apply bg-white/10 rounded-3xl p-8 backdrop-blur-sm 
+           border border-white/20 hover:bg-white/15 
+           transition-all duration-300;
+  }
+  
+  /* Typography Classes */
+  .heading-xl {
+    @apply font-playfair font-bold text-6xl md:text-7xl lg:text-8xl 
+           leading-tight text-charcoal-black;
+  }
+  
+  .heading-lg {
+    @apply font-playfair font-semibold text-3xl md:text-4xl lg:text-5xl 
+           leading-tight text-charcoal-black;
+  }
+  
+  .heading-md {
+    @apply font-playfair font-medium text-2xl md:text-3xl 
+           leading-tight text-charcoal-black;
+  }
+  
+  .body-text {
+    @apply font-inter text-lg md:text-xl leading-relaxed text-charcoal-black;
+  }
+  
+  .caption-text {
+    @apply font-inter text-sm leading-relaxed text-charcoal-black/70;
   }
 }
 
 @layer utilities {
-  /* Animation Keyframes */
+  /* Wealthsimple Animation Keyframes */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
@@ -207,12 +276,62 @@
     }
   }
   
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
   @keyframes countUp {
-    from { transform: scale(0.5); opacity: 0; }
+    from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
   }
   
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 218, 0, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 218, 0, 0.8); }
+  }
+  
+  /* Animation Utilities */
   .animate-count-up {
     animation: countUp 0.6s ease-out;
+  }
+  
+  .animate-pulse-custom {
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  
+  /* Scroll Indicator */
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+    40%, 43% { transform: translateY(-10px); }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s ease-in-out infinite;
   }
 }

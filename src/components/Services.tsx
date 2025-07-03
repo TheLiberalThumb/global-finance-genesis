@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button';
+
 const Services = () => {
   const services = [
     {
@@ -37,10 +39,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
+          <h2 className="heading-lg mb-8 fade-in-up">
             Comprehensive Financial Solutions
           </h2>
-          <p className="text-xl md:text-2xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
+          <p className="body-text text-charcoal-black/80 max-w-4xl mx-auto fade-in-up stagger-delay-1">
             From strategic advisory to project financing, we provide end-to-end solutions 
             that drive sustainable growth and maximize value creation.
           </p>
@@ -51,40 +53,40 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`service-card fade-in-up stagger-delay-${index + 1}`}
+              className={`service-card fade-in-up stagger-delay-${index + 2}`}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-200">
+              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mb-8 hover:scale-110 hover:shadow-yellow transition-all duration-300">
                 {service.icon}
               </div>
 
               {/* Content */}
-              <h3 className="font-inter font-semibold text-2xl text-charcoal-black mb-4">
+              <h3 className="heading-md mb-6">
                 {service.title}
               </h3>
               
-              <p className="text-medium-gray leading-relaxed mb-6 font-inter">
+              <p className="body-text text-charcoal-black/80 mb-8">
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-2">
+              <ul className="space-y-3 mb-8">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-charcoal-black font-inter">
-                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-primary-yellow rounded-full mr-4"></div>
                     {feature}
                   </li>
                 ))}
               </ul>
 
               {/* Learn More Link */}
-              <div className="mt-8">
+              <div className="mt-auto">
                 <a 
                   href="/services" 
-                  className="inline-flex items-center text-contemporary-blue font-semibold hover:text-contemporary-blue/80 transition-colors duration-200"
+                  className="inline-flex items-center text-charcoal-black font-inter font-semibold hover:text-primary-yellow transition-colors duration-300 group"
                 >
                   Learn More
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -94,19 +96,13 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20">
-          <p className="text-xl text-medium-gray mb-8 font-inter">
+        <div className="text-center mt-24 fade-in-up stagger-delay-5">
+          <p className="body-text text-charcoal-black/80 mb-10">
             Ready to explore how we can help your business grow?
           </p>
-          <a 
-            href="/contact" 
-            className="btn-primary inline-flex items-center px-8 py-4 text-lg font-semibold"
-          >
+          <Button className="btn-primary">
             Schedule Consultation
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -29,14 +29,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				// Gission Brand Colors
+				// Wealthsimple-Inspired Brand Colors
 				'primary-yellow': 'hsl(var(--primary-yellow))',
-				'warm-red': 'hsl(var(--warm-red))',
-				'contemporary-blue': 'hsl(var(--contemporary-blue))',
 				'charcoal-black': 'hsl(var(--charcoal-black))',
-				'medium-gray': 'hsl(var(--medium-gray))',
+				'pure-white': 'hsl(var(--pure-white))',
 				'light-gray': 'hsl(var(--light-gray))',
-				'soft-gray': 'hsl(var(--soft-gray))',
 				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

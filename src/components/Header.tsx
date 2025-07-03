@@ -30,30 +30,30 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
-                <span className="text-charcoal-black font-inter font-bold text-xl">
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
+                <span className="text-charcoal-black font-inter font-bold text-xl md:text-2xl">
                   GG
                 </span>
               </div>
             </div>
-            <div className="ml-3">
-              <h1 className="font-inter font-semibold text-lg text-charcoal-black">
+            <div className="ml-4">
+              <h1 className="font-playfair font-semibold text-xl md:text-2xl text-charcoal-black">
                 Gission Global
               </h1>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="font-inter font-medium text-charcoal-black hover:text-contemporary-blue transition-colors duration-200"
+                className="nav-link font-inter font-medium text-lg text-charcoal-black hover:text-primary-yellow"
               >
                 {item.name}
               </a>
@@ -71,27 +71,26 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-charcoal-black hover:text-contemporary-blue transition-colors duration-200"
+              className="text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               <svg
-                className="w-6 h-6"
+                className="w-7 h-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                strokeWidth={2}
               >
                 {isMobileMenuOpen ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
                     d="M6 18L18 6M6 6l12 12"
                   />
                 ) : (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={2}
                     d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
@@ -102,19 +101,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white rounded-lg shadow-lg mt-2 py-4 px-6">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden bg-white rounded-2xl shadow-large mt-4 py-6 px-6 animate-fade-in">
+            <nav className="flex flex-col space-y-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-inter font-medium text-charcoal-black hover:text-contemporary-blue transition-colors duration-200"
+                  className="font-inter font-medium text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button className="btn-primary mt-4">
+              <Button className="btn-primary mt-6 w-full">
                 Get Started
               </Button>
             </nav>

@@ -65,63 +65,63 @@ const ContactCTA = () => {
   return (
     <section className="py-20 lg:py-32 bg-light-gray">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Content */}
-          <div>
-            <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
+          <div className="slide-in-left">
+            <h2 className="heading-lg mb-8">
               Ready to grow your business?
             </h2>
-            <p className="text-xl md:text-2xl text-medium-gray leading-relaxed mb-8">
+            <p className="body-text text-charcoal-black/80 mb-10">
               Join the leading companies who trust us to accelerate their growth 
               through strategic capital solutions and expert advisory services.
             </p>
 
             {/* Benefits */}
-            <div className="space-y-4 mb-8">
+            <div className="space-y-6 mb-10">
               {[
                 "Free initial consultation",
-                "Tailored financial strategies",
+                "Tailored financial strategies", 
                 "Expert guidance throughout",
                 "Proven track record of success"
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-4"></div>
+                  <div className="w-3 h-3 bg-primary-yellow rounded-full mr-6"></div>
                   <span className="text-charcoal-black font-inter text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
 
             {/* Contact Info */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h3 className="font-playfair font-semibold text-xl text-charcoal-black mb-4">
+            <div className="wealthsimple-card">
+              <h3 className="heading-md mb-6">
                 Get in Touch Directly
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-contemporary-blue mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-primary-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-charcoal-black font-inter">hello@gissionglobal.com</span>
+                  <span className="text-charcoal-black font-inter text-lg">hello@gissionglobal.com</span>
                 </div>
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-contemporary-blue mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-primary-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-charcoal-black font-inter">+1 (555) 123-4567</span>
+                  <span className="text-charcoal-black font-inter text-lg">+1 (555) 123-4567</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-lg">
-            <h3 className="font-playfair font-semibold text-3xl text-charcoal-black mb-6 text-center">
+          <div className="wealthsimple-card slide-in-right">
+            <h3 className="heading-md mb-8 text-center">
               Start the Conversation
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-charcoal-black font-inter font-medium mb-2">
+                  <label htmlFor="name" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
                     Full Name *
                   </label>
                   <Input
@@ -131,12 +131,12 @@ const ContactCTA = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full p-4 border-2 border-light-gray rounded-2xl focus:border-primary focus:ring-0 font-inter"
+                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-charcoal-black font-inter font-medium mb-2">
+                  <label htmlFor="email" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
                     Email Address *
                   </label>
                   <Input
@@ -146,14 +146,14 @@ const ContactCTA = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full p-4 border-2 border-light-gray rounded-2xl focus:border-primary focus:ring-0 font-inter"
+                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-charcoal-black font-inter font-medium mb-2">
+                <label htmlFor="company" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
                   Company
                 </label>
                 <Input
@@ -162,13 +162,13 @@ const ContactCTA = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full p-4 border-2 border-light-gray rounded-2xl focus:border-primary focus:ring-0 font-inter"
+                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
                   placeholder="Your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-charcoal-black font-inter font-medium mb-2">
+                <label htmlFor="message" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
                   Message *
                 </label>
                 <Textarea
@@ -177,8 +177,8 @@ const ContactCTA = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={4}
-                  className="w-full p-4 border-2 border-light-gray rounded-2xl focus:border-primary focus:ring-0 font-inter resize-none"
+                  rows={5}
+                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-3xl focus:border-primary-yellow focus:ring-0 font-inter resize-none text-lg transition-colors duration-300"
                   placeholder="Tell us about your project and how we can help..."
                 />
               </div>
@@ -186,11 +186,11 @@ const ContactCTA = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn-primary py-4 text-lg"
+                className="w-full btn-primary text-xl py-6"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-charcoal-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-charcoal-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
@@ -202,7 +202,7 @@ const ContactCTA = () => {
               </Button>
             </form>
             
-            <p className="text-medium-gray text-sm text-center mt-4 font-inter">
+            <p className="caption-text text-center mt-6">
               By submitting this form, you agree to our privacy policy and terms of service.
             </p>
           </div>
