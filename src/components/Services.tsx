@@ -56,7 +56,10 @@ const Services = () => {
               className={`service-card fade-in-up stagger-delay-${index + 2}`}
             >
               {/* Icon */}
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mb-8 hover:scale-110 hover:shadow-yellow transition-all duration-300">
+              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mb-8 hover:scale-110 transition-all duration-300" 
+                   style={{ boxShadow: 'var(--shadow-medium)' }}
+                   onMouseEnter={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-yellow)'}
+                   onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-medium)'}>
                 {service.icon}
               </div>
 

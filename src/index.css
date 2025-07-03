@@ -177,8 +177,13 @@
   .btn-primary {
     @apply bg-primary text-charcoal-black hover:bg-primary/90 
            px-8 py-4 rounded-full font-inter font-semibold text-lg
-           transition-all duration-300 hover:scale-105 hover:shadow-yellow
+           transition-all duration-300 hover:scale-105 
            min-h-[56px] border-2 border-transparent;
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: var(--shadow-yellow);
   }
   
   .btn-secondary {
@@ -196,7 +201,11 @@
   }
   
   .logo-hover {
-    @apply transition-all duration-300 hover:scale-110 hover:shadow-yellow;
+    @apply transition-all duration-300 hover:scale-110;
+  }
+  
+  .logo-hover:hover {
+    box-shadow: var(--shadow-yellow);
   }
   
   .nav-link {
