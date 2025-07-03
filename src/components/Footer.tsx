@@ -41,11 +41,11 @@ const Footer = () => {
             <div className="lg:col-span-2">
               {/* Logo */}
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
-                  <span className="text-charcoal-black font-playfair font-bold text-xl">GG</span>
+                <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mr-4">
+                  <span className="text-charcoal-black font-inter font-bold text-xl">GG</span>
                 </div>
                 <div>
-                  <h2 className="font-playfair font-semibold text-xl">Gission Global</h2>
+                  <h2 className="font-inter font-semibold text-xl">Gission Global</h2>
                   <p className="text-white/60 font-inter text-sm">Investment Limited</p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             {/* Footer Sections */}
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
-                <h3 className="font-playfair font-semibold text-lg text-white mb-6">
+                <h3 className="font-inter font-semibold text-lg text-white mb-6">
                   {section.title}
                 </h3>
                 <ul className="space-y-3">
@@ -106,7 +106,7 @@ const Footer = () => {
         {/* Newsletter Signup */}
         <div className="border-t border-white/20 py-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="font-playfair font-semibold text-2xl text-white mb-4">
+            <h3 className="font-inter font-semibold text-2xl text-white mb-4">
               Stay Informed
             </h3>
             <p className="text-white/70 mb-8 font-inter">
