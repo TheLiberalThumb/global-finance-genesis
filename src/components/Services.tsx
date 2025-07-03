@@ -15,7 +15,7 @@ const Services = () => {
       description: "We specialize in financing high-impact and economically viable projects through equity, debt, or blended finance models.",
       icon: (
         <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 5a2 2 0 114 0v6a2 2 0 11-4 0V5zM5 15a2 2 0 114 0v2a2 2 0 11-4 0v-2zM15 5a2 2 0 114 0v6a2 2 0 11-4 0V5zM13 15a2 2 0 114 0v2a2 2 0 11-4 0v-2z" />
         </svg>
       ),
       features: ["Infrastructure Projects", "Energy Investments", "PPP Structures", "Blended Finance"]
@@ -37,7 +37,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
+          <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
             Comprehensive Financial Solutions
           </h2>
           <p className="text-xl md:text-2xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
@@ -54,12 +54,12 @@ const Services = () => {
               className={`service-card fade-in-up stagger-delay-${index + 1}`}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-200">
                 {service.icon}
               </div>
 
               {/* Content */}
-              <h3 className="font-playfair font-semibold text-2xl text-charcoal-black mb-4">
+              <h3 className="font-inter font-semibold text-2xl text-charcoal-black mb-4">
                 {service.title}
               </h3>
               
