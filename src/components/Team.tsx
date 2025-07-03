@@ -75,7 +75,7 @@ const Team = () => {
                   {member.name}
                 </h3>
                 
-                <p className="text-primary-yellow font-inter font-semibold text-lg mb-6">
+                <p className="text-primary-yellow font-futura font-semibold text-lg mb-6">
                   {member.title}
                 </p>
 
@@ -88,7 +88,7 @@ const Team = () => {
                   {member.expertise.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-4 py-2 bg-charcoal-black/5 text-charcoal-black text-sm font-inter rounded-full hover:bg-primary-yellow hover:text-charcoal-black transition-colors duration-300"
+                      className="px-4 py-2 bg-charcoal-black/5 text-charcoal-black text-sm font-futura rounded-full hover:bg-primary-yellow hover:text-charcoal-black transition-colors duration-300"
                     >
                       {skill}
                     </span>

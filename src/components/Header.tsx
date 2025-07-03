@@ -35,13 +35,13 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
-                <span className="text-charcoal-black font-inter font-bold text-xl md:text-2xl">
+                <span className="text-charcoal-black font-futura font-bold text-xl md:text-2xl">
                   GG
                 </span>
               </div>
             </div>
             <div className="ml-4">
-              <h1 className="font-playfair font-semibold text-xl md:text-2xl text-charcoal-black">
+              <h1 className="font-caslon font-semibold text-xl md:text-2xl text-charcoal-black">
                 Gission Global
               </h1>
             </div>
@@ -53,7 +53,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-inter font-medium text-lg text-charcoal-black hover:text-primary-yellow"
+                className="nav-link font-futura font-medium text-lg text-charcoal-black hover:text-primary-yellow"
               >
                 {item.name}
               </a>
@@ -107,7 +107,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-inter font-medium text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+                  className="font-futura font-medium text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

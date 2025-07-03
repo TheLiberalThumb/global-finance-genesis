@@ -42,11 +42,11 @@ const Footer = () => {
               {/* Logo */}
               <div className="flex items-center mb-8 logo-hover">
                 <div className="w-14 h-14 bg-primary-yellow rounded-full flex items-center justify-center mr-6">
-                  <span className="text-charcoal-black font-inter font-bold text-2xl">GG</span>
+                  <span className="text-charcoal-black font-futura font-bold text-2xl">GG</span>
                 </div>
                 <div>
-                  <h2 className="font-playfair font-semibold text-2xl">Gission Global</h2>
-                  <p className="text-white/60 font-inter">Investment Limited</p>
+                  <h2 className="font-caslon font-semibold text-2xl">Gission Global</h2>
+                  <p className="text-white/60 font-futura">Investment Limited</p>
                 </div>
               </div>
               
@@ -62,20 +62,20 @@ const Footer = () => {
                   <svg className="w-6 h-6 text-primary-yellow mr-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-white/80 font-inter text-lg hover:text-white transition-colors duration-300">hello@gissionglobal.com</span>
+                  <span className="text-white/80 font-futura text-lg hover:text-white transition-colors duration-300">hello@gissionglobal.com</span>
                 </div>
                 <div className="flex items-center group">
                   <svg className="w-6 h-6 text-primary-yellow mr-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-white/80 font-inter text-lg hover:text-white transition-colors duration-300">+1 (555) 123-4567</span>
+                  <span className="text-white/80 font-futura text-lg hover:text-white transition-colors duration-300">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center group">
                   <svg className="w-6 h-6 text-primary-yellow mr-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  <span className="text-white/80 font-inter text-lg hover:text-white transition-colors duration-300">New York, London, Lagos</span>
+                  <span className="text-white/80 font-futura text-lg hover:text-white transition-colors duration-300">New York, London, Lagos</span>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Footer = () => {
             {/* Footer Sections */}
             {Object.entries(footerSections).map(([key, section], index) => (
               <div key={key} className={`fade-in-up stagger-delay-${index + 2}`}>
-                <h3 className="font-playfair font-semibold text-xl text-white mb-8">
+                <h3 className="font-caslon font-semibold text-xl text-white mb-8">
                   {section.title}
                 </h3>
                 <ul className="space-y-4">
@@ -91,7 +91,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="nav-link text-white/70 hover:text-primary-yellow transition-colors duration-300 font-inter text-lg"
+                        className="nav-link text-white/70 hover:text-primary-yellow transition-colors duration-300 font-futura text-lg"
                       >
                         {link.name}
                       </a>
@@ -116,9 +116,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-8 py-5 bg-white/10 border-2 border-white/20 rounded-full text-white placeholder-white/50 font-inter text-lg focus:outline-none focus:border-primary-yellow transition-colors duration-300"
+                className="flex-1 px-8 py-5 bg-white/10 border-2 border-white/20 rounded-full text-white placeholder-white/50 font-futura text-lg focus:outline-none focus:border-primary-yellow transition-colors duration-300"
               />
-              <button className="px-10 py-5 bg-primary-yellow text-charcoal-black font-inter font-semibold text-lg rounded-full hover:bg-primary-yellow/90 hover:scale-105 transition-all duration-300">
+              <button className="px-10 py-5 bg-primary-yellow text-charcoal-black font-futura font-semibold text-lg rounded-full hover:bg-primary-yellow/90 hover:scale-105 transition-all duration-300">
                 Subscribe
               </button>
             </div>
@@ -129,7 +129,7 @@ const Footer = () => {
         <div className="border-t border-white/20 py-10 fade-in-up stagger-delay-5">
           <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Copyright */}
-            <p className="text-white/60 font-inter mb-6 md:mb-0 text-lg">
+            <p className="text-white/60 font-futura mb-6 md:mb-0 text-lg">
               © {currentYear} Gission Global Investment Limited. All rights reserved.
             </p>
 
@@ -159,13 +159,13 @@ const Footer = () => {
             <div className="flex space-x-8">
               <a
                 href="/privacy"
-                className="nav-link text-white/60 hover:text-primary-yellow transition-colors duration-300 font-inter text-lg"
+                className="nav-link text-white/60 hover:text-primary-yellow transition-colors duration-300 font-futura text-lg"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="nav-link text-white/60 hover:text-primary-yellow transition-colors duration-300 font-inter text-lg"
+                className="nav-link text-white/60 hover:text-primary-yellow transition-colors duration-300 font-futura text-lg"
               >
                 Terms of Service
               </a>

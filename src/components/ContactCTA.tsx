@@ -42,7 +42,7 @@ const ContactCTA = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="font-playfair font-bold text-4xl text-charcoal-black mb-6">
+              <h2 className="font-caslon font-bold text-4xl text-charcoal-black mb-6">
                 Thank You!
               </h2>
               <p className="text-xl text-medium-gray mb-8">
@@ -86,7 +86,7 @@ const ContactCTA = () => {
               ].map((benefit, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-3 h-3 bg-primary-yellow rounded-full mr-6"></div>
-                  <span className="text-charcoal-black font-inter text-lg">{benefit}</span>
+                  <span className="text-charcoal-black font-futura text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -101,13 +101,13 @@ const ContactCTA = () => {
                   <svg className="w-6 h-6 text-primary-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-charcoal-black font-inter text-lg">hello@gissionglobal.com</span>
+                  <span className="text-charcoal-black font-futura text-lg">hello@gissionglobal.com</span>
                 </div>
                 <div className="flex items-center">
                   <svg className="w-6 h-6 text-primary-yellow mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span className="text-charcoal-black font-inter text-lg">+1 (555) 123-4567</span>
+                  <span className="text-charcoal-black font-futura text-lg">+1 (555) 123-4567</span>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@ const ContactCTA = () => {
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
+                  <label htmlFor="name" className="block text-charcoal-black font-futura font-semibold mb-3 text-lg">
                     Full Name *
                   </label>
                   <Input
@@ -131,12 +131,12 @@ const ContactCTA = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
+                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-futura text-lg transition-colors duration-300"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
+                  <label htmlFor="email" className="block text-charcoal-black font-futura font-semibold mb-3 text-lg">
                     Email Address *
                   </label>
                   <Input
@@ -146,14 +146,14 @@ const ContactCTA = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
+                    className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-futura text-lg transition-colors duration-300"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
+                <label htmlFor="company" className="block text-charcoal-black font-futura font-semibold mb-3 text-lg">
                   Company
                 </label>
                 <Input
@@ -162,13 +162,13 @@ const ContactCTA = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-inter text-lg transition-colors duration-300"
+                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-full focus:border-primary-yellow focus:ring-0 font-futura text-lg transition-colors duration-300"
                   placeholder="Your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-charcoal-black font-inter font-semibold mb-3 text-lg">
+                <label htmlFor="message" className="block text-charcoal-black font-futura font-semibold mb-3 text-lg">
                   Message *
                 </label>
                 <Textarea
@@ -178,7 +178,7 @@ const ContactCTA = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-3xl focus:border-primary-yellow focus:ring-0 font-inter resize-none text-lg transition-colors duration-300"
+                  className="w-full p-5 border-2 border-charcoal-black/20 rounded-3xl focus:border-primary-yellow focus:ring-0 font-futura resize-none text-lg transition-colors duration-300"
                   placeholder="Tell us about your project and how we can help..."
                 />
               </div>
