@@ -187,26 +187,27 @@
   /* Wealthsimple Button System */
   .btn-primary {
     @apply bg-primary text-charcoal-black hover:bg-primary/90 
-           px-8 py-4 rounded-full font-semibold text-lg
+           px-8 py-4 rounded-3xl font-medium text-base
            transition-all duration-300 hover:scale-105 
-           min-h-[56px] border-2 border-transparent;
+           min-h-[56px];
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.01em;
     box-shadow: var(--shadow-medium);
+    border: none;
   }
   
   .btn-primary:hover {
-    box-shadow: var(--shadow-yellow);
+    box-shadow: 0 4px 20px rgba(255, 218, 0, 0.3);
   }
   
   .btn-secondary {
-    @apply border-2 border-charcoal-black text-charcoal-black bg-white 
+    @apply border border-charcoal-black text-charcoal-black bg-white 
            hover:bg-charcoal-black hover:text-white
-           px-8 py-4 rounded-full font-semibold text-lg
+           px-8 py-4 rounded-3xl font-medium text-base
            transition-all duration-300 hover:scale-105 min-h-[56px];
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.01em;
     box-shadow: var(--shadow-subtle);
   }
