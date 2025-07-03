@@ -15,10 +15,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Hero Content */}
           <div className="text-center lg:text-left">
-            <h1 className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-charcoal-black fade-in-up">
-              Your business{' '}
-              <span className="text-contemporary-blue">deserves</span>{' '}
-              more
+            <h1 className="font-inter font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight text-charcoal-black fade-in-up">
+              Your business deserves more
             </h1>
             
             <p className="mt-8 text-xl md:text-2xl lg:text-2xl text-medium-gray leading-relaxed fade-in-up stagger-delay-1">
