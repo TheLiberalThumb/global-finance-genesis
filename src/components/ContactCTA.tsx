@@ -68,7 +68,7 @@ const ContactCTA = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
+            <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
               Ready to grow your business?
             </h2>
             <p className="text-xl md:text-2xl text-medium-gray leading-relaxed mb-8">
