@@ -47,10 +47,10 @@ const Statistics = () => {
   return (
     <section ref={ref} className="py-20 lg:py-32 bg-contemporary-blue relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-yellow rounded-full"></div>
         <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-white rounded-full"></div>
       </div>
 
@@ -70,12 +70,30 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`text-center ${inView ? 'animate-count-up' : 'opacity-0'}`}
+              className={`bg-white/10 rounded-2xl p-8 text-center backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300 ${inView ? 'animate-count-up' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
+              {/* Icon */}
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-contemporary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {index === 0 && (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  )}
+                  {index === 1 && (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  )}
+                  {index === 2 && (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  )}
+                  {index === 3 && (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  )}
+                </svg>
+              </div>
+
               {/* Number */}
               <div className="mb-4">
-                <span className="font-inter font-bold text-3xl md:text-4xl lg:text-5xl text-primary-yellow block">
+                <span className="font-inter font-bold text-4xl lg:text-5xl text-white block">
                   {stat.number}
                 </span>
               </div>
@@ -86,7 +104,7 @@ const Statistics = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-white/70 font-inter leading-relaxed">
+              <p className="text-white/80 font-inter text-sm leading-relaxed">
                 {stat.description}
               </p>
             </div>
@@ -101,7 +119,7 @@ const Statistics = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="/case-studies" 
-              className="inline-flex items-center px-8 py-4 bg-white text-contemporary-blue font-semibold text-lg rounded-3xl hover:bg-white/90 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-white text-contemporary-blue font-semibold text-lg rounded-2xl hover:bg-white/90 transition-all duration-300 hover:scale-105"
             >
               View Case Studies
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -110,7 +128,7 @@ const Statistics = () => {
             </a>
             <a 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-3xl hover:bg-white hover:text-contemporary-blue transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-2xl hover:bg-white hover:text-contemporary-blue transition-all duration-300 hover:scale-105"
             >
               Start Your Project
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
