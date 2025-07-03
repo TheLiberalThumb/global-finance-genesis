@@ -3,8 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Star, Lightbulb, Handshake, Target, Globe, Award, Users, CircleCheck } from 'lucide-react';
+import { useEffect } from 'react';
+import { initializeAnimations } from '@/utils/animations';
 
 const About = () => {
+  useEffect(() => {
+    initializeAnimations();
+  }, []);
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -13,53 +18,55 @@ const About = () => {
       <section className="relative overflow-hidden bg-gradient-to-br from-white via-light-gray to-white min-h-screen flex items-center">
         {/* Floating Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-primary-yellow/10 rounded-full floating-animation"></div>
-          <div className="absolute top-40 right-32 w-24 h-24 bg-primary-yellow/20 rounded-full coin-float"></div>
-          <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-primary-yellow/15 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
-          <div className="absolute bottom-20 right-20 w-20 h-20 bg-primary-yellow/10 rounded-full coin-float" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-20 left-20 w-32 h-32 bg-primary-yellow/10 rounded-full floating-bg-element"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-primary-yellow/20 rounded-full floating-bg-element"></div>
+          <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-primary-yellow/15 rounded-full floating-bg-element"></div>
+          <div className="absolute bottom-20 right-20 w-20 h-20 bg-primary-yellow/10 rounded-full floating-bg-element"></div>
+          <div className="absolute top-1/2 left-10 w-12 h-12 bg-primary-yellow/25 rounded-full floating-bg-element"></div>
+          <div className="absolute top-3/4 right-1/3 w-8 h-8 bg-primary-yellow/30 rounded-full floating-bg-element"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-5 gap-12 items-center relative z-10 py-32">
           {/* Content - 60% */}
           <div className="lg:col-span-3 space-y-8">
             <div className="space-y-6">
-              <h1 className="heading-xl fade-in-up">
+              <h1 className="heading-xl hero-content-enter">
                 Building Tomorrow's Financial Landscape
               </h1>
-              <p className="body-text text-xl lg:text-2xl text-charcoal-black/80 max-w-2xl fade-in-up stagger-delay-1">
+              <p className="body-text text-xl lg:text-2xl text-charcoal-black/80 max-w-2xl hero-content-enter stagger-delay-1">
                 For over 15 years, we've been empowering businesses to achieve their boldest ambitions through strategic capital solutions and expert financial guidance.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-6 fade-in-up stagger-delay-2">
-              <Button className="btn-primary text-lg px-10 py-5">
+            <div className="flex flex-col sm:flex-row gap-6 hero-content-enter stagger-delay-2">
+              <Button className="btn-primary text-lg px-10 py-5 interactive-button">
                 Start Your Journey
               </Button>
-              <Button className="btn-secondary text-lg px-10 py-5">
+              <Button className="btn-secondary text-lg px-10 py-5 interactive-button">
                 Our Track Record
               </Button>
             </div>
             
             {/* Trust Indicators */}
-            <div className="flex items-center space-x-8 pt-8 fade-in-up stagger-delay-3">
-              <div className="text-center">
-                <div className="heading-md text-primary-yellow">15+</div>
+            <div className="flex items-center space-x-8 pt-8 hero-content-enter stagger-delay-3">
+              <div className="text-center counter-up">
+                <div className="heading-md text-primary-yellow animate-count-up">15+</div>
                 <div className="caption-text">Years of Excellence</div>
               </div>
-              <div className="text-center">
-                <div className="heading-md text-primary-yellow">$2B+</div>
+              <div className="text-center counter-up stagger-delay-1">
+                <div className="heading-md text-primary-yellow animate-count-up">$2B+</div>
                 <div className="caption-text">Funding Facilitated</div>
               </div>
-              <div className="text-center">
-                <div className="heading-md text-primary-yellow">100+</div>
+              <div className="text-center counter-up stagger-delay-2">
+                <div className="heading-md text-primary-yellow animate-count-up">100+</div>
                 <div className="caption-text">Projects Completed</div>
               </div>
             </div>
           </div>
           
           {/* Visual Space - 40% */}
-          <div className="lg:col-span-2 relative fade-in-up stagger-delay-2">
-            <div className="relative w-full h-96 lg:h-[600px] bg-gradient-to-br from-charcoal-black via-charcoal-black/90 to-charcoal-black/80 rounded-3xl overflow-hidden">
+          <div className="lg:col-span-2 relative hero-content-enter stagger-delay-2">
+            <div className="relative w-full h-96 lg:h-[600px] bg-gradient-to-br from-charcoal-black via-charcoal-black/90 to-charcoal-black/80 rounded-3xl overflow-hidden interactive-image">
               {/* 3D Animation Space */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-white text-center space-y-4">
@@ -187,9 +194,9 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Excellence */}
-            <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up">
+            <Card className="bg-white p-8 text-center interactive-card group scroll-triggered">
               <CardContent className="space-y-6">
-                <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-glow">
                   <Star className="w-10 h-10 text-charcoal-black" />
                 </div>
                 <h3 className="heading-md">Excellence</h3>
@@ -200,9 +207,9 @@ const About = () => {
             </Card>
 
             {/* Innovation */}
-            <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-1">
+            <Card className="bg-white p-8 text-center interactive-card group scroll-triggered stagger-delay-1">
               <CardContent className="space-y-6">
-                <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-pulse-custom">
                   <Lightbulb className="w-10 h-10 text-charcoal-black" />
                 </div>
                 <h3 className="heading-md">Innovation</h3>
@@ -300,13 +307,13 @@ const About = () => {
                   side: 'right'
                 }
               ].map((milestone, index) => (
-                <div key={milestone.year} className={`relative flex ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} fade-in-up`} style={{animationDelay: `${index * 0.1}s`}}>
+                <div key={milestone.year} className={`relative flex ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} scroll-triggered ${milestone.side === 'left' ? 'milestone-enter-left' : 'milestone-enter-right'}`} style={{animationDelay: `${index * 0.2}s`}}>
                   {/* Timeline Dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-yellow rounded-full border-4 border-white shadow-lg z-10"></div>
+                  <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-yellow rounded-full border-4 border-white shadow-lg z-10 timeline-dot ${index <= 3 ? 'active' : ''}`}></div>
                   
                   {/* Content Card */}
-                  <Card className={`w-full max-w-md bg-white hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
-                    <div className="aspect-[5/3] overflow-hidden rounded-t-lg">
+                  <Card className={`w-full max-w-md bg-white interactive-card ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
+                    <div className="aspect-[5/3] overflow-hidden rounded-t-lg interactive-image">
                       <img 
                         src={milestone.image} 
                         alt={milestone.title}
@@ -342,8 +349,8 @@ const About = () => {
           
           <div className="grid md:grid-cols-3 gap-12 mb-16">
             {/* Mike Adesokan */}
-            <div className="text-center group fade-in-up">
-              <div className="relative mb-6">
+            <div className="text-center group profile-card scroll-triggered">
+              <div className="relative mb-6 profile-image">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-yellow/20 group-hover:border-primary-yellow transition-all duration-300">
                   <img 
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
@@ -351,7 +358,8 @@ const About = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
+                <div className="profile-overlay"></div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center animate-bounce-slow">
                   <Users className="w-6 h-6 text-charcoal-black" />
                 </div>
               </div>
