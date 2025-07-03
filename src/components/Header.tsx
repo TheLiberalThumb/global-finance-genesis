@@ -34,14 +34,14 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-charcoal-black font-playfair font-bold text-xl lg:text-2xl">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 bg-primary-yellow rounded-full flex items-center justify-center">
+                <span className="text-charcoal-black font-inter font-bold text-xl lg:text-2xl">
                   GG
                 </span>
               </div>
             </div>
             <div className="ml-3 lg:ml-4">
-              <h1 className="font-playfair font-semibold text-lg lg:text-xl text-charcoal-black">
+              <h1 className="font-inter font-semibold text-lg lg:text-xl text-charcoal-black">
                 Gission Global
               </h1>
             </div>
