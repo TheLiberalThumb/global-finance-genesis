@@ -2,32 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Gission Global Investment Design System - Wealthsimple Inspired */
 
 @layer base {
   :root {
+    /* Gission Brand Colors */
+    --primary-yellow: 51 100% 50%;        /* #FFDA00 - Main brand color */
+    --warm-red: 15 100% 60%;              /* #FF6B35 - Accent highlights */
+    --contemporary-blue: 212 100% 40%;    /* #0066CC - Trust elements */
+    --charcoal-black: 0 0% 10%;          /* #1A1A1A - Primary text */
+    --medium-gray: 0 0% 40%;             /* #666666 - Secondary text */
+    --light-gray: 0 0% 96%;              /* #F5F5F5 - Section backgrounds */
+    --soft-gray: 0 0% 98%;               /* #F9F9F9 - Subtle backgrounds */
+    
+    /* Design System Mappings */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: var(--charcoal-black);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--charcoal-black);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--charcoal-black);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--primary-yellow);
+    --primary-foreground: var(--charcoal-black);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--light-gray);
+    --secondary-foreground: var(--charcoal-black);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--light-gray);
+    --muted-foreground: var(--medium-gray);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--contemporary-blue);
+    --accent-foreground: 0 0% 100%;
+    
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 100%), hsl(var(--soft-gray)));
+    --section-gradient: linear-gradient(180deg, hsl(var(--light-gray)), hsl(0 0% 100%));
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -100,6 +111,95 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Gission Custom Components */
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+  
+  .section-gradient {
+    background: var(--section-gradient);
+  }
+  
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .coin-float {
+    animation: coinFloat 8s ease-in-out infinite;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .stagger-delay-1 { animation-delay: 0.1s; }
+  .stagger-delay-2 { animation-delay: 0.2s; }
+  .stagger-delay-3 { animation-delay: 0.3s; }
+  .stagger-delay-4 { animation-delay: 0.4s; }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 
+           px-8 py-4 rounded-3xl font-inter font-semibold text-lg
+           transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground
+           px-8 py-4 rounded-3xl font-inter font-semibold text-lg
+           transition-all duration-300 hover:scale-105;
+  }
+  
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .service-card {
+    @apply bg-card rounded-2xl p-8 shadow-md hover:shadow-xl
+           transition-all duration-300 hover:-translate-y-2
+           border-t-4 border-primary;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes coinFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(5deg); }
+    50% { transform: translateY(-30px) rotate(0deg); }
+    75% { transform: translateY(-15px) rotate(-5deg); }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes countUp {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .animate-count-up {
+    animation: countUp 0.6s ease-out;
   }
 }

@@ -18,12 +18,26 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				
+				// Gission Brand Colors
+				'primary-yellow': 'hsl(var(--primary-yellow))',
+				'warm-red': 'hsl(var(--warm-red))',
+				'contemporary-blue': 'hsl(var(--contemporary-blue))',
+				'charcoal-black': 'hsl(var(--charcoal-black))',
+				'medium-gray': 'hsl(var(--medium-gray))',
+				'light-gray': 'hsl(var(--light-gray))',
+				'soft-gray': 'hsl(var(--soft-gray))',
+				
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
