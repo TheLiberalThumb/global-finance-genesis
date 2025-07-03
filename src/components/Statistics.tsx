@@ -45,37 +45,40 @@ const Statistics = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 lg:py-32 bg-contemporary-blue relative overflow-hidden">
+    <section ref={ref} className="py-20 lg:py-32 bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-yellow rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-white rounded-full"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-light-gray rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-primary-yellow rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-light-gray rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-primary-yellow rounded-full"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
             Results That Speak
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-inter text-lg md:text-xl text-charcoal-black max-w-4xl mx-auto leading-relaxed">
             Our commitment to excellence has delivered measurable impact for clients worldwide
           </p>
         </div>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`bg-white/10 rounded-2xl p-8 text-center backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300 ${inView ? 'animate-count-up' : 'opacity-0'}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`bg-white rounded-lg p-8 text-center border border-light-gray/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${inView ? 'animate-count-up' : 'opacity-0'}`}
+              style={{ 
+                animationDelay: `${index * 0.2}s`,
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-contemporary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {index === 0 && (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   )}
@@ -93,18 +96,18 @@ const Statistics = () => {
 
               {/* Number */}
               <div className="mb-4">
-                <span className="font-inter font-bold text-4xl lg:text-5xl text-white block">
+                <span className="font-playfair font-bold text-4xl lg:text-5xl text-charcoal-black block">
                   {stat.number}
                 </span>
               </div>
 
               {/* Label */}
-              <h3 className="font-inter font-semibold text-lg text-white mb-3">
+              <h3 className="font-inter font-medium text-lg text-charcoal-black mb-3">
                 {stat.label}
               </h3>
 
               {/* Description */}
-              <p className="text-white/80 font-inter text-sm leading-relaxed">
+              <p className="text-charcoal-black/70 font-inter text-sm leading-relaxed">
                 {stat.description}
               </p>
             </div>
@@ -113,13 +116,13 @@ const Statistics = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <p className="text-xl text-white/80 mb-8 font-inter">
+          <p className="font-inter text-lg text-charcoal-black/80 mb-8 max-w-3xl mx-auto">
             Join the companies that trust us to deliver exceptional results
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a 
               href="/case-studies" 
-              className="inline-flex items-center px-8 py-4 bg-white text-contemporary-blue font-semibold text-lg rounded-2xl hover:bg-white/90 transition-all duration-300 hover:scale-105"
+              className="btn-primary inline-flex items-center justify-center"
             >
               View Case Studies
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,7 +131,7 @@ const Statistics = () => {
             </a>
             <a 
               href="/contact" 
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-2xl hover:bg-white hover:text-contemporary-blue transition-all duration-300 hover:scale-105"
+              className="btn-secondary inline-flex items-center justify-center"
             >
               Start Your Project
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
