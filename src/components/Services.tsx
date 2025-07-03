@@ -39,24 +39,25 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8 fade-in-up">
+          <h2 className="heading-lg mb-6 fade-in-up">
             Comprehensive Financial Solutions
           </h2>
-          <p className="body-text text-charcoal-black/80 max-w-4xl mx-auto fade-in-up stagger-delay-1">
+          <p className="body-text text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
             From strategic advisory to project financing, we provide end-to-end solutions 
             that drive sustainable growth and maximize value creation.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`service-card fade-in-up stagger-delay-${index + 2}`}
+              className={`service-card h-full flex flex-col fade-in-up stagger-delay-${index + 2}`}
+              style={{ padding: '32px' }}
             >
               {/* Icon */}
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mb-8 hover:scale-110 transition-all duration-300" 
+              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-all duration-300" 
                    style={{ boxShadow: 'var(--shadow-medium)' }}
                    onMouseEnter={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-yellow)'}
                    onMouseLeave={(e) => e.currentTarget.style.boxShadow = 'var(--shadow-medium)'}>
@@ -64,29 +65,29 @@ const Services = () => {
               </div>
 
               {/* Content */}
-              <h3 className="heading-md mb-6">
+              <h3 className="font-playfair font-semibold text-2xl leading-tight text-charcoal-black mb-4">
                 {service.title}
               </h3>
               
-              <p className="body-text text-charcoal-black/80 mb-8">
+              <p className="font-inter text-base leading-relaxed text-charcoal-black/80 mb-6" style={{ lineHeight: '1.6' }}>
                 {service.description}
               </p>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-8 flex-grow">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-charcoal-black font-inter">
-                    <div className="w-2 h-2 bg-primary-yellow rounded-full mr-4"></div>
-                    {feature}
+                  <li key={featureIndex} className="flex items-start font-inter text-sm text-charcoal-black">
+                    <div className="w-1.5 h-1.5 bg-primary-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
 
               {/* Learn More Link */}
-              <div className="mt-auto">
+              <div className="mt-auto pt-4">
                 <a 
                   href="/services" 
-                  className="inline-flex items-center text-charcoal-black font-inter font-semibold hover:text-primary-yellow transition-colors duration-300 group"
+                  className="inline-flex items-center font-inter text-sm font-medium text-charcoal-black hover:text-primary-yellow transition-colors duration-300 group"
                 >
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -99,8 +100,8 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-24 fade-in-up stagger-delay-5">
-          <p className="body-text text-charcoal-black/80 mb-10">
+        <div className="text-center mt-20 fade-in-up stagger-delay-5">
+          <p className="body-text text-charcoal-black/80 mb-8 max-w-2xl mx-auto">
             Ready to explore how we can help your business grow?
           </p>
           <Button className="btn-primary">
