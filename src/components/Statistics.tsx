@@ -29,12 +29,12 @@ const Statistics = () => {
     },
     {
       number: "$2B+",
-      label: "Funding Secured",
+      label: "In Funding Secured",
       description: "Capital raised for our clients through strategic partnerships"
     },
     {
       number: "98%",
-      label: "Client Satisfaction",
+      label: "Client Satisfaction Rate",
       description: "Proven track record of delivering exceptional results"
     },
     {
@@ -57,7 +57,7 @@ const Statistics = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+          <h2 className="font-inter font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
             Results That Speak
           </h2>
           <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -75,13 +75,13 @@ const Statistics = () => {
             >
               {/* Number */}
               <div className="mb-4">
-                <span className="font-playfair font-bold text-5xl md:text-6xl lg:text-7xl text-primary block">
+                <span className="font-inter font-bold text-3xl md:text-4xl lg:text-5xl text-primary-yellow block">
                   {stat.number}
                 </span>
               </div>
 
               {/* Label */}
-              <h3 className="font-playfair font-semibold text-xl md:text-2xl text-white mb-3">
+              <h3 className="font-inter font-semibold text-lg text-white mb-3">
                 {stat.label}
               </h3>
 
