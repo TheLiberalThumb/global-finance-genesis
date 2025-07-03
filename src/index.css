@@ -151,6 +151,25 @@
     background: hsl(var(--dark-section));
   }
   
+  /* Animation Container for Hero */
+  .animation-container {
+    position: relative;
+    will-change: transform;
+    transform-style: preserve-3d;
+  }
+  
+  .animation-container::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(135deg, rgba(255, 218, 0, 0.05), transparent);
+    border-radius: 3rem;
+    z-index: -1;
+  }
+  
   /* Advanced Animation System */
   .floating-animation {
     animation: float 6s ease-in-out infinite;
@@ -445,6 +464,10 @@
     .interactive-button:hover {
       transform: none;
       box-shadow: none;
+    }
+    
+    .animation-container {
+      height: 400px !important;
     }
   }
   
