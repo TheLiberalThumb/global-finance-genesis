@@ -31,11 +31,11 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-up stagger-delay-2">
-              <Button className="btn-primary">
+            <div className="flex flex-col sm:flex-row gap-6 fade-in-up stagger-delay-2">
+              <Button className="bg-primary-yellow text-charcoal-black hover:bg-primary-yellow/90 px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]">
                 Start Your Journey
               </Button>
-              <Button className="btn-secondary">
+              <Button className="bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-primary-yellow hover:border-primary-yellow px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]">
                 Learn More
               </Button>
             </div>
