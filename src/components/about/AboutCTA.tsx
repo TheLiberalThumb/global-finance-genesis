@@ -18,10 +18,10 @@ const AboutCTA = () => {
           Join the companies who trust us to turn their vision into reality.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-up stagger-delay-2">
-          <Button className="btn-primary text-lg px-10 py-5">
+          <Button className="btn-primary text-lg px-10 py-5 shadow-lg">
             Start Your Journey
           </Button>
-          <Button className="bg-white text-charcoal-black hover:bg-white/90 px-10 py-5 rounded-3xl font-medium transition-all duration-300 hover:scale-105 text-lg">
+          <Button className="bg-white text-charcoal-black hover:bg-white/90 px-10 py-5 rounded-3xl font-medium transition-all duration-300 hover:scale-105 text-lg shadow-lg border-2 border-white">
             Download Our Brochure
           </Button>
         </div>
