@@ -14,7 +14,7 @@ const CoreValues = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Excellence */}
-          <Card className="wealthsimple-card text-center interactive-card group scroll-triggered">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group scroll-triggered">
             <CardContent className="space-y-6">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-glow">
                 <Star className="w-10 h-10 text-charcoal-black" />
@@ -27,7 +27,7 @@ const CoreValues = () => {
           </Card>
 
           {/* Innovation */}
-          <Card className="wealthsimple-card text-center interactive-card group scroll-triggered stagger-delay-1">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group scroll-triggered stagger-delay-1">
             <CardContent className="space-y-6">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-pulse-custom">
                 <Lightbulb className="w-10 h-10 text-charcoal-black" />
@@ -40,7 +40,7 @@ const CoreValues = () => {
           </Card>
 
           {/* Partnership */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
             <CardContent className="space-y-6">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Handshake className="w-10 h-10 text-charcoal-black" />
@@ -53,7 +53,7 @@ const CoreValues = () => {
           </Card>
 
           {/* Impact */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
             <CardContent className="space-y-6">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Target className="w-10 h-10 text-charcoal-black" />

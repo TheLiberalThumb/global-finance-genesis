@@ -13,7 +13,7 @@ const MissionVision = () => {
         
         <div className="grid md:grid-cols-2 gap-12">
           {/* Mission Card */}
-          <Card className="wealthsimple-card border-t-4 border-primary-yellow fade-in-up">
+          <Card className="bg-white rounded-3xl p-8 border-t-4 border-primary-yellow shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up">
             <CardHeader className="pb-6">
               <CardTitle className="heading-md">Our Mission</CardTitle>
             </CardHeader>
@@ -25,7 +25,7 @@ const MissionVision = () => {
           </Card>
 
           {/* Vision Card */}
-          <Card className="wealthsimple-card border-t-4 border-primary-yellow fade-in-up stagger-delay-1">
+          <Card className="bg-white rounded-3xl p-8 border-t-4 border-primary-yellow shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up stagger-delay-1">
             <CardHeader className="pb-6">
               <CardTitle className="heading-md">Our Vision</CardTitle>
             </CardHeader>
