@@ -31,7 +31,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-up stagger-delay-2">
+            <div className="flex flex-col sm:flex-row gap-6 fade-in-up stagger-delay-2 mt-8">
               <Button variant="cta-primary">
                 Start Your Journey
               </Button>
