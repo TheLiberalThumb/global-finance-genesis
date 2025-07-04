@@ -767,19 +767,6 @@
   .animate-float-slow {
     animation: floatingElement 15s ease-in-out infinite;
   }
-
-  /* Phoenix Loading Animations */
-  .wing-flap {
-    animation: wingFlap 0.6s ease-in-out infinite alternate;
-  }
-
-  .phoenix-container {
-    animation: phoenixFloat 2s ease-in-out infinite;
-  }
-
-  .animate-fade-out {
-    animation: fadeOut 0.5s ease-out forwards;
-  }
   
   @keyframes glow {
     0%, 100% { box-shadow: 0 0 5px rgba(255, 218, 0, 0.3); }
@@ -794,20 +781,5 @@
   @keyframes bounceSlow {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
-  }
-
-  @keyframes wingFlap {
-    0% { transform: rotateZ(-12deg) rotateY(0deg); }
-    100% { transform: rotateZ(-5deg) rotateY(10deg); }
-  }
-
-  @keyframes phoenixFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-3px); }
-  }
-
-  @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
   }
 }
