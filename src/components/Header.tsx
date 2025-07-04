@@ -31,30 +31,43 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+        <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
+          {/* Logo and Company Name */}
+          <Link to="/" className="flex items-center gap-3 lg:gap-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
-                <span className="text-charcoal-black font-futura font-bold text-xl md:text-2xl">
+              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
+                <span className="text-charcoal-black font-futura font-bold text-lg md:text-xl lg:text-2xl">
                   GG
                 </span>
               </div>
             </div>
-            <div className="ml-4">
-              <h1 className="font-caslon font-semibold text-xl md:text-2xl text-charcoal-black">
+            <div>
+              <h1 className="font-caslon font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl text-charcoal-black leading-tight">
                 Gission Global
               </h1>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-futura font-medium text-lg text-charcoal-black hover:text-primary-yellow"
+                className="nav-link font-futura font-medium text-base lg:text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Tablet Navigation - Condensed */}
+          <nav className="hidden md:flex lg:hidden items-center space-x-6">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="nav-link font-futura font-medium text-sm text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -63,13 +76,13 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button variant="cta-primary">
+            <Button variant="cta-primary" className="text-sm md:text-base lg:text-lg px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4">
               Get Started
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
