@@ -31,11 +31,11 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-up stagger-delay-2">
-              <Button className="btn-primary">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-up stagger-delay-2">
+              <Button variant="cta-primary">
                 Start Your Journey
               </Button>
-              <Button className="btn-secondary">
+              <Button variant="cta-secondary">
                 Learn More
               </Button>
             </div>
