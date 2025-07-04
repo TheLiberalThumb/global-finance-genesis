@@ -151,16 +151,17 @@ const About = () => {
             
             {/* Large Supporting Image */}
             <div className="relative fade-in-up stagger-delay-3">
-              <div className="aspect-[4/3] bg-gradient-to-br from-charcoal-black to-charcoal-black/80 rounded-3xl overflow-hidden">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop" 
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&h=600&fit=crop&auto=format&q=80" 
                   alt="Global business collaboration" 
-                  className="w-full h-full object-cover mix-blend-overlay"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-black/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-black/70 via-transparent to-transparent"></div>
                 <div className="absolute bottom-8 left-8 text-white">
                   <h3 className="heading-md text-white mb-2">Global Partnerships</h3>
-                  <p className="body-text text-white/80">Building bridges across continents</p>
+                  <p className="body-text text-white/90">Building bridges across continents</p>
                 </div>
               </div>
             </div>
@@ -339,9 +340,10 @@ const About = () => {
                   <Card className={`w-full max-w-md bg-white interactive-card ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
                     <div className="aspect-[5/3] overflow-hidden rounded-t-lg interactive-image">
                       <img 
-                        src={milestone.image} 
+                        src={`${milestone.image}&auto=format&q=80`}
                         alt={milestone.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     </div>
                     <CardContent className="p-6">
@@ -377,9 +379,10 @@ const About = () => {
               <div className="relative mb-6 profile-image">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-yellow/20 group-hover:border-primary-yellow transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
                     alt="Mike Adesokan" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="profile-overlay"></div>
@@ -399,9 +402,10 @@ const About = () => {
               <div className="relative mb-6">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-yellow/20 group-hover:border-primary-yellow transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612e2c3?w=400&h=400&fit=crop&crop=face" 
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612e2c3?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
                     alt="Rebecca Adesokan" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
@@ -420,9 +424,10 @@ const About = () => {
               <div className="relative mb-6">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-primary-yellow/20 group-hover:border-primary-yellow transition-all duration-300">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" 
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
                     alt="Adeola Emmanuel" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
