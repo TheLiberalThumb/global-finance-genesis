@@ -110,10 +110,10 @@ const Team = () => {
               and unlock new opportunities for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button className="btn-secondary">
+              <Button variant="cta-secondary">
                 Meet Full Team
               </Button>
-              <Button className="btn-primary">
+              <Button variant="cta-primary">
                 Schedule Meeting
               </Button>
             </div>

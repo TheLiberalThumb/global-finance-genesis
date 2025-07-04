@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-3xl",
         link: "text-primary underline-offset-4 hover:underline",
         "cta-primary": "bg-primary-yellow text-charcoal-black hover:bg-primary-yellow/90 px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
-        "cta-secondary": "bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-charcoal-black hover:text-white hover:border-charcoal-black px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
+        "cta-secondary": "bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-primary-yellow hover:text-charcoal-black hover:border-primary-yellow px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
       },
       size: {
         default: "h-11 px-6 py-3 text-base min-h-[44px]",
