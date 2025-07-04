@@ -15,26 +15,26 @@ const AboutHero = () => {
         <div className="absolute bottom-20 right-20 w-14 h-14 bg-primary-yellow/25 rounded-full floating-animation" style={{animationDelay: '0.5s'}}></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-20 lg:py-32">
+      <div className="wide-content container-padding relative z-10 section-padding">
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center min-h-[80vh]">
           
           {/* Content Column - 60% */}
           <div className="lg:col-span-3 space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal-black leading-tight hero-content-enter">
+              <h1 className="heading-xl hero-content-enter">
                 Building <span className="text-primary-yellow">Tomorrow's</span> Financial Landscape
               </h1>
-              <p className="text-lg lg:text-xl xl:text-2xl text-charcoal-black leading-relaxed max-w-2xl hero-content-enter stagger-delay-1">
+              <p className="body-text text-xl text-charcoal-black leading-relaxed max-w-2xl hero-content-enter stagger-delay-1">
                 For over 15 years, we've been empowering businesses to achieve their boldest ambitions through strategic capital solutions and expert financial guidance.
               </p>
             </div>
             
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 hero-content-enter stagger-delay-2">
-              <Button className="bg-primary-yellow text-charcoal-black hover:bg-primary-yellow/90 px-8 py-4 rounded-3xl font-medium text-lg transition-all duration-300 hover:scale-105">
+              <Button className="btn-primary text-lg">
                 Start Your Journey
               </Button>
-              <Button className="bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-charcoal-black hover:text-white px-8 py-4 rounded-3xl font-medium text-lg transition-all duration-300">
+              <Button className="btn-secondary text-lg">
                 Learn More
               </Button>
             </div>

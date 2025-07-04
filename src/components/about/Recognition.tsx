@@ -3,8 +3,8 @@ import { CircleCheck, Award, Globe, Target } from 'lucide-react';
 
 const Recognition = () => {
   return (
-    <section className="py-24 lg:py-32 bg-light-gray">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section className="section-padding bg-light-gray">
+      <div className="content-width container-padding">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-6 fade-in-up">Recognition & Credentials</h2>
           <p className="body-text text-xl text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
@@ -14,7 +14,7 @@ const Recognition = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* SEC Licensed */}
-          <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up">
+          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <CircleCheck className="w-10 h-10 text-charcoal-black" />
@@ -25,7 +25,7 @@ const Recognition = () => {
           </Card>
 
           {/* ISO Certified */}
-          <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-1">
+          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-1">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-10 h-10 text-charcoal-black" />
@@ -36,7 +36,7 @@ const Recognition = () => {
           </Card>
 
           {/* Global Partners */}
-          <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
+          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-10 h-10 text-charcoal-black" />
@@ -47,7 +47,7 @@ const Recognition = () => {
           </Card>
 
           {/* ESG Compliant */}
-          <Card className="bg-white p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
+          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Target className="w-10 h-10 text-charcoal-black" />

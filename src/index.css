@@ -500,6 +500,73 @@
     box-shadow: var(--shadow-medium);
   }
   
+  /* Wealthsimple Typography System */
+  .heading-xl {
+    @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal-black leading-tight;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-lg {
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-charcoal-black leading-tight;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-md {
+    @apply text-xl lg:text-2xl font-semibold text-charcoal-black;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .heading-sm {
+    @apply text-lg lg:text-xl font-medium text-charcoal-black;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+  
+  .body-text {
+    @apply text-base lg:text-lg text-charcoal-black/80 leading-relaxed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  .caption-text {
+    @apply text-sm text-charcoal-black/60;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Consistent spacing system */
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply px-6 lg:px-8;
+  }
+  
+  .content-width {
+    @apply max-w-6xl mx-auto;
+  }
+  
+  .wide-content {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Animation performance improvements */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-pulse-custom {
+    animation: pulseCustom 2s ease-in-out infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounceSlow 3s ease-in-out infinite;
+  }
+  }
+  
   .service-card {
     @apply wealthsimple-card border-t-4 border-primary;
   }
@@ -768,5 +835,20 @@
   
   .animate-float-slow {
     animation: floatingElement 15s ease-in-out infinite;
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 218, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 218, 0, 0.6); }
+  }
+  
+  @keyframes pulseCustom {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  @keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 }

@@ -3,8 +3,8 @@ import { Globe, Users, Handshake, Target } from 'lucide-react';
 
 const GlobalPresence = () => {
   return (
-    <section className="py-24 lg:py-32 bg-charcoal-black text-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section className="section-padding bg-charcoal-black text-white">
+      <div className="content-width container-padding">
         <div className="text-center mb-16">
           <h2 className="heading-lg text-white mb-6 fade-in-up">Where We Operate</h2>
           <p className="body-text text-xl text-white/80 max-w-4xl mx-auto fade-in-up stagger-delay-1">

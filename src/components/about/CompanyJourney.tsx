@@ -47,8 +47,8 @@ const CompanyJourney = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-light-gray">
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+    <section className="section-padding bg-light-gray">
+      <div className="max-w-5xl mx-auto container-padding">
         <div className="text-center mb-20">
           <h2 className="heading-lg mb-6 fade-in-up">Our Journey</h2>
           <p className="body-text text-xl text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
@@ -67,7 +67,7 @@ const CompanyJourney = () => {
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-yellow rounded-full border-4 border-white shadow-lg z-10 timeline-dot ${index <= 3 ? 'active' : ''}`}></div>
                 
                 {/* Content Card */}
-                <Card className={`w-full max-w-md bg-white interactive-card ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
+                <Card className={`w-full max-w-md wealthsimple-card interactive-card ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
                   <div className="aspect-[5/3] overflow-hidden rounded-t-lg interactive-image">
                     <img 
                       src={`${milestone.image}&auto=format&q=80`}

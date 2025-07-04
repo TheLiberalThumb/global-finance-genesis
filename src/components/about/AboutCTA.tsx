@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 const AboutCTA = () => {
   return (
-    <section className="py-24 lg:py-32 bg-charcoal-black text-white relative overflow-hidden">
+    <section className="section-padding bg-charcoal-black text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-primary-yellow/10 rounded-full floating-animation"></div>
@@ -10,7 +10,7 @@ const AboutCTA = () => {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary-yellow/10 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
       </div>
       
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-4xl mx-auto container-padding text-center relative z-10">
         <h2 className="heading-xl text-white mb-8 fade-in-up">
           Ready to Transform Your Business?
         </h2>

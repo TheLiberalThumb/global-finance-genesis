@@ -3,8 +3,8 @@ import { Users, Award, Globe } from 'lucide-react';
 
 const Leadership = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section className="section-padding bg-white">
+      <div className="content-width container-padding">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-6 fade-in-up">Meet the Visionaries Behind Our Success</h2>
           <p className="body-text text-xl text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">

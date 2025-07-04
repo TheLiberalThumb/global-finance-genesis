@@ -1,7 +1,7 @@
 const CompanyStory = () => {
   return (
-    <section className="py-24 lg:py-32 bg-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+    <section className="section-padding bg-white">
+      <div className="content-width container-padding">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
@@ -9,7 +9,7 @@ const CompanyStory = () => {
               <h2 className="heading-lg fade-in-up">Our Story</h2>
               
               {/* Opening Impact Statement */}
-              <blockquote className="text-2xl lg:text-3xl font-light text-charcoal-black/90 italic border-l-4 border-primary-yellow pl-6 fade-in-up stagger-delay-1">
+              <blockquote className="heading-md font-light text-charcoal-black/90 italic border-l-4 border-primary-yellow pl-6 fade-in-up stagger-delay-1">
                 "We're not just moving money—we're building futures."
               </blockquote>
             </div>
