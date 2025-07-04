@@ -553,19 +553,6 @@
     @apply max-w-7xl mx-auto;
   }
   
-  /* Animation performance improvements */
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
-  }
-  
-  .animate-pulse-custom {
-    animation: pulseCustom 2s ease-in-out infinite;
-  }
-  
-  .animate-bounce-slow {
-    animation: bounceSlow 3s ease-in-out infinite;
-  }
-  
   /* Mobile Typography Adjustments */
   @media (max-width: 768px) {
     .heading-xl {
@@ -762,15 +749,15 @@
   }
   
   .animate-pulse-custom {
-    animation: pulse 2s ease-in-out infinite;
+    animation: pulseCustom 2s ease-in-out infinite;
   }
   
   .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+    animation: glow 2s ease-in-out infinite alternate;
   }
   
   .animate-bounce-slow {
-    animation: bounce 2s ease-in-out infinite;
+    animation: bounceSlow 3s ease-in-out infinite;
   }
   
   .animate-text-shimmer {
