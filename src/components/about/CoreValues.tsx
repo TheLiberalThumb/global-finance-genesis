@@ -6,61 +6,61 @@ const CoreValues = () => {
     <section className="section-padding bg-white">
       <div className="wide-content container-padding">
         <div className="text-center mb-20">
-          <h2 className="heading-lg mb-6 fade-in-up">What Drives Us</h2>
-          <p className="body-text text-xl text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
-            Our core values shape every decision, every partnership, and every solution we deliver
+          <h2 className="heading-lg mb-6 fade-in-up">Our Core Values</h2>
+          <p className="body-text text-xl text-charcoal-black/70 max-w-3xl mx-auto fade-in-up stagger-delay-1">
+            The principles that drive every decision, partnership, and solution we deliver to create lasting impact
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Excellence */}
-          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group scroll-triggered">
-            <CardContent className="space-y-6">
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-glow">
-                <Star className="w-10 h-10 text-charcoal-black" />
+          <Card className="bg-white rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group">
+            <CardContent className="space-y-8">
+              <div className="w-24 h-24 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+                <Star className="w-12 h-12 text-charcoal-black" />
               </div>
-              <h3 className="heading-md">Excellence</h3>
-              <p className="body-text text-charcoal-black/80">
-                We uphold the highest standards of ethics, accountability, and compliance in every transaction.
+              <h3 className="heading-md text-charcoal-black font-semibold">Excellence</h3>
+              <p className="body-text text-charcoal-black/70 leading-relaxed">
+                Upholding the highest standards of ethics, accountability, and compliance in every transaction to ensure exceptional outcomes.
               </p>
             </CardContent>
           </Card>
 
           {/* Innovation */}
-          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group scroll-triggered stagger-delay-1">
-            <CardContent className="space-y-6">
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300 animate-pulse-custom">
-                <Lightbulb className="w-10 h-10 text-charcoal-black" />
+          <Card className="bg-white rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group">
+            <CardContent className="space-y-8">
+              <div className="w-24 h-24 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+                <Lightbulb className="w-12 h-12 text-charcoal-black" />
               </div>
-              <h3 className="heading-md">Innovation</h3>
-              <p className="body-text text-charcoal-black/80">
-                We leverage cutting-edge financial strategies and technologies to deliver superior outcomes.
+              <h3 className="heading-md text-charcoal-black font-semibold">Innovation</h3>
+              <p className="body-text text-charcoal-black/70 leading-relaxed">
+                Leveraging cutting-edge financial strategies and technologies to deliver superior outcomes and drive market evolution.
               </p>
             </CardContent>
           </Card>
 
           {/* Partnership */}
-          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
-            <CardContent className="space-y-6">
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                <Handshake className="w-10 h-10 text-charcoal-black" />
+          <Card className="bg-white rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group">
+            <CardContent className="space-y-8">
+              <div className="w-24 h-24 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+                <Handshake className="w-12 h-12 text-charcoal-black" />
               </div>
-              <h3 className="heading-md">Partnership</h3>
-              <p className="body-text text-charcoal-black/80">
-                We build lasting relationships based on trust, transparency, and shared success.
+              <h3 className="heading-md text-charcoal-black font-semibold">Partnership</h3>
+              <p className="body-text text-charcoal-black/70 leading-relaxed">
+                Building lasting relationships based on trust, transparency, and shared success that create mutual value.
               </p>
             </CardContent>
           </Card>
 
           {/* Impact */}
-          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
-            <CardContent className="space-y-6">
-              <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                <Target className="w-10 h-10 text-charcoal-black" />
+          <Card className="bg-white rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group">
+            <CardContent className="space-y-8">
+              <div className="w-24 h-24 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+                <Target className="w-12 h-12 text-charcoal-black" />
               </div>
-              <h3 className="heading-md">Impact</h3>
-              <p className="body-text text-charcoal-black/80">
-                Our solutions create measurable value that drives growth and transforms industries.
+              <h3 className="heading-md text-charcoal-black font-semibold">Impact</h3>
+              <p className="body-text text-charcoal-black/70 leading-relaxed">
+                Creating measurable value that drives sustainable growth and transforms industries for lasting positive change.
               </p>
             </CardContent>
           </Card>
