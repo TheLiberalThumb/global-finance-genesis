@@ -53,7 +53,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`bg-charcoal-black rounded-2xl p-8 h-full flex flex-col fade-in-up stagger-delay-${index + 2} hover:scale-105 transition-all duration-300`}
+              className={`bg-white rounded-2xl p-8 h-full flex flex-col fade-in-up stagger-delay-${index + 2} hover:scale-105 transition-all duration-300 border border-gray-100`}
               style={{ boxShadow: 'var(--shadow-large)' }}
             >
               {/* Icon */}
@@ -62,18 +62,18 @@ const Services = () => {
               </div>
 
               {/* Content */}
-              <h3 className="font-playfair font-semibold text-2xl leading-tight text-white mb-4">
+              <h3 className="font-playfair font-semibold text-2xl leading-tight text-charcoal-black mb-4">
                 {service.title}
               </h3>
               
-              <p className="font-inter text-base leading-relaxed text-white/80 mb-6" style={{ lineHeight: '1.6' }}>
+              <p className="font-inter text-base leading-relaxed text-charcoal-black/80 mb-6" style={{ lineHeight: '1.6' }}>
                 {service.description}
               </p>
 
               {/* Features */}
               <ul className="space-y-2 mb-8 flex-grow">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start font-inter text-sm text-white/80">
+                  <li key={featureIndex} className="flex items-start font-inter text-sm text-charcoal-black/80">
                     <div className="w-1.5 h-1.5 bg-primary-yellow rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span>{feature}</span>
                   </li>
@@ -84,7 +84,7 @@ const Services = () => {
               <div className="mt-auto pt-4">
                 <a 
                   href="/services" 
-                  className="inline-flex items-center font-inter text-sm font-medium text-white hover:text-primary-yellow transition-colors duration-300 group"
+                  className="inline-flex items-center font-inter text-sm font-medium text-charcoal-black hover:text-primary-yellow transition-colors duration-300 group"
                 >
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
