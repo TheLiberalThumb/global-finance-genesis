@@ -14,7 +14,7 @@ const Recognition = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* SEC Licensed */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <CircleCheck className="w-10 h-10 text-charcoal-black" />
@@ -25,7 +25,7 @@ const Recognition = () => {
           </Card>
 
           {/* ISO Certified */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-1">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-1">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-10 h-10 text-charcoal-black" />
@@ -36,7 +36,7 @@ const Recognition = () => {
           </Card>
 
           {/* Global Partners */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-2">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-10 h-10 text-charcoal-black" />
@@ -47,7 +47,7 @@ const Recognition = () => {
           </Card>
 
           {/* ESG Compliant */}
-          <Card className="wealthsimple-card text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
+          <Card className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group fade-in-up stagger-delay-3">
             <CardContent className="space-y-4">
               <div className="w-20 h-20 bg-primary-yellow rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
                 <Target className="w-10 h-10 text-charcoal-black" />
