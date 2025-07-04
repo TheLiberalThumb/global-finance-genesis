@@ -30,11 +30,11 @@ const AboutHero = () => {
             </div>
             
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 hero-content-enter stagger-delay-2">
-              <Button className="bg-primary-yellow text-charcoal-black hover:bg-primary-yellow/90 px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]">
+            <div className="flex flex-col sm:flex-row gap-4 hero-content-enter stagger-delay-2">
+              <Button className="btn-primary text-lg">
                 Start Your Journey
               </Button>
-              <Button className="bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-primary-yellow hover:border-primary-yellow px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]">
+              <Button className="btn-secondary text-lg">
                 Learn More
               </Button>
             </div>
