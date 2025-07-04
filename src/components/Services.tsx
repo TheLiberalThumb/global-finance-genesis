@@ -101,7 +101,7 @@ const Services = () => {
           <p className="body-text text-charcoal-black/80 mb-8 max-w-2xl mx-auto">
             Ready to explore how we can help your business grow?
           </p>
-          <Button className="btn-primary">
+          <Button variant="cta-primary">
             Schedule Consultation
           </Button>
         </div>

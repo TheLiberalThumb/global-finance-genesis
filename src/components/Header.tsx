@@ -63,7 +63,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button className="btn-primary">
+            <Button variant="cta-primary">
               Get Started
             </Button>
           </div>
@@ -114,7 +114,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="btn-primary mt-6 w-full">
+              <Button variant="cta-primary" className="mt-6 w-full">
                 Get Started
               </Button>
             </nav>

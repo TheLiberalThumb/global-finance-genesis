@@ -51,7 +51,7 @@ const ContactCTA = () => {
               </p>
               <Button 
                 onClick={() => setIsSubmitted(false)}
-                className="btn-secondary"
+                variant="cta-secondary"
               >
                 Send Another Message
               </Button>
@@ -186,7 +186,8 @@ const ContactCTA = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn-primary text-xl py-6"
+                variant="cta-primary"
+                className="w-full text-xl"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">

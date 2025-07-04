@@ -82,7 +82,7 @@ const Leadership = () => {
         </div>
 
         <div className="text-center fade-in-up stagger-delay-3">
-          <Button className="btn-secondary text-lg px-8 py-4">
+          <Button variant="cta-secondary">
             Meet Our Full Team
           </Button>
         </div>
