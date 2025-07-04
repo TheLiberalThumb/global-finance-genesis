@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +32,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="w-12 h-12 md:w-14 md:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
                 <span className="text-charcoal-black font-futura font-bold text-xl md:text-2xl">
@@ -46,7 +45,7 @@ const Header = () => {
                 Gission Global
               </h1>
             </div>
-          </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
