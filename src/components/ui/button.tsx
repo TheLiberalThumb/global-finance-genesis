@@ -9,17 +9,17 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-charcoal-black hover:bg-primary/90 rounded-3xl shadow-md hover:shadow-lg hover:scale-105",
+        default: "bg-primary text-dark-navy hover:bg-primary/90 rounded-3xl shadow-md hover:shadow-lg hover:scale-105",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded-3xl",
         outline:
-          "border border-charcoal-black text-charcoal-black bg-white hover:bg-charcoal-black hover:text-white rounded-3xl shadow-sm hover:shadow-md hover:scale-105",
+          "border border-rich-gold text-rich-gold bg-dark-navy hover:bg-rich-gold hover:text-dark-navy rounded-3xl shadow-sm hover:shadow-md hover:scale-105",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-3xl",
         ghost: "hover:bg-accent hover:text-accent-foreground rounded-3xl",
         link: "text-primary underline-offset-4 hover:underline",
-        "cta-primary": "bg-primary-yellow text-charcoal-black hover:bg-primary-yellow/90 px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
-        "cta-secondary": "bg-white text-charcoal-black border-2 border-charcoal-black hover:bg-primary-yellow hover:text-charcoal-black hover:border-primary-yellow px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
+        "cta-primary": "bg-rich-gold text-dark-navy hover:bg-rich-gold/90 px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
+        "cta-secondary": "bg-dark-navy text-rich-gold border-2 border-rich-gold hover:bg-rich-gold hover:text-dark-navy hover:border-rich-gold px-12 py-6 rounded-3xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-h-[56px]",
       },
       size: {
         default: "h-11 px-6 py-3 text-base min-h-[44px]",

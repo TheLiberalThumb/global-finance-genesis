@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-navy ${
         isScrolled 
           ? 'header-shadow' 
           : ''
@@ -35,14 +35,14 @@ const Header = () => {
           {/* Logo and Company Name */}
           <Link to="/" className="flex items-center gap-3 lg:gap-4">
             <div className="flex-shrink-0">
-              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-primary-yellow rounded-full flex items-center justify-center logo-hover">
-                <span className="text-charcoal-black font-futura font-bold text-lg md:text-xl lg:text-2xl">
+              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-rich-gold rounded-full flex items-center justify-center logo-hover">
+                <span className="text-dark-navy font-futura font-bold text-lg md:text-xl lg:text-2xl">
                   GG
                 </span>
               </div>
             </div>
             <div>
-              <h1 className="font-caslon font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl text-charcoal-black leading-tight">
+              <h1 className="font-caslon font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl text-pure-white leading-tight">
                 Gission Global
               </h1>
             </div>
@@ -54,7 +54,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-futura font-medium text-base lg:text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+                className="nav-link font-futura font-medium text-base lg:text-lg text-light-gray hover:text-rich-gold transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -67,7 +67,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-futura font-medium text-sm text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+                className="nav-link font-futura font-medium text-sm text-light-gray hover:text-rich-gold transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -85,7 +85,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+              className="text-light-gray hover:text-rich-gold transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               <svg
@@ -115,13 +115,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white rounded-2xl shadow-large mt-4 py-6 px-6 animate-fade-in">
+          <div className="md:hidden bg-dark-navy rounded-2xl shadow-large mt-4 py-6 px-6 animate-fade-in border border-rich-gold/20">
             <nav className="flex flex-col space-y-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-futura font-medium text-lg text-charcoal-black hover:text-primary-yellow transition-colors duration-300"
+                  className="font-futura font-medium text-lg text-light-gray hover:text-rich-gold transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

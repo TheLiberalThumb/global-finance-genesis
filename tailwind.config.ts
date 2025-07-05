@@ -31,9 +31,10 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				// Wealthsimple-Inspired Brand Colors
-				'primary-yellow': 'hsl(var(--primary-yellow))',
-				'charcoal-black': 'hsl(var(--charcoal-black))',
+				// World Liberty Financial Premium Brand Colors
+				'rich-gold': 'hsl(var(--rich-gold))',
+				'dark-navy': 'hsl(var(--dark-navy))',
+				'deep-navy': 'hsl(var(--deep-navy))',
 				'pure-white': 'hsl(var(--pure-white))',
 				'light-gray': 'hsl(var(--light-gray))',
 				

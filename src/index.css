@@ -5,54 +5,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wealthsimple-Inspired Design System - Minimal Color Palette */
+/* World Liberty Financial-Inspired Design System - Premium Gold & Navy Palette */
 
 @layer base {
   :root {
-    /* Wealthsimple Restricted Color Palette */
-    --primary-yellow: 51 100% 50%;        /* #FFDA00 - Primary brand color */
-    --charcoal-black: 0 0% 10%;          /* #1A1A1A - Primary text & dark sections */
-    --pure-white: 0 0% 100%;             /* #FFFFFF - Backgrounds & cards */
-    --light-gray: 0 0% 96%;              /* #F5F5F5 - Subtle background variations */
+    /* World Liberty Financial Premium Color Palette */
+    --rich-gold: 51 100% 50%;            /* #FFD700 - Primary gold accent */
+    --dark-navy: 0 0% 11%;               /* #1B1B1B - Primary background */
+    --deep-navy: 285 6% 14%;             /* #242124 - Secondary background */
+    --pure-white: 0 0% 100%;             /* #FFFFFF - Text on dark backgrounds */
+    --light-gray: 43 8% 89%;             /* #E5E4E2 - Secondary text */
     
-    /* Design System Mappings */
-    --background: var(--pure-white);
-    --foreground: var(--charcoal-black);
+    /* World Liberty Financial Design System Mappings */
+    --background: var(--dark-navy);
+    --foreground: var(--pure-white);
 
-    --card: var(--pure-white);
-    --card-foreground: var(--charcoal-black);
+    --card: var(--dark-navy);
+    --card-foreground: var(--pure-white);
 
-    --popover: var(--pure-white);
-    --popover-foreground: var(--charcoal-black);
+    --popover: var(--dark-navy);
+    --popover-foreground: var(--pure-white);
 
-    --primary: var(--primary-yellow);
-    --primary-foreground: var(--pure-white);
+    --primary: var(--rich-gold);
+    --primary-foreground: var(--dark-navy);
 
-    --secondary: var(--light-gray);
-    --secondary-foreground: var(--charcoal-black);
+    --secondary: var(--deep-navy);
+    --secondary-foreground: var(--pure-white);
 
-    --muted: var(--light-gray);
-    --muted-foreground: var(--charcoal-black);
+    --muted: var(--deep-navy);
+    --muted-foreground: var(--light-gray);
 
-    --accent: var(--primary-yellow);
-    --accent-foreground: var(--charcoal-black);
+    --accent: var(--rich-gold);
+    --accent-foreground: var(--dark-navy);
     
-    /* Wealthsimple-style gradients */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--pure-white)) 0%, hsl(var(--light-gray)) 100%);
-    --dark-section: var(--charcoal-black);
+    /* Premium WLF Gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--dark-navy)) 0%, hsl(var(--deep-navy)) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(var(--rich-gold)) 0%, hsl(51 100% 85%) 100%);
+    --dark-section: var(--dark-navy);
     
-    /* Wealthsimple Shadows */
-    --shadow-subtle: 0 2px 10px rgba(0,0,0,0.1);
-    --shadow-medium: 0 4px 20px rgba(0,0,0,0.15);
-    --shadow-large: 0 8px 32px rgba(0,0,0,0.2);
-    --shadow-yellow: 0 4px 20px rgba(255, 218, 0, 0.3);
+    /* Premium Gold & Navy Shadows */
+    --shadow-subtle: 0 2px 10px rgba(0,0,0,0.3);
+    --shadow-medium: 0 4px 20px rgba(0,0,0,0.4);
+    --shadow-large: 0 8px 32px rgba(0,0,0,0.5);
+    --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 94%;
-    --ring: var(--primary-yellow);
+    --border: 43 8% 89%;
+    --input: 285 6% 14%;
+    --ring: var(--rich-gold);
 
     --radius: 0.5rem;
 
@@ -262,7 +264,7 @@
   }
   
   .interactive-button:hover {
-    box-shadow: 0 8px 25px rgba(255, 218, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
     transform: translateY(-2px) scale(1.05);
   }
   
@@ -292,7 +294,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(45deg, rgba(255, 218, 0, 0.1), transparent);
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
@@ -311,7 +313,7 @@
     content: '';
     position: absolute;
     inset: -8px;
-    border: 2px solid rgba(255, 218, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.3);
     border-radius: 50%;
     opacity: 0;
     transform: scale(0.8);
@@ -326,7 +328,7 @@
   
   .timeline-dot:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 20px rgba(255, 218, 0, 0.6);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
   }
   
   /* Leadership Interactions */
@@ -349,7 +351,7 @@
   }
   
   .profile-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-charcoal-black/50 to-transparent 
+    @apply absolute inset-0 bg-gradient-to-t from-dark-navy/50 to-transparent 
            opacity-0 transition-opacity duration-300;
   }
   
@@ -359,7 +361,7 @@
   
   /* Text Animations */
   .animate-text-reveal {
-    background: linear-gradient(90deg, transparent, hsl(var(--primary-yellow)), transparent);
+    background: linear-gradient(90deg, transparent, hsl(var(--rich-gold)), transparent);
     background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -379,7 +381,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: hsl(var(--primary-yellow));
+    background: hsl(var(--rich-gold));
     transform: translateX(-100%);
     transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
@@ -448,9 +450,9 @@
     }
   }
   
-  /* Wealthsimple Button System */
+  /* World Liberty Financial Button System */
   .btn-primary {
-    @apply bg-primary text-charcoal-black hover:bg-primary/90 
+    @apply bg-primary text-dark-navy hover:bg-primary/90 
            px-8 py-4 rounded-3xl font-medium
            transition-all duration-300 interactive-button 
            min-h-[56px];
@@ -463,8 +465,8 @@
   }
   
   .btn-secondary {
-    @apply border border-charcoal-black text-charcoal-black bg-white 
-           hover:bg-charcoal-black hover:text-white
+    @apply border border-rich-gold text-rich-gold bg-dark-navy 
+           hover:bg-rich-gold hover:text-dark-navy
            px-8 py-4 rounded-3xl font-medium
            transition-all duration-300 interactive-button min-h-[56px];
     font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -485,7 +487,7 @@
   }
   
   .logo-hover:hover {
-    box-shadow: var(--shadow-yellow);
+    box-shadow: var(--shadow-gold);
   }
   
   .nav-link {
@@ -494,44 +496,44 @@
   
   /* Card System */
   .wealthsimple-card {
-    @apply bg-white rounded-3xl p-8 
+    @apply bg-card rounded-3xl p-8 
            transition-all duration-300 interactive-card
-           border border-light-gray/50;
+           border border-light-gray/20;
     box-shadow: var(--shadow-medium);
   }
   
-  /* Wealthsimple Typography System */
+  /* World Liberty Financial Typography System */
   .heading-xl {
-    @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal-black leading-tight;
+    @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     letter-spacing: -0.02em;
   }
   
   .heading-lg {
-    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-charcoal-black leading-tight;
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground leading-tight;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     letter-spacing: -0.02em;
   }
   
   .heading-md {
-    @apply text-xl lg:text-2xl font-semibold text-charcoal-black;
+    @apply text-xl lg:text-2xl font-semibold text-foreground;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     letter-spacing: -0.01em;
   }
   
   .heading-sm {
-    @apply text-lg lg:text-xl font-medium text-charcoal-black;
+    @apply text-lg lg:text-xl font-medium text-foreground;
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   }
   
   .body-text {
-    @apply text-base lg:text-lg text-charcoal-black/80 leading-relaxed;
+    @apply text-base lg:text-lg text-muted-foreground leading-relaxed;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
   }
   
   .caption-text {
-    @apply text-sm text-charcoal-black/60;
+    @apply text-sm text-muted-foreground/80;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
   }
@@ -726,10 +728,10 @@
   
   @keyframes glow {
     0%, 100% { 
-      box-shadow: 0 0 5px rgba(255, 218, 0, 0.5);
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
     }
     50% { 
-      box-shadow: 0 0 20px rgba(255, 218, 0, 0.8), 0 0 30px rgba(255, 218, 0, 0.4);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.4);
     }
   }
   
@@ -769,8 +771,8 @@
   }
   
   @keyframes glow {
-    0%, 100% { box-shadow: 0 0 5px rgba(255, 218, 0, 0.3); }
-    50% { box-shadow: 0 0 20px rgba(255, 218, 0, 0.6); }
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
   }
   
   @keyframes pulseCustom {
