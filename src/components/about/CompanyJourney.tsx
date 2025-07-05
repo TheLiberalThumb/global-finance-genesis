@@ -47,27 +47,27 @@ const CompanyJourney = () => {
   ];
 
   return (
-    <section className="section-padding bg-light-gray">
+    <section className="section-padding bg-background">
       <div className="max-w-5xl mx-auto container-padding">
         <div className="text-center mb-20">
           <h2 className="heading-lg mb-6 fade-in-up">Our Journey</h2>
-          <p className="body-text text-xl text-charcoal-black/80 max-w-3xl mx-auto fade-in-up stagger-delay-1">
+          <p className="body-text text-xl text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1">
             Milestones that shaped our path to becoming a trusted global investment partner
           </p>
         </div>
         
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-0.5 h-full w-0.5 bg-primary-yellow/30"></div>
+          <div className="absolute left-1/2 transform -translate-x-0.5 h-full w-0.5 bg-rich-gold/30"></div>
           
           <div className="space-y-16">
             {milestones.map((milestone, index) => (
               <div key={milestone.year} className={`relative flex ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} scroll-triggered ${milestone.side === 'left' ? 'milestone-enter-left' : 'milestone-enter-right'}`} style={{animationDelay: `${index * 0.2}s`}}>
                 {/* Timeline Dot */}
-                <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary-yellow rounded-full border-4 border-white shadow-lg z-10 timeline-dot ${index <= 3 ? 'active' : ''}`}></div>
+                <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-rich-gold rounded-full border-4 border-background shadow-lg z-10 timeline-dot ${index <= 3 ? 'active' : ''}`}></div>
                 
                 {/* Content Card */}
-                <Card className={`w-full max-w-md bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
+                <Card className={`w-full max-w-md bg-card rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-rich-gold/20 ${milestone.side === 'left' ? 'mr-8' : 'ml-8'}`}>
                   <div className="aspect-[5/3] overflow-hidden rounded-t-lg interactive-image">
                     <img 
                       src={`${milestone.image}&auto=format&q=80`}
@@ -78,12 +78,12 @@ const CompanyJourney = () => {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center">
-                        <span className="font-bold text-charcoal-black text-sm">{milestone.year}</span>
+                      <div className="w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center">
+                        <span className="font-bold text-dark-navy text-sm">{milestone.year}</span>
                       </div>
-                      <h3 className="heading-md">{milestone.title}</h3>
+                      <h3 className="heading-md text-foreground">{milestone.title}</h3>
                     </div>
-                    <p className="body-text text-charcoal-black/80">{milestone.description}</p>
+                    <p className="body-text text-light-gray">{milestone.description}</p>
                   </CardContent>
                 </Card>
               </div>

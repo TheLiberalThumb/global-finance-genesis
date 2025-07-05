@@ -1,6 +1,6 @@
 const CompanyStory = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-background">
       <div className="content-width container-padding">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -9,7 +9,7 @@ const CompanyStory = () => {
               <h2 className="heading-lg fade-in-up">Our Story</h2>
               
               {/* Opening Impact Statement */}
-              <blockquote className="heading-md font-light text-charcoal-black/90 italic border-l-4 border-primary-yellow pl-6 fade-in-up stagger-delay-1">
+              <blockquote className="heading-md font-light text-light-gray italic border-l-4 border-rich-gold pl-6 fade-in-up stagger-delay-1">
                 "We're not just moving money—we're building futures."
               </blockquote>
             </div>
@@ -21,12 +21,12 @@ const CompanyStory = () => {
               
               {/* Statistics Callouts */}
               <div className="grid grid-cols-2 gap-4 my-8">
-                <div className="bg-primary-yellow/10 p-6 rounded-2xl text-center border border-primary-yellow/20">
-                  <div className="heading-md text-primary-yellow">$2B+</div>
+                <div className="bg-rich-gold/10 p-6 rounded-2xl text-center border border-rich-gold/20">
+                  <div className="heading-md text-rich-gold">$2B+</div>
                   <div className="caption-text">Funding Facilitated</div>
                 </div>
-                <div className="bg-primary-yellow/10 p-6 rounded-2xl text-center border border-primary-yellow/20">
-                  <div className="heading-md text-primary-yellow">98%</div>
+                <div className="bg-rich-gold/10 p-6 rounded-2xl text-center border border-rich-gold/20">
+                  <div className="heading-md text-rich-gold">98%</div>
                   <div className="caption-text">Client Satisfaction</div>
                 </div>
               </div>
@@ -46,10 +46,10 @@ const CompanyStory = () => {
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal-black/70 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/70 via-transparent to-transparent"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="heading-md text-white mb-2">Global Partnerships</h3>
-                <p className="body-text text-white/90">Building bridges across continents</p>
+                <h3 className="heading-md text-pure-white mb-2">Global Partnerships</h3>
+                <p className="body-text text-pure-white/90">Building bridges across continents</p>
               </div>
             </div>
           </div>

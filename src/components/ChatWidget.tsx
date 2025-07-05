@@ -144,9 +144,9 @@ const ChatWidget = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={openChat}
-          className="w-16 h-16 rounded-full bg-primary-yellow hover:bg-primary-yellow/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+          className="w-16 h-16 rounded-full bg-rich-gold hover:bg-rich-gold/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
         >
-          <MessageCircle className="w-6 h-6 text-charcoal-black group-hover:scale-110 transition-transform duration-300" />
+          <MessageCircle className="w-6 h-6 text-dark-navy group-hover:scale-110 transition-transform duration-300" />
           {hasUnread && (
             <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
           )}
@@ -159,16 +159,16 @@ const ChatWidget = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <div className="bg-white rounded-2xl shadow-2xl w-96 h-[600px] flex flex-col animate-scale-in">
         {/* Header */}
-        <div className="bg-primary-yellow p-4 rounded-t-2xl flex items-center justify-between">
+        <div className="bg-rich-gold p-4 rounded-t-2xl flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-charcoal-black rounded-full flex items-center justify-center">
-              <span className="text-primary-yellow font-bold text-lg">GG</span>
+            <div className="w-10 h-10 bg-dark-navy rounded-full flex items-center justify-center">
+              <span className="text-rich-gold font-bold text-lg">GG</span>
             </div>
             <div>
-              <h3 className="font-semibold text-charcoal-black">Gission Global</h3>
+              <h3 className="font-semibold text-dark-navy">Gission Global</h3>
               <div className="flex items-center space-x-1">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-charcoal-black/80">Online</span>
+                <span className="text-sm text-dark-navy/80">Online</span>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ const ChatWidget = () => {
               variant="ghost"
               size="sm"
               onClick={closeChat}
-              className="text-charcoal-black hover:bg-charcoal-black/10 p-1 h-8 w-8"
+              className="text-dark-navy hover:bg-dark-navy/10 p-1 h-8 w-8"
             >
               <Minimize2 className="w-4 h-4" />
             </Button>
@@ -185,7 +185,7 @@ const ChatWidget = () => {
               variant="ghost"
               size="sm"
               onClick={closeChat}
-              className="text-charcoal-black hover:bg-charcoal-black/10 p-1 h-8 w-8"
+              className="text-dark-navy hover:bg-dark-navy/10 p-1 h-8 w-8"
             >
               <X className="w-4 h-4" />
             </Button>
@@ -193,7 +193,7 @@ const ChatWidget = () => {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-light-gray/30">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/30">
           {messages.map((message) => (
             <div
               key={message.id}
@@ -202,8 +202,8 @@ const ChatWidget = () => {
               <div
                 className={`max-w-[80%] p-3 rounded-2xl ${
                   message.sender === 'user'
-                    ? 'bg-primary-yellow text-charcoal-black'
-                    : 'bg-white text-charcoal-black shadow-sm border border-light-gray/50'
+                    ? 'bg-rich-gold text-dark-navy'
+                    : 'bg-card text-foreground shadow-sm border border-rich-gold/20'
                 }`}
               >
                 <p className="text-sm leading-relaxed">{message.content}</p>
@@ -223,12 +223,12 @@ const ChatWidget = () => {
                   <Button
                     key={action.action}
                     variant="outline"
-                    className="p-3 h-auto text-left border-charcoal-black/20 hover:border-primary-yellow hover:bg-primary-yellow/10 transition-all duration-300"
+                    className="p-3 h-auto text-left border-rich-gold/20 hover:border-rich-gold hover:bg-rich-gold/10 transition-all duration-300"
                     onClick={() => handleQuickAction(action.action, action.text)}
                   >
                     <div className="flex flex-col items-center space-y-2">
-                      <Icon className="w-5 h-5 text-charcoal-black" />
-                      <span className="text-xs text-charcoal-black text-center leading-tight">
+                      <Icon className="w-5 h-5 text-foreground" />
+                      <span className="text-xs text-foreground text-center leading-tight">
                         {action.text}
                       </span>
                     </div>
@@ -241,11 +241,11 @@ const ChatWidget = () => {
           {/* Typing Indicator */}
           {isTyping && (
             <div className="flex justify-start">
-              <div className="bg-white p-3 rounded-2xl shadow-sm border border-light-gray/50">
+              <div className="bg-card p-3 rounded-2xl shadow-sm border border-rich-gold/20">
                 <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-charcoal-black/40 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-charcoal-black/40 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-charcoal-black/40 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ const ChatWidget = () => {
         </div>
 
         {/* Input */}
-        <div className="p-4 border-t border-light-gray/50">
+        <div className="p-4 border-t border-rich-gold/20">
           <div className="flex space-x-2">
             <Input
               ref={inputRef}
@@ -263,17 +263,17 @@ const ChatWidget = () => {
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type your message..."
-              className="flex-1 border-charcoal-black/20 focus:border-primary-yellow focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,218,0,0.2)] bg-white"
+              className="flex-1 border-rich-gold/20 focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] bg-card text-foreground"
             />
             <Button
               onClick={handleSendMessage}
               disabled={!inputValue.trim()}
-              className="bg-primary-yellow hover:bg-primary-yellow/90 text-charcoal-black p-3 rounded-lg transition-all duration-300 hover:scale-105"
+              className="bg-rich-gold hover:bg-rich-gold/90 text-dark-navy p-3 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Send className="w-4 h-4" />
             </Button>
           </div>
-          <p className="text-xs text-charcoal-black/60 mt-2 text-center">
+          <p className="text-xs text-light-gray mt-2 text-center">
             We typically respond within minutes
           </p>
         </div>
