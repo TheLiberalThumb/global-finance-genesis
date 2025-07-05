@@ -3,9 +3,9 @@ import { Globe } from 'lucide-react';
 
 const AboutHero = () => {
   return (
-    <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
+    <section className="relative bg-dark-navy min-h-screen flex items-center overflow-hidden">
       {/* Subtle background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background to-deep-navy"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-dark-navy to-deep-navy"></div>
       
       {/* Subtle floating background elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
