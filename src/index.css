@@ -9,12 +9,24 @@
 
 @layer base {
   :root {
-    /* World Liberty Financial Premium Color Palette */
+    /* World Liberty Financial Premium Color Palette - Enhanced System */
     --rich-gold: 51 100% 50%;            /* #FFD700 - Primary gold accent */
     --dark-navy: 0 0% 11%;               /* #1B1B1B - Primary background */
     --deep-navy: 285 6% 14%;             /* #242124 - Secondary background */
     --pure-white: 0 0% 100%;             /* #FFFFFF - Text on dark backgrounds */
     --light-gray: 43 8% 89%;             /* #E5E4E2 - Secondary text */
+    
+    /* WLF Enhanced Color System */
+    --primary-yellow: var(--rich-gold);
+    --primary-gold: var(--rich-gold);
+    --bg-primary: var(--dark-navy);
+    --bg-secondary: var(--deep-navy);
+    --text-primary: var(--pure-white);
+    --text-secondary: var(--light-gray);
+    --text-accent: var(--rich-gold);
+    --border-primary: var(--rich-gold);
+    --border-subtle: var(--rich-gold);
+    --hover-gold: var(--rich-gold);
     
     /* World Liberty Financial Design System Mappings */
     --background: var(--dark-navy);
@@ -38,16 +50,20 @@
     --accent: var(--rich-gold);
     --accent-foreground: var(--dark-navy);
     
-    /* Premium WLF Gradients */
+    /* Premium WLF Gradients - Enhanced System */
     --hero-gradient: linear-gradient(135deg, hsl(var(--dark-navy)) 0%, hsl(var(--deep-navy)) 100%);
     --gold-gradient: linear-gradient(135deg, hsl(var(--rich-gold)) 0%, hsl(51 100% 85%) 100%);
+    --bg-gradient: linear-gradient(135deg, hsl(var(--dark-navy)) 0%, hsl(var(--deep-navy)) 100%);
     --dark-section: var(--dark-navy);
     
-    /* Premium Gold & Navy Shadows */
+    /* Premium Gold & Navy Shadows - Enhanced System */
     --shadow-subtle: 0 2px 10px rgba(0,0,0,0.3);
     --shadow-medium: 0 4px 20px rgba(0,0,0,0.4);
     --shadow-large: 0 8px 32px rgba(0,0,0,0.5);
     --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
+    --shadow-enhanced: 0 8px 25px rgba(255, 215, 0, 0.4);
+    --focus-ring: rgba(255, 215, 0, 0.3);
+    --hover-glow: 0 0 20px rgba(255, 215, 0, 0.6);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;

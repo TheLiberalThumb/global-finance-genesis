@@ -23,8 +23,8 @@ const AboutHero = () => {
           <div className="order-1 lg:order-2 lg:col-span-2 relative hero-content-enter stagger-delay-2">
             <div className="relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] bg-deep-navy rounded-3xl overflow-hidden border border-rich-gold/20">
               
-              {/* Animation Container */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-deep-navy to-dark-navy">
+               {/* Animation Container */}
+               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-dark-navy to-deep-navy">
                 
                 {/* Central Focus Element - Ready for GIF/Animation */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
