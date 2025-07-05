@@ -29,21 +29,21 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8 fade-in-up text-foreground">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="heading-lg mb-6 sm:mb-8 fade-in-up text-foreground">
             Meet Our Leadership
           </h2>
-          <p className="body-text text-light-gray max-w-4xl mx-auto fade-in-up stagger-delay-1">
+          <p className="body-text text-light-gray max-w-4xl mx-auto fade-in-up stagger-delay-1 px-4 sm:px-0">
             Our experienced team combines deep industry knowledge with innovative thinking 
             to deliver exceptional results for our clients.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}

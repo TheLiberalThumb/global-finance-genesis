@@ -8,13 +8,13 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-rich-gold/15 rounded-full floating-animation stagger-delay-2"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         {/* Mobile: Animation above content, Desktop: Side by side */}
-        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-8 lg:gap-16 lg:items-center min-h-[80vh]">
+        <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-16 lg:items-center min-h-[70vh] sm:min-h-[80vh]">
           
           {/* Animation Section - Shows first on mobile, right on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-2 relative">
-            <div className="animation-container relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
+            <div className="animation-container relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
               
               {/* 3D Animation Container */}
               <div className="absolute inset-0 bg-background rounded-3xl border border-rich-gold/20">
@@ -52,28 +52,28 @@ const Hero = () => {
           </div>
 
           {/* Content Section - Shows second on mobile, left on desktop */}
-          <div className="order-2 lg:order-1 lg:col-span-3 space-y-6 lg:space-y-8 text-center lg:text-left pt-8 lg:pt-0">
+          <div className="order-2 lg:order-1 lg:col-span-3 space-y-4 sm:space-y-6 lg:space-y-8 text-center lg:text-left pt-6 sm:pt-8 lg:pt-0">
             {/* Main Headline */}
             <div className="fade-in-up">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-playfair font-bold text-foreground leading-tight mb-4 lg:mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-playfair font-bold text-foreground leading-tight mb-3 sm:mb-4 lg:mb-6">
                 Your business <span className="text-rich-gold">deserves</span> more
               </h1>
             </div>
             
             {/* Subheading */}
             <div className="fade-in-up stagger-delay-1">
-              <p className="font-futura text-lg sm:text-xl lg:text-2xl text-light-gray leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="font-futura text-base sm:text-lg md:text-xl lg:text-2xl text-light-gray leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Get the most out of your capital with smart investment solutions and 
                 personalized advisory services to build long-term value.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 fade-in-up stagger-delay-2 mt-8 justify-center lg:justify-start">
-              <Button variant="cta-primary">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 fade-in-up stagger-delay-2 mt-6 sm:mt-8 justify-center lg:justify-start">
+              <Button variant="cta-primary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
                 Start Your Journey
               </Button>
-              <Button variant="cta-secondary">
+              <Button variant="cta-secondary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
                 Learn More
               </Button>
             </div>

@@ -1,8 +1,8 @@
 const CompanyStory = () => {
   return (
     <section className="section-padding bg-background">
-      <div className="content-width container-padding">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="content-width container-padding px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -20,12 +20,12 @@ const CompanyStory = () => {
               </p>
               
               {/* Statistics Callouts */}
-              <div className="grid grid-cols-2 gap-4 my-8">
-                <div className="bg-rich-gold/10 p-6 rounded-2xl text-center border border-rich-gold/20">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6 sm:my-8">
+                <div className="bg-rich-gold/10 p-4 sm:p-6 rounded-2xl text-center border border-rich-gold/20">
                   <div className="heading-md text-rich-gold">$2B+</div>
                   <div className="caption-text">Funding Facilitated</div>
                 </div>
-                <div className="bg-rich-gold/10 p-6 rounded-2xl text-center border border-rich-gold/20">
+                <div className="bg-rich-gold/10 p-4 sm:p-6 rounded-2xl text-center border border-rich-gold/20">
                   <div className="heading-md text-rich-gold">98%</div>
                   <div className="caption-text">Client Satisfaction</div>
                 </div>

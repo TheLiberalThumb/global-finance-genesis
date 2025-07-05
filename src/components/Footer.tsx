@@ -1,7 +1,7 @@
 const StayInformedSection = () => {
   return (
     <section className="bg-background mt-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-rich-gold mb-6 font-playfair">
             Stay Informed
@@ -62,10 +62,10 @@ const Footer = () => {
     <>
       <StayInformedSection />
       <footer className="bg-background">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8">
             {/* Company Info */}
-            <div className="md:col-span-2">
+            <div className="sm:col-span-2 md:col-span-2">
               {/* Logo */}
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center mr-4">

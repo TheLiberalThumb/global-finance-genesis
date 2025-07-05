@@ -30,19 +30,19 @@ const Header = () => {
           : ''
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20 lg:h-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 lg:h-24">
           {/* Logo and Company Name */}
-          <Link to="/" className="flex items-center gap-3 lg:gap-4">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 lg:gap-4">
             <div className="flex-shrink-0">
-              <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-rich-gold rounded-full flex items-center justify-center logo-hover">
-                <span className="text-dark-navy font-futura font-bold text-lg md:text-xl lg:text-2xl">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-rich-gold rounded-full flex items-center justify-center logo-hover">
+                <span className="text-dark-navy font-futura font-bold text-sm sm:text-lg md:text-xl lg:text-2xl">
                   GG
                 </span>
               </div>
             </div>
             <div>
-              <h1 className="font-caslon font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl text-pure-white leading-tight">
+              <h1 className="font-caslon font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-pure-white leading-tight">
                 Gission Global
               </h1>
             </div>
@@ -76,7 +76,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button variant="cta-primary" className="text-sm md:text-base lg:text-lg px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4">
+            <Button variant="cta-primary" className="text-xs sm:text-sm md:text-base lg:text-lg px-3 sm:px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 min-h-[40px] sm:min-h-[44px]">
               Get Started
             </Button>
           </div>
@@ -115,19 +115,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-dark-navy rounded-2xl shadow-large mt-4 py-6 px-6 animate-fade-in border border-rich-gold/20">
+          <div className="md:hidden bg-dark-navy rounded-2xl shadow-large mt-4 py-6 px-6 animate-fade-in border border-rich-gold/20 mx-4">
             <nav className="flex flex-col space-y-6">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-futura font-medium text-lg text-pure-white hover:text-rich-gold transition-colors duration-300"
+                  className="font-futura font-medium text-lg text-pure-white hover:text-rich-gold transition-colors duration-300 py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <Button variant="cta-primary" className="mt-6 w-full">
+              <Button variant="cta-primary" className="mt-6 w-full min-h-[48px] text-base">
                 Get Started
               </Button>
             </nav>

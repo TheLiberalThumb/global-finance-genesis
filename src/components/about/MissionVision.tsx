@@ -3,17 +3,17 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const MissionVision = () => {
   return (
     <section className="section-padding bg-background">
-      <div className="content-width container-padding">
-        <div className="text-center mb-16">
-          <h2 className="heading-lg mb-6 fade-in-up">Our Purpose</h2>
-          <p className="body-text text-xl text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1">
+      <div className="content-width container-padding px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="heading-lg mb-4 sm:mb-6 fade-in-up">Our Purpose</h2>
+          <p className="body-text text-lg sm:text-xl text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1">
             Driving meaningful change through strategic financial solutions
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {/* Mission Card */}
-          <Card className="bg-card rounded-3xl p-8 border-t-4 border-rich-gold shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up">
+          <Card className="bg-card rounded-3xl p-6 sm:p-8 border-t-4 border-rich-gold shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up">
             <CardHeader className="pb-6">
               <CardTitle className="heading-md text-foreground">Our Mission</CardTitle>
             </CardHeader>
@@ -25,7 +25,7 @@ const MissionVision = () => {
           </Card>
 
           {/* Vision Card */}
-          <Card className="bg-card rounded-3xl p-8 border-t-4 border-rich-gold shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up stagger-delay-1">
+          <Card className="bg-card rounded-3xl p-6 sm:p-8 border-t-4 border-rich-gold shadow-lg hover:shadow-xl transition-all duration-300 fade-in-up stagger-delay-1">
             <CardHeader className="pb-6">
               <CardTitle className="heading-md text-foreground">Our Vision</CardTitle>
             </CardHeader>

@@ -63,9 +63,9 @@ const ContactCTA = () => {
   }
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center">
           {/* Content */}
           <div className="slide-in-left">
             <h2 className="heading-lg mb-8 text-foreground">
@@ -119,9 +119,9 @@ const ContactCTA = () => {
               Start the Conversation
             </h3>
             <form onSubmit={handleSubmit} className="space-y-8">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-card-foreground font-futura font-semibold mb-3 text-lg">
+                  <label htmlFor="name" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
                     Full Name *
                   </label>
                   <Input
@@ -131,12 +131,12 @@ const ContactCTA = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                     className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
+                    className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                     placeholder="Your full name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-card-foreground font-futura font-semibold mb-3 text-lg">
+                  <label htmlFor="email" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
                     Email Address *
                   </label>
                   <Input
@@ -146,14 +146,14 @@ const ContactCTA = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                     className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
+                    className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-card-foreground font-futura font-semibold mb-3 text-lg">
+                <label htmlFor="company" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
                   Company
                 </label>
                 <Input
@@ -162,13 +162,13 @@ const ContactCTA = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
+                  className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                   placeholder="Your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-card-foreground font-futura font-semibold mb-3 text-lg">
+                <label htmlFor="message" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
                   Message *
                 </label>
                 <Textarea
@@ -177,8 +177,8 @@ const ContactCTA = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full min-h-[120px] px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text leading-relaxed"
+                  rows={4}
+                  className="w-full min-h-[100px] sm:min-h-[120px] px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text leading-relaxed"
                   placeholder="Tell us about your project and how we can help..."
                 />
               </div>
@@ -187,7 +187,7 @@ const ContactCTA = () => {
                 type="submit"
                 disabled={isSubmitting}
                 variant="cta-primary"
-                className="w-full text-xl"
+                className="w-full text-base sm:text-lg md:text-xl min-h-[48px] sm:min-h-[56px]"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">

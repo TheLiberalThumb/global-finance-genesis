@@ -36,25 +36,25 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-6 fade-in-up text-foreground">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="heading-lg mb-4 sm:mb-6 fade-in-up text-foreground">
             Comprehensive Financial Solutions
           </h2>
-          <p className="body-text text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1">
+          <p className="body-text text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1 px-4 sm:px-0">
             From strategic advisory to project financing, we provide end-to-end solutions 
             that drive sustainable growth and maximize value creation.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`bg-card rounded-2xl p-8 h-full flex flex-col fade-in-up stagger-delay-${index + 2} hover:scale-105 transition-all duration-300 border border-rich-gold/20`}
+              className={`bg-card rounded-2xl p-6 sm:p-8 h-full flex flex-col fade-in-up stagger-delay-${index + 2} hover:scale-105 transition-all duration-300 border border-rich-gold/20`}
               style={{ boxShadow: 'var(--shadow-large)' }}
             >
               {/* Icon */}
