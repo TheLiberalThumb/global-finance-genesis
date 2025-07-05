@@ -54,7 +54,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-futura font-medium text-base lg:text-lg text-light-gray hover:text-rich-gold transition-colors duration-300"
+                className="nav-link font-futura font-medium text-base lg:text-lg text-pure-white hover:text-rich-gold transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -67,7 +67,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="nav-link font-futura font-medium text-sm text-light-gray hover:text-rich-gold transition-colors duration-300"
+                className="nav-link font-futura font-medium text-sm text-pure-white hover:text-rich-gold transition-colors duration-300"
               >
                 {item.name}
               </a>
@@ -85,7 +85,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-light-gray hover:text-rich-gold transition-colors duration-300"
+              className="text-pure-white hover:text-rich-gold transition-colors duration-300"
               aria-label="Toggle mobile menu"
             >
               <svg
@@ -121,7 +121,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-futura font-medium text-lg text-light-gray hover:text-rich-gold transition-colors duration-300"
+                  className="font-futura font-medium text-lg text-pure-white hover:text-rich-gold transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}

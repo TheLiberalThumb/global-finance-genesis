@@ -131,7 +131,7 @@ const ContactCTA = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full h-14 px-5 py-4 bg-pure-white border-2 border-dark-navy rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-dark-navy placeholder:text-muted-foreground transition-all duration-300 cursor-text"
+                     className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                     placeholder="Your full name"
                   />
                 </div>
@@ -146,7 +146,7 @@ const ContactCTA = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full h-14 px-5 py-4 bg-pure-white border-2 border-dark-navy rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-dark-navy placeholder:text-muted-foreground transition-all duration-300 cursor-text"
+                     className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -162,7 +162,7 @@ const ContactCTA = () => {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full h-14 px-5 py-4 bg-pure-white border-2 border-dark-navy rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-dark-navy placeholder:text-muted-foreground transition-all duration-300 cursor-text"
+                  className="w-full h-14 px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                   placeholder="Your company name"
                 />
               </div>
@@ -178,7 +178,7 @@ const ContactCTA = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full min-h-[120px] px-5 py-4 bg-pure-white border-2 border-dark-navy rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-lg text-dark-navy placeholder:text-muted-foreground transition-all duration-300 cursor-text leading-relaxed"
+                  className="w-full min-h-[120px] px-5 py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text leading-relaxed"
                   placeholder="Tell us about your project and how we can help..."
                 />
               </div>

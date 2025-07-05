@@ -1,21 +1,21 @@
 const StayInformedSection = () => {
   return (
-    <section className="bg-charcoal-black text-white mt-16">
+    <section className="bg-background mt-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-white mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-5xl font-bold text-rich-gold mb-6 font-playfair">
             Stay Informed
           </h2>
-          <p className="text-gray-400 mb-10 text-lg leading-relaxed">
+          <p className="text-light-gray mb-10 text-lg leading-relaxed">
             Get the latest insights on market trends, investment opportunities, and financial strategies delivered directly to your inbox.
           </p>
           <div className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-6 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 text-base focus:outline-none focus:border-primary-yellow transition-colors duration-300"
+              className="flex-1 px-6 py-4 bg-card border border-rich-gold/20 rounded-lg text-pure-white placeholder:text-light-gray text-base focus:outline-none focus:border-rich-gold transition-colors duration-300"
             />
-            <button className="px-8 py-4 bg-primary-yellow text-charcoal-black font-semibold text-base rounded-lg hover:bg-yellow-400 transition-colors duration-300">
+            <button className="px-8 py-4 bg-rich-gold text-dark-navy font-semibold text-base rounded-lg hover:bg-rich-gold/90 transition-colors duration-300">
               Subscribe
             </button>
           </div>
@@ -61,36 +61,36 @@ const Footer = () => {
   return (
     <>
       <StayInformedSection />
-      <footer className="bg-charcoal-black text-white">
+      <footer className="bg-background">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
               {/* Logo */}
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-primary-yellow rounded-full flex items-center justify-center mr-4">
-                  <span className="text-charcoal-black font-bold text-xl">GG</span>
+                <div className="w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center mr-4">
+                  <span className="text-dark-navy font-bold text-xl">GG</span>
                 </div>
                 <div>
-                  <h2 className="text-xl font-semibold text-white">Gission Global</h2>
-                  <p className="text-sm text-gray-400">Investment Limited</p>
+                  <h2 className="text-xl font-semibold text-pure-white">Gission Global</h2>
+                  <p className="text-sm text-light-gray">Investment Limited</p>
                 </div>
               </div>
               
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              <p className="text-light-gray mb-6 text-sm leading-relaxed">
                 Leading corporate financing entity specializing in project investment, 
                 capital raising, and strategic consulting.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3">
-                <div className="text-gray-400 hover:text-primary-yellow transition-colors duration-300 cursor-pointer text-sm">
+                <div className="text-light-gray hover:text-rich-gold transition-colors duration-300 cursor-pointer text-sm">
                   hello@gissionglobal.com
                 </div>
-                <div className="text-gray-400 hover:text-primary-yellow transition-colors duration-300 cursor-pointer text-sm">
+                <div className="text-light-gray hover:text-rich-gold transition-colors duration-300 cursor-pointer text-sm">
                   +1 (555) 123-4567
                 </div>
-                <div className="text-gray-400 text-sm">
+                <div className="text-light-gray text-sm">
                   New York, London, Lagos
                 </div>
               </div>
@@ -99,7 +99,7 @@ const Footer = () => {
             {/* Navigation Sections */}
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
-                <h3 className="text-white font-semibold mb-4 text-lg">
+                <h3 className="text-pure-white font-semibold mb-4 text-lg">
                   {section.title}
                 </h3>
                 <ul className="space-y-3">
@@ -107,7 +107,7 @@ const Footer = () => {
                     <li key={link.name}>
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-primary-yellow transition-colors duration-300 text-sm"
+                        className="text-light-gray hover:text-rich-gold transition-colors duration-300 text-sm"
                       >
                         {link.name}
                       </a>
@@ -119,15 +119,15 @@ const Footer = () => {
           </div>
 
           {/* Bottom Section */}
-          <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+          <div className="border-t border-rich-gold/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-light-gray text-sm mb-4 md:mb-0">
               © {currentYear} Gission Global Investment Limited. All rights reserved.
             </p>
 
             <div className="flex items-center space-x-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-primary-yellow transition-colors duration-300"
+                className="text-light-gray hover:text-rich-gold transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ const Footer = () => {
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-primary-yellow transition-colors duration-300"
+                className="text-light-gray hover:text-rich-gold transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -145,13 +145,13 @@ const Footer = () => {
               </a>
               <a
                 href="/privacy"
-                className="text-gray-400 hover:text-primary-yellow transition-colors duration-300 text-sm"
+                className="text-light-gray hover:text-rich-gold transition-colors duration-300 text-sm"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-gray-400 hover:text-primary-yellow transition-colors duration-300 text-sm"
+                className="text-light-gray hover:text-rich-gold transition-colors duration-300 text-sm"
               >
                 Terms
               </a>

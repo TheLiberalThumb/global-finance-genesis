@@ -78,8 +78,8 @@ const Statistics = () => {
               }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-dark-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300 border-2 border-rich-gold">
+                <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {index === 0 && (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   )}
