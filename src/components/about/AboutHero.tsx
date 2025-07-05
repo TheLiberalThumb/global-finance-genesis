@@ -20,7 +20,7 @@ const AboutHero = () => {
             <div className="animation-container relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
               
               {/* 3D Animation Container */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dark-navy to-deep-navy rounded-3xl border border-rich-gold/20">
+              <div className="absolute inset-0 bg-background rounded-3xl border border-rich-gold/20">
                 
                 {/* Floating Animation Elements - Optimized for mobile */}
                 <div className="hidden md:block absolute top-20 left-20 w-20 h-20 bg-rich-gold rounded-full floating-animation opacity-80"></div>
