@@ -4,27 +4,23 @@ import { Globe } from 'lucide-react';
 const AboutHero = () => {
   return (
     <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
-      {/* Subtle background gradient overlay */}
-      <div className="absolute inset-0 hero-gradient"></div>
-      
-      {/* Subtle floating background elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-20 left-20 w-16 h-16 bg-rich-gold/20 rounded-full floating-animation"></div>
-        <div className="absolute top-40 right-32 w-12 h-12 bg-rich-gold/15 rounded-full floating-animation" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-32 left-1/4 w-10 h-10 bg-rich-gold/10 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 right-20 w-14 h-14 bg-rich-gold/25 rounded-full floating-animation" style={{animationDelay: '0.5s'}}></div>
+      {/* Background Pattern - Subtle */}
+      <div className="absolute inset-0 overflow-hidden opacity-5">
+        <div className="absolute top-20 left-10 w-24 h-24 bg-rich-gold/20 rounded-full floating-animation"></div>
+        <div className="absolute bottom-40 right-20 w-16 h-16 bg-rich-gold/10 rounded-full coin-float"></div>
+        <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-rich-gold/15 rounded-full floating-animation stagger-delay-2"></div>
       </div>
       
-      <div className="wide-content container-padding relative z-10 section-padding">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20">
         {/* Mobile: Animation above content, Desktop: Side by side */}
         <div className="flex flex-col lg:grid lg:grid-cols-5 gap-8 lg:gap-16 lg:items-center min-h-[80vh]">
           
           {/* Animation Section - Shows first on mobile, right on desktop */}
           <div className="order-1 lg:order-2 lg:col-span-2 relative hero-content-enter stagger-delay-2">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] bg-deep-navy rounded-3xl overflow-hidden border border-rich-gold/20">
+            <div className="animation-container relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
               
-               {/* Animation Container */}
-               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-dark-navy to-deep-navy">
+              {/* 3D Animation Container */}
+              <div className="absolute inset-0 bg-gradient-to-br from-dark-navy to-deep-navy rounded-3xl border border-rich-gold/20">
                 
                 {/* Central Focus Element - Ready for GIF/Animation */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
