@@ -22,31 +22,31 @@ const AboutHero = () => {
               {/* 3D Animation Container */}
               <div className="absolute inset-0 bg-gradient-to-br from-dark-navy to-deep-navy rounded-3xl border border-rich-gold/20">
                 
-                {/* Central Focus Element - Ready for GIF/Animation */}
+                {/* Floating Animation Elements - Optimized for mobile */}
+                <div className="hidden md:block absolute top-20 left-20 w-20 h-20 bg-rich-gold rounded-full floating-animation opacity-80"></div>
+                <div className="absolute top-8 md:top-40 right-4 md:right-10 w-12 md:w-16 h-12 md:h-16 bg-rich-gold/60 rounded-full coin-float stagger-delay-1"></div>
+                <div className="hidden md:block absolute bottom-40 left-10 w-24 h-24 bg-rich-gold/40 rounded-full floating-animation stagger-delay-2"></div>
+                <div className="absolute bottom-8 md:bottom-20 right-8 md:right-20 w-16 md:w-32 h-16 md:h-32 bg-rich-gold/20 rounded-full coin-float stagger-delay-3"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 md:w-12 h-8 md:h-12 bg-rich-gold/10 rounded-full floating-animation stagger-delay-4"></div>
+                
+                {/* Central Focus Element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="w-24 md:w-40 h-24 md:h-40 bg-rich-gold rounded-full flex items-center justify-center coin-float">
-                    <div className="w-20 md:w-32 h-20 md:h-32 bg-dark-navy rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-20 md:w-32 h-20 md:h-32 bg-background rounded-full flex items-center justify-center shadow-lg">
                       <Globe className="w-8 md:w-16 h-8 md:h-16 text-rich-gold" />
                     </div>
                   </div>
                 </div>
-                
-                {/* Floating Animation Elements - Optimized for mobile */}
-                <div className="hidden md:block absolute top-20 left-20 w-20 h-20 bg-rich-gold/60 rounded-full floating-animation"></div>
-                <div className="absolute top-8 md:top-40 right-4 md:right-10 w-12 md:w-16 h-12 md:h-16 bg-rich-gold/40 rounded-full coin-float stagger-delay-1"></div>
-                <div className="hidden md:block absolute bottom-40 left-10 w-24 h-24 bg-rich-gold/30 rounded-full floating-animation stagger-delay-2"></div>
-                <div className="absolute bottom-8 md:bottom-20 right-8 md:right-20 w-16 md:w-32 h-16 md:h-32 bg-rich-gold/20 rounded-full coin-float stagger-delay-3"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-20 -translate-y-4 md:-translate-y-20 w-8 md:w-12 h-8 md:h-12 bg-dark-navy/20 rounded-full floating-animation stagger-delay-4"></div>
-                
+
                 {/* Geometric Shapes for Visual Interest - Simplified for mobile */}
-                <div className="absolute top-6 md:top-10 right-1/4 md:right-1/3 w-6 md:w-8 h-6 md:h-8 bg-dark-navy/30 transform rotate-45 floating-animation stagger-delay-5"></div>
+                <div className="absolute top-6 md:top-10 right-1/4 md:right-1/3 w-6 md:w-8 h-6 md:h-8 bg-rich-gold/20 transform rotate-45 floating-animation stagger-delay-5"></div>
                 <div className="absolute bottom-6 md:bottom-10 left-1/4 md:left-1/3 w-4 md:w-6 h-4 md:h-6 bg-rich-gold/60 transform rotate-12 coin-float stagger-delay-6"></div>
                 
               </div>
               
-              {/* Animation Overlay Text */}
+              {/* Animation Space Overlay Text */}
               <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-center">
-                <p className="text-xs md:text-sm text-light-gray font-medium">
+                <p className="caption-text opacity-60 text-xs md:text-sm text-rich-gold">
                   Global Financial Solutions
                 </p>
               </div>
