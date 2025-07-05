@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="animation-container relative w-full h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
               
               {/* 3D Animation Container */}
-              <div className="absolute inset-0 bg-gradient-to-br from-deep-navy/50 to-dark-navy/30 rounded-3xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-deep-navy to-dark-navy rounded-3xl border border-rich-gold/20">
                 
                 {/* Floating Animation Elements - Optimized for mobile */}
                 <div className="hidden md:block absolute top-20 left-20 w-20 h-20 bg-rich-gold rounded-full floating-animation opacity-80"></div>
@@ -30,9 +30,9 @@ const Hero = () => {
                 
                 {/* Central Focus Element */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-24 md:w-40 h-24 md:h-40 bg-rich-gold/80 rounded-full flex items-center justify-center coin-float">
-                    <div className="w-20 md:w-32 h-20 md:h-32 bg-pure-white rounded-full flex items-center justify-center shadow-lg">
-                      <svg className="w-8 md:w-16 h-8 md:h-16 text-dark-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-24 md:w-40 h-24 md:h-40 bg-rich-gold rounded-full flex items-center justify-center coin-float">
+                    <div className="w-20 md:w-32 h-20 md:h-32 bg-dark-navy rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-8 md:w-16 h-8 md:h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                       </svg>
                     </div>
@@ -47,7 +47,7 @@ const Hero = () => {
               
               {/* Animation Space Overlay Text */}
               <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-center">
-                <p className="caption-text opacity-60 text-xs md:text-sm">
+                <p className="caption-text opacity-60 text-xs md:text-sm text-light-gray">
                   Intelligent Investment Solutions
                 </p>
               </div>
