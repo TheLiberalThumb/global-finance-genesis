@@ -71,11 +71,8 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`bg-card rounded-lg p-6 sm:p-8 text-center border border-rich-gold/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${inView ? 'animate-count-up' : 'opacity-0'}`}
-              style={{ 
-                animationDelay: `${index * 0.2}s`,
-                boxShadow: '0 4px 12px rgba(255,215,0,0.1)'
-              }}
+              className={`wlf-card-premium text-center ${inView ? 'animate-count-up' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300 border-2 border-rich-gold">

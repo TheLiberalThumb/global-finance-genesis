@@ -510,12 +510,20 @@
     @apply relative overflow-hidden transition-colors duration-300 underline-animation;
   }
   
-  /* Card System */
+  /* World Liberty Financial Card System */
+  .wlf-card-premium {
+    @apply bg-dark-navy border-2 border-rich-gold rounded-xl p-6 sm:p-8 
+           transition-all duration-300 hover:-translate-y-2;
+    box-shadow: 0 8px 32px rgba(255, 215, 0, 0.15), 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .wlf-card-premium:hover {
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.25), 0 0 30px rgba(255, 215, 0, 0.4);
+    border-color: hsl(var(--rich-gold));
+  }
+  
   .wealthsimple-card {
-    @apply bg-card rounded-3xl p-8 
-           transition-all duration-300 interactive-card
-           border border-light-gray/20;
-    box-shadow: var(--shadow-medium);
+    @apply wlf-card-premium;
   }
   
   /* World Liberty Financial Typography System */

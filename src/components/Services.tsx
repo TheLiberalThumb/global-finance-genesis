@@ -54,8 +54,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`bg-card rounded-2xl p-6 sm:p-8 h-full flex flex-col fade-in-up stagger-delay-${index + 2} hover:scale-105 transition-all duration-300 border border-rich-gold/20`}
-              style={{ boxShadow: 'var(--shadow-large)' }}
+              className={`wlf-card-premium h-full flex flex-col fade-in-up stagger-delay-${index + 2}`}
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-all duration-300 border-2 border-rich-gold">
