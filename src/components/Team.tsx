@@ -29,14 +29,14 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-light-gray">
+    <section className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="heading-lg mb-8 fade-in-up">
+          <h2 className="heading-lg mb-8 fade-in-up text-foreground">
             Meet Our Leadership
           </h2>
-          <p className="body-text text-charcoal-black/80 max-w-4xl mx-auto fade-in-up stagger-delay-1">
+          <p className="body-text text-light-gray max-w-4xl mx-auto fade-in-up stagger-delay-1">
             Our experienced team combines deep industry knowledge with innovative thinking 
             to deliver exceptional results for our clients.
           </p>
@@ -51,7 +51,7 @@ const Team = () => {
             >
               {/* Profile Image */}
               <div className="relative mb-8">
-                <div className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-primary-yellow/20 group-hover:border-primary-yellow group-hover:scale-105 transition-all duration-300">
+                <div className="w-36 h-36 mx-auto rounded-full overflow-hidden border-4 border-rich-gold/20 group-hover:border-rich-gold group-hover:scale-105 transition-all duration-300">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -61,7 +61,7 @@ const Team = () => {
                 {/* LinkedIn Icon */}
                 <a
                   href={member.linkedin}
-                  className="absolute bottom-0 right-1/2 transform translate-x-1/2 translate-y-1/2 w-12 h-12 bg-charcoal-black rounded-full flex items-center justify-center text-white hover:bg-primary-yellow hover:text-charcoal-black hover:scale-110 transition-all duration-300"
+                  className="absolute bottom-0 right-1/2 transform translate-x-1/2 translate-y-1/2 w-12 h-12 bg-dark-navy rounded-full flex items-center justify-center text-pure-white hover:bg-rich-gold hover:text-dark-navy hover:scale-110 transition-all duration-300"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -71,15 +71,15 @@ const Team = () => {
 
               {/* Content */}
               <div className="text-center">
-                <h3 className="heading-md mb-3">
+                <h3 className="heading-md mb-3 text-card-foreground">
                   {member.name}
                 </h3>
                 
-                <p className="text-primary-yellow font-futura font-semibold text-lg mb-6">
+                <p className="text-rich-gold font-futura font-semibold text-lg mb-6">
                   {member.title}
                 </p>
 
-                <p className="body-text text-charcoal-black/80 mb-8">
+                <p className="body-text text-light-gray mb-8">
                   {member.bio}
                 </p>
 
@@ -88,7 +88,7 @@ const Team = () => {
                   {member.expertise.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-4 py-2 bg-charcoal-black/5 text-charcoal-black text-sm font-futura rounded-full hover:bg-primary-yellow hover:text-charcoal-black transition-colors duration-300"
+                      className="px-4 py-2 bg-deep-navy text-light-gray text-sm font-futura rounded-full hover:bg-rich-gold hover:text-dark-navy transition-colors duration-300"
                     >
                       {skill}
                     </span>
@@ -102,10 +102,10 @@ const Team = () => {
         {/* Team CTA */}
         <div className="text-center mt-24 fade-in-up stagger-delay-5">
           <div className="wealthsimple-card max-w-5xl mx-auto">
-            <h3 className="heading-md mb-6">
+            <h3 className="heading-md mb-6 text-card-foreground">
               Ready to Work with Our Team?
             </h3>
-            <p className="body-text text-charcoal-black/80 mb-10">
+            <p className="body-text text-light-gray mb-10">
               Our experts are here to help you navigate complex financial decisions 
               and unlock new opportunities for growth.
             </p>

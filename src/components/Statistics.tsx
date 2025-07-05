@@ -46,22 +46,22 @@ const Statistics = () => {
   ];
 
   return (
-    <section ref={ref} className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-20 lg:py-32 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-light-gray rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-24 h-24 bg-primary-yellow rounded-full"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-light-gray rounded-full"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-primary-yellow rounded-full"></div>
+        <div className="absolute top-20 left-20 w-32 h-32 bg-deep-navy rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-rich-gold rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-deep-navy rounded-full"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-rich-gold rounded-full"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal-black mb-6">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
             Results That Speak
           </h2>
-          <p className="font-inter text-lg md:text-xl text-charcoal-black max-w-4xl mx-auto leading-relaxed">
+          <p className="font-inter text-lg md:text-xl text-light-gray max-w-4xl mx-auto leading-relaxed">
             Our commitment to excellence has delivered measurable impact for clients worldwide
           </p>
         </div>
@@ -71,15 +71,15 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`bg-white rounded-lg p-8 text-center border border-light-gray/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${inView ? 'animate-count-up' : 'opacity-0'}`}
+              className={`bg-card rounded-lg p-8 text-center border border-rich-gold/20 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${inView ? 'animate-count-up' : 'opacity-0'}`}
               style={{ 
                 animationDelay: `${index * 0.2}s`,
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                boxShadow: '0 4px 12px rgba(255,215,0,0.1)'
               }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 bg-primary-yellow rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-charcoal-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-dark-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {index === 0 && (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   )}
@@ -97,18 +97,18 @@ const Statistics = () => {
 
               {/* Number */}
               <div className="mb-4">
-                <span className="font-playfair font-bold text-4xl lg:text-5xl text-charcoal-black block">
+                <span className="font-playfair font-bold text-4xl lg:text-5xl text-rich-gold block">
                   {stat.number}
                 </span>
               </div>
 
               {/* Label */}
-              <h3 className="font-inter font-medium text-lg text-charcoal-black mb-3">
+              <h3 className="font-inter font-medium text-lg text-card-foreground mb-3">
                 {stat.label}
               </h3>
 
               {/* Description */}
-              <p className="text-charcoal-black/70 font-inter text-sm leading-relaxed">
+              <p className="text-light-gray font-inter text-sm leading-relaxed">
                 {stat.description}
               </p>
             </div>
@@ -117,7 +117,7 @@ const Statistics = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <p className="font-inter text-lg text-charcoal-black/80 mb-8 max-w-3xl mx-auto">
+          <p className="font-inter text-lg text-light-gray mb-8 max-w-3xl mx-auto">
             Join the companies that trust us to deliver exceptional results
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
