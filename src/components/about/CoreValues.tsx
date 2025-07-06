@@ -12,11 +12,11 @@ const CoreValues = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-8 md:gap-y-12">
           {/* Excellence */}
-          <Card className="bg-card rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border border-rich-gold/20">
+          <Card className="wlf-card-premium text-center">
             <CardContent className="space-y-8">
-              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto hover:scale-105 transition-all duration-300">
                 <Star className="w-12 h-12 text-dark-navy" />
               </div>
               <h3 className="heading-md text-foreground font-semibold">Excellence</h3>
@@ -27,9 +27,9 @@ const CoreValues = () => {
           </Card>
 
           {/* Innovation */}
-          <Card className="bg-card rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border border-rich-gold/20">
+          <Card className="wlf-card-premium text-center">
             <CardContent className="space-y-8">
-              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto hover:scale-105 transition-all duration-300">
                 <Lightbulb className="w-12 h-12 text-dark-navy" />
               </div>
               <h3 className="heading-md text-foreground font-semibold">Innovation</h3>
@@ -40,9 +40,9 @@ const CoreValues = () => {
           </Card>
 
           {/* Partnership */}
-          <Card className="bg-card rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border border-rich-gold/20">
+          <Card className="wlf-card-premium text-center">
             <CardContent className="space-y-8">
-              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto hover:scale-105 transition-all duration-300">
                 <Handshake className="w-12 h-12 text-dark-navy" />
               </div>
               <h3 className="heading-md text-foreground font-semibold">Partnership</h3>
@@ -53,9 +53,9 @@ const CoreValues = () => {
           </Card>
 
           {/* Impact */}
-          <Card className="bg-card rounded-3xl p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 group border border-rich-gold/20">
+          <Card className="wlf-card-premium text-center">
             <CardContent className="space-y-8">
-              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl">
+              <div className="w-24 h-24 bg-rich-gold rounded-full flex items-center justify-center mx-auto hover:scale-105 transition-all duration-300">
                 <Target className="w-12 h-12 text-dark-navy" />
               </div>
               <h3 className="heading-md text-foreground font-semibold">Impact</h3>
