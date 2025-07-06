@@ -3,7 +3,7 @@ import FloatingElements from '@/components/FloatingElements';
 
 const ServicesHero = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-24 xl:py-32 bg-background relative overflow-hidden hero-gradient">
+    <section className="py-12 sm:py-16 lg:py-24 xl:py-32 bg-background relative overflow-hidden">
       <FloatingElements />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[500px]">
@@ -28,19 +28,20 @@ const ServicesHero = () => {
           {/* Right Column - 3D Animation */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end scroll-fade-up scroll-stagger-1">
             <div className="relative w-full max-w-[500px] h-[280px] sm:h-[350px] lg:h-[400px]">
-              <div className="w-full h-full rounded-xl overflow-hidden bg-dark-navy/20 backdrop-blur-sm border border-rich-gold/10">
-                <iframe 
-                  src='https://my.spline.design/metalcryptocreditcard-YLo39Gr0MVn761iZlrr9ddvH/' 
-                  frameBorder='0' 
-                  width='100%' 
-                  height='100%'
-                  className="w-full h-full"
-                  style={{ border: 'none' }}
-                  allowFullScreen
-                  loading='lazy'
-                  title="Interactive 3D Financial Technology Animation"
-                />
-              </div>
+              <iframe 
+                src='https://my.spline.design/metalcryptocreditcard-YLo39Gr0MVn761iZlrr9ddvH/' 
+                frameBorder='0' 
+                width='100%' 
+                height='100%'
+                className="w-full h-full rounded-xl"
+                style={{ 
+                  border: 'none',
+                  background: 'transparent'
+                }}
+                allowFullScreen
+                loading='lazy'
+                title="Interactive 3D Financial Technology Animation"
+              />
             </div>
           </div>
         </div>
