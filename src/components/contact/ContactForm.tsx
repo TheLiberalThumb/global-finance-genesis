@@ -130,19 +130,17 @@ const ContactForm = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        FULL NAME *
+                      <label htmlFor="name" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Full Name *
                       </label>
                       <input
                         type="text"
+                        id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className={`w-full px-5 py-4 bg-[#1B1B1B] border-2 rounded-lg text-pure-white text-base placeholder:text-light-gray/60 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px]
-                          ${errors.name ? 'border-red-400/70' : 'border-rich-gold/30'}`}
-                        placeholder="Enter your full name"
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
+                        placeholder="Your full name"
                       />
                       {errors.name && (
                         <p className="text-red-400 text-sm mt-1 flex items-center gap-1">
@@ -152,18 +150,16 @@ const ContactForm = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        EMAIL ADDRESS *
+                      <label htmlFor="email" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Email Address *
                       </label>
                       <input
                         type="email"
+                        id="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-5 py-4 bg-[#1B1B1B] border-2 rounded-lg text-pure-white text-base placeholder:text-light-gray/60 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px]
-                          ${errors.email ? 'border-red-400/70' : 'border-rich-gold/30'}`}
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="your@company.com"
                       />
                       {errors.email && (
@@ -183,33 +179,31 @@ const ContactForm = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        COMPANY NAME
+                      <label htmlFor="company" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Company Name
                       </label>
                       <input
                         type="text"
+                        id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 bg-[#1B1B1B] border-2 border-rich-gold/30 rounded-lg text-pure-white text-base placeholder:text-light-gray/60 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px]"
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="Your company name"
                       />
                     </div>
                     
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        PHONE NUMBER
+                      <label htmlFor="phone" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Phone Number
                       </label>
                       <input
                         type="tel"
+                        id="phone"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 bg-[#1B1B1B] border-2 border-rich-gold/30 rounded-lg text-pure-white text-base placeholder:text-light-gray/60 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px]"
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="+234 (0) 806 123 4567"
                       />
                     </div>
@@ -224,20 +218,19 @@ const ContactForm = () => {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        SERVICE OF INTEREST
+                      <label htmlFor="service" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Service of Interest
                       </label>
                       <select
+                        id="service"
                         name="service"
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 bg-[#1B1B1B] border-2 border-rich-gold/30 rounded-lg text-pure-white text-base 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px] cursor-pointer"
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
                       >
-                        <option value="" className="bg-[#1B1B1B] text-light-gray/60">Select a service</option>
+                        <option value="" className="bg-card text-light-gray">Select a service</option>
                         {services.map((service) => (
-                          <option key={service} value={service} className="bg-[#1B1B1B] text-pure-white py-2">
+                          <option key={service} value={service} className="bg-card text-pure-white py-2">
                             {service}
                           </option>
                         ))}
@@ -245,20 +238,19 @@ const ContactForm = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                        PROJECT BUDGET
+                      <label htmlFor="budget" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Project Budget
                       </label>
                       <select
+                        id="budget"
                         name="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-5 py-4 bg-[#1B1B1B] border-2 border-rich-gold/30 rounded-lg text-pure-white text-base 
-                          focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                          transition-all duration-300 hover:border-rich-gold/60 min-h-[56px] cursor-pointer"
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
                       >
-                        <option value="" className="bg-[#1B1B1B] text-light-gray/60">Select budget range</option>
+                        <option value="" className="bg-card text-light-gray">Select budget range</option>
                         {budgetRanges.map((range) => (
-                          <option key={range} value={range} className="bg-[#1B1B1B] text-pure-white py-2">
+                          <option key={range} value={range} className="bg-card text-pure-white py-2">
                             {range}
                           </option>
                         ))}
@@ -274,18 +266,16 @@ const ContactForm = () => {
                   </div>
                   
                   <div className="space-y-2">
-                    <label className="block font-inter font-semibold text-rich-gold text-sm tracking-wide">
-                      PROJECT DETAILS *
+                    <label htmlFor="message" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                      Project Details *
                     </label>
                     <textarea
+                      id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={6}
-                      className={`w-full px-5 py-4 bg-[#1B1B1B] border-2 rounded-lg text-pure-white text-base placeholder:text-light-gray/60 
-                        focus:outline-none focus:border-rich-gold focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
-                        transition-all duration-300 hover:border-rich-gold/60 resize-none
-                        ${errors.message ? 'border-red-400/70' : 'border-rich-gold/30'}`}
+                      className="w-full min-h-[100px] sm:min-h-[120px] px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text leading-relaxed"
                       placeholder="Tell us about your project objectives, timeline, specific requirements, and any other relevant details that will help us understand your needs..."
                     />
                     {errors.message && (
@@ -305,23 +295,19 @@ const ContactForm = () => {
                     ref={magneticRef}
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold text-dark-navy font-bold text-lg 
-                      px-12 py-4 rounded-lg min-h-[56px] w-full sm:w-auto
-                      hover:shadow-[0_0_30px_rgba(255,215,0,0.5)] hover:scale-105 
-                      active:scale-95 transition-all duration-300 
-                      disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
-                      magnetic-button"
+                    variant="cta-primary"
+                    className="w-full text-base sm:text-lg md:text-xl min-h-[48px] sm:min-h-[56px]"
                   >
                     {isSubmitting ? (
-                      <div className="flex items-center gap-3">
-                        <div className="w-5 h-5 border-2 border-dark-navy/30 border-t-dark-navy rounded-full animate-spin" />
-                        Sending Message...
+                      <div className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-dark-navy" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
                       </div>
                     ) : (
-                      <div className="flex items-center gap-3">
-                        <Send className="w-5 h-5" />
-                        Send Message
-                      </div>
+                      'Send Message'
                     )}
                   </Button>
                   
