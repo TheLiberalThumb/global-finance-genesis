@@ -32,6 +32,21 @@ export class AnimationController {
       }
     );
 
+    // New scroll-fade-up observer
+    const scrollFadeObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
     // Timeline progress observer
     const timelineObserver = new IntersectionObserver(
       (entries) => {
@@ -46,7 +61,7 @@ export class AnimationController {
       }
     );
 
-    this.observers.push(scrollObserver, timelineObserver);
+    this.observers.push(scrollObserver, scrollFadeObserver, timelineObserver);
 
     // Observe elements when DOM is ready
     setTimeout(() => {
@@ -61,6 +76,12 @@ export class AnimationController {
       this.observers[0].observe(el);
     });
 
+    // Observe scroll-fade-up elements
+    const scrollFadeElements = document.querySelectorAll('.scroll-fade-up');
+    scrollFadeElements.forEach((el) => {
+      this.observers[1].observe(el);
+    });
+
     // Observe counter elements
     const counterElements = document.querySelectorAll('.counter-up');
     counterElements.forEach((el) => {
@@ -70,7 +91,7 @@ export class AnimationController {
     // Observe timeline elements
     const timelineElements = document.querySelectorAll('.timeline-line');
     timelineElements.forEach((el) => {
-      this.observers[1].observe(el);
+      this.observers[2].observe(el);
     });
   }
 

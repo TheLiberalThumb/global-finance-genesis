@@ -19,8 +19,8 @@ const AboutHero = () => {
           <div className="order-1 lg:order-2 lg:col-span-2 relative hero-content-enter stagger-delay-2">
             <div className="animation-container relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[700px] fade-in-up stagger-delay-4">
               
-              {/* 3D Animation Container */}
-              <div className="absolute inset-0 bg-background rounded-3xl border border-rich-gold/20">
+              {/* 3D Animation Container - Seamless Floating */}
+              <div className="absolute inset-0 bg-transparent overflow-hidden">
                 
                 {/* Floating Animation Elements - Optimized for mobile */}
                 <div className="hidden md:block absolute top-20 left-20 w-20 h-20 bg-rich-gold rounded-full floating-animation opacity-80"></div>

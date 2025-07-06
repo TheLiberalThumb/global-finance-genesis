@@ -936,7 +936,59 @@
     }
   }
   
+  @keyframes floatingElement {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) translateX(8px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-25px) translateX(-4px) rotate(-1deg);
+    }
+    75% {
+      transform: translateY(-12px) translateX(-6px) rotate(3deg);
+    }
+  }
+  
+  @keyframes floatingAnimation {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-12px) translateX(6px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-18px) translateX(-3px) rotate(-2deg);
+    }
+  }
+  
+  @keyframes coin-float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-8px) rotate(5deg);
+    }
+    50% {
+      transform: translateY(-16px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-8px) rotate(-5deg);
+    }
+  }
+  
   /* Animation Utilities */
+  .floating-animation {
+    animation: floatingAnimation 8s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  .coin-float {
+    animation: coin-float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+  
   .animate-count-up {
     animation: counterUp 1.5s ease-out;
   }
