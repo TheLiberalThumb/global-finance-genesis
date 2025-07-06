@@ -144,11 +144,15 @@ const ChatWidget = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <Button
           onClick={openChat}
-          className="w-16 h-16 rounded-full bg-rich-gold hover:bg-rich-gold/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+          className="w-16 h-16 rounded-full bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold 
+            hover:shadow-[0_0_30px_rgba(255,215,0,0.6)] shadow-lg transition-all duration-300 
+            hover:scale-110 group border-2 border-rich-gold/20"
         >
           <MessageCircle className="w-6 h-6 text-dark-navy group-hover:scale-110 transition-transform duration-300" />
           {hasUnread && (
-            <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
+            <div className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 rounded-full animate-pulse border-2 border-white">
+              <div className="w-full h-full bg-red-400 rounded-full animate-ping"></div>
+            </div>
           )}
         </Button>
       </div>
@@ -157,18 +161,18 @@ const ChatWidget = () => {
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
-      <div className="bg-white rounded-2xl shadow-2xl w-96 h-[600px] flex flex-col animate-scale-in">
+      <div className="bg-[#1B1B1B] rounded-2xl shadow-2xl border-2 border-rich-gold/30 w-96 h-[600px] flex flex-col animate-scale-in">
         {/* Header */}
-        <div className="bg-rich-gold p-4 rounded-t-2xl flex items-center justify-between">
+        <div className="bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold p-4 rounded-t-2xl flex items-center justify-between shadow-lg">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-dark-navy rounded-full flex items-center justify-center">
+            <div className="w-10 h-10 bg-dark-navy rounded-full flex items-center justify-center shadow-md">
               <span className="text-rich-gold font-bold text-lg">GG</span>
             </div>
             <div>
-              <h3 className="font-semibold text-dark-navy">Gission Global</h3>
+              <h3 className="font-semibold text-dark-navy font-inter">Gission Global</h3>
               <div className="flex items-center space-x-1">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm text-dark-navy/80">Online</span>
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-dark-navy/80 font-inter">Online</span>
               </div>
             </div>
           </div>
@@ -177,7 +181,7 @@ const ChatWidget = () => {
               variant="ghost"
               size="sm"
               onClick={closeChat}
-              className="text-dark-navy hover:bg-dark-navy/10 p-1 h-8 w-8"
+              className="text-dark-navy hover:bg-dark-navy/20 p-1 h-8 w-8 rounded-lg transition-all duration-300"
             >
               <Minimize2 className="w-4 h-4" />
             </Button>
@@ -185,7 +189,7 @@ const ChatWidget = () => {
               variant="ghost"
               size="sm"
               onClick={closeChat}
-              className="text-dark-navy hover:bg-dark-navy/10 p-1 h-8 w-8"
+              className="text-dark-navy hover:bg-dark-navy/20 p-1 h-8 w-8 rounded-lg transition-all duration-300"
             >
               <X className="w-4 h-4" />
             </Button>
@@ -193,21 +197,23 @@ const ChatWidget = () => {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-background/30">
+        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-[#1B1B1B]">
           {messages.map((message) => (
             <div
               key={message.id}
               className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[80%] p-3 rounded-2xl ${
+                className={`max-w-[80%] p-3 rounded-lg transition-all duration-300 ${
                   message.sender === 'user'
-                    ? 'bg-rich-gold text-dark-navy'
-                    : 'bg-card text-foreground shadow-sm border border-rich-gold/20'
+                    ? 'bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold text-dark-navy shadow-lg'
+                    : 'bg-dark-navy/80 text-pure-white shadow-md border border-rich-gold/20 hover:border-rich-gold/40'
                 }`}
               >
-                <p className="text-sm leading-relaxed">{message.content}</p>
-                <p className="text-xs opacity-70 mt-1">
+                <p className="text-sm leading-relaxed font-inter">{message.content}</p>
+                <p className={`text-xs mt-1 font-inter ${
+                  message.sender === 'user' ? 'text-dark-navy/70' : 'text-light-gray/80'
+                }`}>
                   {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                 </p>
               </div>
@@ -223,12 +229,14 @@ const ChatWidget = () => {
                   <Button
                     key={action.action}
                     variant="outline"
-                    className="p-3 h-auto text-left border-rich-gold/20 hover:border-rich-gold hover:bg-rich-gold/10 transition-all duration-300"
+                    className="p-3 h-auto text-left bg-dark-navy/60 border-2 border-rich-gold/30 hover:border-rich-gold 
+                      hover:bg-rich-gold/10 hover:shadow-[0_0_15px_rgba(255,215,0,0.3)] 
+                      transition-all duration-300 rounded-lg group"
                     onClick={() => handleQuickAction(action.action, action.text)}
                   >
                     <div className="flex flex-col items-center space-y-2">
-                      <Icon className="w-5 h-5 text-foreground" />
-                      <span className="text-xs text-foreground text-center leading-tight">
+                      <Icon className="w-5 h-5 text-rich-gold group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs text-pure-white text-center leading-tight font-inter group-hover:text-rich-gold transition-colors duration-300">
                         {action.text}
                       </span>
                     </div>
@@ -241,11 +249,11 @@ const ChatWidget = () => {
           {/* Typing Indicator */}
           {isTyping && (
             <div className="flex justify-start">
-              <div className="bg-card p-3 rounded-2xl shadow-sm border border-rich-gold/20">
+              <div className="bg-dark-navy/80 p-3 rounded-lg shadow-md border border-rich-gold/20">
                 <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-foreground/40 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-rich-gold rounded-full animate-bounce"></div>
+                  <div className="w-2 h-2 bg-rich-gold rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-2 h-2 bg-rich-gold rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                 </div>
               </div>
             </div>
@@ -255,26 +263,30 @@ const ChatWidget = () => {
         </div>
 
         {/* Input */}
-        <div className="p-4 border-t border-rich-gold/20">
-          <div className="flex space-x-2">
+        <div className="p-4 border-t-2 border-rich-gold/30 bg-[#1B1B1B]">
+          <div className="flex space-x-3">
             <Input
               ref={inputRef}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Type your message..."
-              className="flex-1 border-rich-gold/20 focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] bg-card text-foreground"
+              className="flex-1 bg-dark-navy/60 border-2 border-rich-gold/30 text-pure-white placeholder:text-light-gray/60 
+                focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_20px_rgba(255,215,0,0.3)] 
+                transition-all duration-300 rounded-lg font-inter text-sm min-h-[48px]"
             />
             <Button
               onClick={handleSendMessage}
               disabled={!inputValue.trim()}
-              className="bg-rich-gold hover:bg-rich-gold/90 text-dark-navy p-3 rounded-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] 
+                text-dark-navy p-3 rounded-lg transition-all duration-300 hover:scale-105 
+                disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 min-h-[48px] min-w-[48px]"
             >
-              <Send className="w-4 h-4" />
+              <Send className="w-5 h-5" />
             </Button>
           </div>
-          <p className="text-xs text-light-gray mt-2 text-center">
-            We typically respond within minutes
+          <p className="text-xs text-light-gray/80 mt-3 text-center font-inter">
+            We typically respond within minutes • Powered by Gission Global
           </p>
         </div>
       </div>
