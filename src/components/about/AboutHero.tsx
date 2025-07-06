@@ -1,9 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
-
 const AboutHero = () => {
-  return (
-    <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
+  return <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
       {/* Background Pattern - Subtle */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-20 left-10 w-24 h-24 bg-rich-gold/20 rounded-full floating-animation"></div>
@@ -46,9 +44,7 @@ const AboutHero = () => {
               
               {/* Animation Space Overlay Text */}
               <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-center">
-                <p className="caption-text opacity-60 text-xs md:text-sm text-rich-gold">
-                  Global Financial Solutions
-                </p>
+                
               </div>
               
             </div>
@@ -94,8 +90,6 @@ const AboutHero = () => {
           
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutHero;
