@@ -15,8 +15,8 @@ export const initializeScrollAnimations = () => {
   }
 
   const observerOptions: IntersectionObserverInit = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.2,
+    rootMargin: '0px 0px -20px 0px',
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -30,6 +30,14 @@ export const initializeScrollAnimations = () => {
             element.classList.contains('scroll-fade-right') ||
             element.classList.contains('scroll-scale')) {
           element.classList.add('visible');
+        }
+      } else {
+        // Remove visible class when element is out of viewport for re-triggering
+        if (element.classList.contains('scroll-fade-up') ||
+            element.classList.contains('scroll-fade-left') ||
+            element.classList.contains('scroll-fade-right') ||
+            element.classList.contains('scroll-scale')) {
+          element.classList.remove('visible');
         }
       }
     });
