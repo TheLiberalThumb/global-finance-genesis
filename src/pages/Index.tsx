@@ -4,6 +4,7 @@ import Services from '@/components/Services';
 import Statistics from '@/components/Statistics';
 import Team from '@/components/Team';
 import ContactCTA from '@/components/ContactCTA';
+import TrustIndicators from '@/components/TrustIndicators';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,6 +18,7 @@ const Index = () => {
         <Team />
         <ContactCTA />
       </main>
+      <TrustIndicators />
       <Footer />
     </div>
   );

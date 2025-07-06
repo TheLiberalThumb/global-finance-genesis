@@ -11,7 +11,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ChatWidget from "./components/ChatWidget";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
-import TrustIndicators from "./components/TrustIndicators";
 import AccessibilityEnhancements from "./components/AccessibilityEnhancements";
 import SEOOptimizer from "./components/SEOOptimizer";
 
@@ -37,7 +36,6 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-        <TrustIndicators />
         <ChatWidget />
       </BrowserRouter>
     </TooltipProvider>
