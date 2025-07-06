@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
 import { useState } from 'react';
 import { CheckCircle, Send } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm = () => {
   const magneticRef = useMagneticButton(0.2);
@@ -64,11 +65,31 @@ const ContactForm = () => {
     
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Submit to Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          service: formData.service,
+          budget: formData.budget,
+          message: formData.message
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
       setIsSubmitted(true);
-    }, 2000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // You could add toast notification here if needed
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const services = [

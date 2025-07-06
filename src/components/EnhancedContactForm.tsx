@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const EnhancedContactForm = () => {
   const [formData, setFormData] = useState({
@@ -85,8 +86,22 @@ const EnhancedContactForm = () => {
     }
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Submit to Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          budget: formData.budget,
+          urgency: formData.urgency,
+          message: formData.message
+        }]);
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Message Sent Successfully!",
@@ -104,6 +119,7 @@ const EnhancedContactForm = () => {
         urgency: ''
       });
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
