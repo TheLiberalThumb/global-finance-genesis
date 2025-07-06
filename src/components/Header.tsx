@@ -37,6 +37,7 @@ const Header = () => {
             to="/" 
             className="flex items-center gap-2 sm:gap-3 lg:gap-4"
             onClick={() => {
+              window.location.href = "/";
               window.location.reload();
             }}
           >
