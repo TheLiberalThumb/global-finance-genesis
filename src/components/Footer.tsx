@@ -229,6 +229,12 @@ const Footer = () => {
               >
                 Terms
               </a>
+              <a
+                href="/admin/login"
+                className="text-light-gray hover:text-rich-gold transition-colors duration-300 text-sm"
+              >
+                Admin
+              </a>
             </div>
           </div>
         </div>
