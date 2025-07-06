@@ -22,10 +22,10 @@ const App = () => (
     <TooltipProvider>
       <PerformanceOptimizer />
       <AccessibilityEnhancements />
-      <SEOOptimizer />
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SEOOptimizer />
         <div id="main-content">
           <Routes>
             <Route path="/" element={<Index />} />
