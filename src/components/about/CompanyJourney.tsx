@@ -49,9 +49,9 @@ const CompanyJourney = () => {
   return (
     <section className="section-padding bg-background">
       <div className="max-w-5xl mx-auto container-padding">
-        <div className="text-center mb-20">
-          <h2 className="heading-lg mb-6 fade-in-up">Our Journey</h2>
-          <p className="body-text text-xl text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1">
+        <div className="text-center mb-20 scroll-fade-up">
+          <h2 className="heading-lg mb-6 text-foreground">Our Journey</h2>
+          <p className="body-text text-xl text-light-gray max-w-3xl mx-auto scroll-fade-up scroll-stagger-1">
             Milestones that shaped our path to becoming a trusted global investment partner
           </p>
         </div>
@@ -62,7 +62,7 @@ const CompanyJourney = () => {
           
           <div className="space-y-16">
             {milestones.map((milestone, index) => (
-              <div key={milestone.year} className={`relative flex ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} scroll-triggered ${milestone.side === 'left' ? 'milestone-enter-left' : 'milestone-enter-right'}`} style={{animationDelay: `${index * 0.2}s`}}>
+              <div key={milestone.year} className={`relative flex ${milestone.side === 'left' ? 'justify-start' : 'justify-end'} scroll-fade-${milestone.side === 'left' ? 'right' : 'left'} scroll-stagger-${Math.min(index + 1, 6)}`}>
                 {/* Timeline Dot */}
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-rich-gold rounded-full border-4 border-background shadow-lg z-10 timeline-dot ${index <= 3 ? 'active' : ''}`}></div>
                 

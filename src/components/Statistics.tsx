@@ -57,11 +57,11 @@ const Statistics = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-12 sm:mb-16 scroll-fade-up">
           <h2 className="font-playfair font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 sm:mb-6">
             Results That Speak
           </h2>
-          <p className="font-inter text-base sm:text-lg md:text-xl text-light-gray max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
+          <p className="font-inter text-base sm:text-lg md:text-xl text-light-gray max-w-4xl mx-auto leading-relaxed px-4 sm:px-0 scroll-fade-up scroll-stagger-1">
             Our commitment to excellence has delivered measurable impact for clients worldwide
           </p>
         </div>
@@ -71,7 +71,7 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`wlf-card-premium text-center ${inView ? 'animate-count-up' : 'opacity-0'}`}
+              className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)} ${inView ? 'visible animate-count-up' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Icon */}
@@ -113,7 +113,7 @@ const Statistics = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-20 scroll-fade-up scroll-stagger-5">
           <p className="font-inter text-lg text-light-gray mb-8 max-w-3xl mx-auto">
             Join the companies that trust us to deliver exceptional results
           </p>

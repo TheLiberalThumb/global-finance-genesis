@@ -39,11 +39,11 @@ const Services = () => {
     <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="heading-lg mb-4 sm:mb-6 fade-in-up text-foreground">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-fade-up">
+          <h2 className="heading-lg mb-4 sm:mb-6 text-foreground">
             Comprehensive Financial Solutions
           </h2>
-          <p className="body-text text-light-gray max-w-3xl mx-auto fade-in-up stagger-delay-1 px-4 sm:px-0">
+          <p className="body-text text-light-gray max-w-3xl mx-auto px-4 sm:px-0 scroll-fade-up scroll-stagger-1">
             From strategic advisory to project financing, we provide end-to-end solutions 
             that drive sustainable growth and maximize value creation.
           </p>
@@ -54,7 +54,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`wlf-card-premium h-full flex flex-col fade-in-up stagger-delay-${index + 2}`}
+              className={`wlf-card-premium h-full flex flex-col scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-all duration-300 border-2 border-rich-gold">
@@ -97,7 +97,7 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20 fade-in-up stagger-delay-5">
+        <div className="text-center mt-20 scroll-fade-up scroll-stagger-4">
           <p className="body-text text-light-gray mb-8 max-w-2xl mx-auto">
             Ready to explore how we can help your business grow?
           </p>

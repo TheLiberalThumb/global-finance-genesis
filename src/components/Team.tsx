@@ -32,11 +32,11 @@ const Team = () => {
     <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="heading-lg mb-6 sm:mb-8 fade-in-up text-foreground">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-fade-up">
+          <h2 className="heading-lg mb-6 sm:mb-8 text-foreground">
             Meet Our Leadership
           </h2>
-          <p className="body-text text-light-gray max-w-4xl mx-auto fade-in-up stagger-delay-1 px-4 sm:px-0">
+          <p className="body-text text-light-gray max-w-4xl mx-auto px-4 sm:px-0 scroll-fade-up scroll-stagger-1">
             Our experienced team combines deep industry knowledge with innovative thinking 
             to deliver exceptional results for our clients.
           </p>
@@ -47,7 +47,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className={`wlf-card-premium group ${index === 0 ? 'slide-in-left' : index === 1 ? 'fade-in-up' : 'slide-in-right'} stagger-delay-${index + 2}`}
+              className={`wlf-card-premium group scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Profile Image */}
               <div className="relative mb-8">
@@ -100,7 +100,7 @@ const Team = () => {
         </div>
 
         {/* Team CTA */}
-        <div className="text-center mt-24 fade-in-up stagger-delay-5">
+        <div className="text-center mt-24 scroll-fade-up scroll-stagger-4">
           <div className="wlf-card-premium max-w-5xl mx-auto">
             <h3 className="heading-md mb-6 text-card-foreground">
               Ready to Work with Our Team?
