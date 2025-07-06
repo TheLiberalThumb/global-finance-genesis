@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 const Hero = () => {
-  return <section className="relative min-h-screen bg-background flex items-center overflow-hidden">
+  return <section id="hero" className="relative min-h-screen bg-background flex items-center overflow-hidden">
       {/* Background Pattern - Subtle */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-20 left-10 w-24 h-24 bg-rich-gold/20 rounded-full floating-animation"></div>

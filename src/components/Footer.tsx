@@ -1,4 +1,70 @@
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/components/ui/use-toast';
+
 const StayInformedSection = () => {
+  const [email, setEmail] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      toast({
+        title: "Email Required",
+        description: "Please enter your email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from('newsletter_subscriptions')
+        .insert([{ email: email.trim().toLowerCase() }]);
+
+      if (error) {
+        if (error.code === '23505') { // Unique constraint violation
+          toast({
+            title: "Already Subscribed",
+            description: "This email is already subscribed to our newsletter.",
+            variant: "default",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Successfully Subscribed!",
+          description: "Thank you for subscribing to our newsletter. You'll receive the latest financial insights and market trends.",
+        });
+        setEmail('');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      toast({
+        title: "Subscription Failed",
+        description: "There was an error subscribing to our newsletter. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section className="bg-background mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -9,16 +75,24 @@ const StayInformedSection = () => {
           <p className="text-light-gray mb-10 text-lg leading-relaxed">
             Get the latest insights on market trends, investment opportunities, and financial strategies delivered directly to your inbox.
           </p>
-          <div className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4">
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="flex-1 px-6 py-4 bg-card border border-rich-gold/20 rounded-lg text-pure-white placeholder:text-light-gray text-base focus:outline-none focus:border-rich-gold transition-colors duration-300"
+              disabled={isLoading}
+              className="flex-1 px-6 py-4 bg-card border border-rich-gold/20 rounded-lg text-pure-white placeholder:text-light-gray text-base focus:outline-none focus:border-rich-gold transition-colors duration-300 disabled:opacity-50"
+              required
             />
-            <button className="px-8 py-4 bg-rich-gold text-dark-navy font-semibold text-base rounded-lg hover:bg-rich-gold/90 transition-colors duration-300">
-              Subscribe
+            <button 
+              type="submit"
+              disabled={isLoading}
+              className="px-8 py-4 bg-rich-gold text-dark-navy font-semibold text-base rounded-lg hover:bg-rich-gold/90 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isLoading ? 'Subscribing...' : 'Subscribe'}
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
