@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactCTA = () => {
   const [formData, setFormData] = useState({
@@ -24,11 +25,28 @@ const ContactCTA = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Submit to Supabase
+      const { error } = await supabase
+        .from('contacts')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
       setIsSubmitted(true);
-    }, 2000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      // You could add toast notification here if needed
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
