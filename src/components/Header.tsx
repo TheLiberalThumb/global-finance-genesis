@@ -37,7 +37,7 @@ const Header = () => {
             to="/" 
             className="flex items-center gap-2 sm:gap-3 lg:gap-4"
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              window.location.reload();
             }}
           >
             <div className="flex-shrink-0">

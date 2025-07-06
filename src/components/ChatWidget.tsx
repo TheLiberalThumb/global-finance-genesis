@@ -148,7 +148,7 @@ const ChatWidget = () => {
             hover:shadow-[0_0_30px_rgba(255,215,0,0.6)] shadow-lg transition-all duration-300 
             hover:scale-110 group border-2 border-rich-gold/20"
         >
-          <MessageCircle className="w-6 h-6 text-dark-navy group-hover:scale-110 transition-transform duration-300" />
+          <MessageCircle className="w-6 h-6 text-rich-gold group-hover:scale-110 transition-transform duration-300" />
           {hasUnread && (
             <div className="absolute -top-2 -right-2 w-5 h-5 bg-red-500 rounded-full animate-pulse border-2 border-white">
               <div className="w-full h-full bg-red-400 rounded-full animate-ping"></div>
