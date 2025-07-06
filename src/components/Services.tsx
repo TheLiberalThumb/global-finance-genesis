@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
+import { useMagneticButton } from '@/hooks/useMagneticButton';
+import FloatingElements from './FloatingElements';
 
 const Services = () => {
+  const magneticRef = useMagneticButton(0.2);
   const services = [
     {
       title: "Corporate Finance Advisory",
@@ -36,8 +39,9 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden section-morph">
+      <FloatingElements />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-fade-up">
           <h2 className="heading-lg mb-4 sm:mb-6 text-foreground">
@@ -97,11 +101,15 @@ const Services = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-20 scroll-fade-up scroll-stagger-4">
+        <div className="text-center mt-20 scroll-fade-up scroll-stagger-4 reveal-block">
           <p className="body-text text-light-gray mb-8 max-w-2xl mx-auto">
             Ready to explore how we can help your business grow?
           </p>
-          <Button variant="cta-primary">
+          <Button 
+            ref={magneticRef}
+            variant="cta-primary" 
+            className="magnetic-button"
+          >
             Schedule Consultation
           </Button>
         </div>

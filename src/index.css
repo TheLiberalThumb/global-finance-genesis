@@ -317,7 +317,45 @@
     opacity: 0;
   }
   
-  /* Animation Delays - Enhanced Staggered System */
+  /* Magnetic Button Effects */
+  .magnetic-button {
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+  }
+
+  /* Floating Background Elements */
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: floatGentle 12s ease-in-out infinite;
+    will-change: transform;
+    pointer-events: none;
+  }
+
+  .floating-element:nth-child(1) { animation-delay: 0s; }
+  .floating-element:nth-child(2) { animation-delay: 2s; }
+  .floating-element:nth-child(3) { animation-delay: 4s; }
+  .floating-element:nth-child(4) { animation-delay: 6s; }
+
+  /* Section Background Morphing */
+  .section-morph {
+    transition: background 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: background;
+  }
+
+  /* Content Reveal Blocks */
+  .reveal-block {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .reveal-block.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
   .stagger-delay-1 { animation-delay: 0.1s; transition-delay: 0.1s; }
   .stagger-delay-2 { animation-delay: 0.2s; transition-delay: 0.2s; }
   .stagger-delay-3 { animation-delay: 0.3s; transition-delay: 0.3s; }
@@ -515,7 +553,8 @@
   @media (max-width: 768px) {
     .floating-animation,
     .coin-float,
-    .floating-bg-element {
+    .floating-bg-element,
+    .floating-element {
       animation-duration: 8s;
     }
     
@@ -527,6 +566,11 @@
     .interactive-button:hover {
       transform: none;
       box-shadow: none;
+    }
+
+    .magnetic-button {
+      transform: none !important;
+      transition: none;
     }
   }
   
@@ -790,18 +834,18 @@
     }
   }
   
-  @keyframes floatingElement {
+  @keyframes floatGentle {
     0%, 100% {
       transform: translateY(0px) translateX(0px) rotate(0deg);
     }
     25% {
-      transform: translateY(-20px) translateX(10px) rotate(5deg);
+      transform: translateY(-15px) translateX(8px) rotate(2deg);
     }
     50% {
-      transform: translateY(-40px) translateX(-5px) rotate(-3deg);
+      transform: translateY(-25px) translateX(-4px) rotate(-1deg);
     }
     75% {
-      transform: translateY(-20px) translateX(-10px) rotate(7deg);
+      transform: translateY(-12px) translateX(-6px) rotate(3deg);
     }
   }
   
