@@ -174,14 +174,53 @@
     background: hsl(var(--dark-section));
   }
   
-  /* Advanced Animation System */
-  .floating-animation {
-    animation: float 6s ease-in-out infinite;
+  /* Core Web Vitals Optimization Classes */
+  .optimize-lcp {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
   }
   
-  .coin-float {
-    animation: coinFloat 8s ease-in-out infinite;
-    will-change: transform;
+  .optimize-cls {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
+  
+  .optimize-inp {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Loading State Animations */
+  .loading-shimmer {
+    background: linear-gradient(90deg, 
+      rgba(255, 215, 0, 0.1) 0%, 
+      rgba(255, 215, 0, 0.2) 50%, 
+      rgba(255, 215, 0, 0.1) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  /* Critical CSS for above-the-fold content */
+  .critical-content {
+    font-display: swap;
+    will-change: auto;
+  }
+  
+  /* Performance-first button interactions */
+  .perf-button {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  .perf-button:hover {
+    transform: translateZ(0) translateY(-2px);
   }
   
   .fade-in-up {

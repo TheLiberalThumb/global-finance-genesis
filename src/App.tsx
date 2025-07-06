@@ -10,24 +10,34 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ChatWidget from "./components/ChatWidget";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import TrustIndicators from "./components/TrustIndicators";
+import AccessibilityEnhancements from "./components/AccessibilityEnhancements";
+import SEOOptimizer from "./components/SEOOptimizer";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <PerformanceOptimizer />
+      <AccessibilityEnhancements />
+      <SEOOptimizer />
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div id="main-content">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/contact" element={<Contact />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <TrustIndicators />
         <ChatWidget />
       </BrowserRouter>
     </TooltipProvider>
