@@ -47,7 +47,7 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className={`wealthsimple-card group ${index === 0 ? 'slide-in-left' : index === 1 ? 'fade-in-up' : 'slide-in-right'} stagger-delay-${index + 2}`}
+              className={`wlf-card-premium group ${index === 0 ? 'slide-in-left' : index === 1 ? 'fade-in-up' : 'slide-in-right'} stagger-delay-${index + 2}`}
             >
               {/* Profile Image */}
               <div className="relative mb-8">
@@ -101,7 +101,7 @@ const Team = () => {
 
         {/* Team CTA */}
         <div className="text-center mt-24 fade-in-up stagger-delay-5">
-          <div className="wealthsimple-card max-w-5xl mx-auto">
+          <div className="wlf-card-premium max-w-5xl mx-auto">
             <h3 className="heading-md mb-6 text-card-foreground">
               Ready to Work with Our Team?
             </h3>
