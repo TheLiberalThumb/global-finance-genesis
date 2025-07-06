@@ -106,25 +106,28 @@ const TrustIndicators = () => {
             Performance Metrics
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-rich-gold/10 to-rich-gold/5 
-              border border-rich-gold/30 hover:border-rich-gold/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.2)] 
-              transition-all duration-500">
+            <div className="text-center p-8 rounded-xl bg-dark-navy 
+              border border-rich-gold/30 hover:border-rich-gold/60 
+              hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] hover:-translate-y-1
+              transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
               <div className="text-4xl lg:text-5xl font-bold text-rich-gold mb-3">256-bit</div>
-              <p className="text-pure-white font-medium mb-2">Encryption</p>
+              <p className="text-light-gray font-medium mb-2">Encryption</p>
               <p className="text-light-gray text-sm">Bank-grade security</p>
             </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-rich-gold/10 to-rich-gold/5 
-              border border-rich-gold/30 hover:border-rich-gold/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.2)] 
-              transition-all duration-500">
+            <div className="text-center p-8 rounded-xl bg-dark-navy 
+              border border-rich-gold/30 hover:border-rich-gold/60 
+              hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] hover:-translate-y-1
+              transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
               <div className="text-4xl lg:text-5xl font-bold text-rich-gold mb-3">99.9%</div>
-              <p className="text-pure-white font-medium mb-2">Uptime SLA</p>
+              <p className="text-light-gray font-medium mb-2">Uptime SLA</p>
               <p className="text-light-gray text-sm">Guaranteed availability</p>
             </div>
-            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-rich-gold/10 to-rich-gold/5 
-              border border-rich-gold/30 hover:border-rich-gold/60 hover:shadow-[0_0_25px_rgba(255,215,0,0.2)] 
-              transition-all duration-500">
+            <div className="text-center p-8 rounded-xl bg-dark-navy 
+              border border-rich-gold/30 hover:border-rich-gold/60 
+              hover:shadow-[0_0_20px_rgba(255,215,0,0.2)] hover:-translate-y-1
+              transition-all duration-300 shadow-[0_8px_24px_rgba(0,0,0,0.1)]">
               <div className="text-4xl lg:text-5xl font-bold text-rich-gold mb-3">24/7</div>
-              <p className="text-pure-white font-medium mb-2">Monitoring</p>
+              <p className="text-light-gray font-medium mb-2">Monitoring</p>
               <p className="text-light-gray text-sm">Continuous oversight</p>
             </div>
           </div>
