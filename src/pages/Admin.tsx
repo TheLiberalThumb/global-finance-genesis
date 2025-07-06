@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { useAuth } from '@/contexts/AuthContext';
+import { useToast } from '@/hooks/use-toast';
 
 interface Contact {
   id: string;
@@ -22,6 +25,8 @@ interface Contact {
 const Admin = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [loading, setLoading] = useState(true);
+  const { signOut } = useAuth();
+  const { toast } = useToast();
 
   useEffect(() => {
     fetchContacts();
@@ -57,6 +62,22 @@ const Admin = () => {
     });
   };
 
+  const handleSignOut = async () => {
+    const { error } = await signOut();
+    if (error) {
+      toast({
+        title: "Error",
+        description: "Failed to sign out",
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Success",
+        description: "Signed out successfully",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -64,12 +85,19 @@ const Admin = () => {
       <div className="container mx-auto px-4 py-8">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-foreground">
-              Contact Submissions
-            </CardTitle>
-            <CardDescription>
-              View and manage contact form submissions
-            </CardDescription>
+            <div className="flex justify-between items-center">
+              <div>
+                <CardTitle className="text-2xl font-bold text-foreground">
+                  Contact Submissions
+                </CardTitle>
+                <CardDescription>
+                  View and manage contact form submissions
+                </CardDescription>
+              </div>
+              <Button onClick={handleSignOut} variant="outline">
+                Sign Out
+              </Button>
+            </div>
           </CardHeader>
           
           <CardContent>
