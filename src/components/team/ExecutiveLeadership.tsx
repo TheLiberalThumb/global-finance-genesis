@@ -6,21 +6,21 @@ const ExecutiveLeadership = () => {
       name: "Mike Adesokan",
       role: "Chief Executive Officer",
       bio: "Visionary leader with over 20 years of experience in global finance and strategic investment. Mike has successfully led transformational deals worth over $2B across emerging markets.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png",
       achievements: ["$2B+ in transactions", "20+ years experience", "Global market expertise"]
     },
     {
       name: "Rebecca Adesokan",
       role: "Executive Director",
       bio: "Strategic operations expert specializing in organizational excellence and sustainable growth. Rebecca drives operational efficiency and stakeholder engagement across all business units.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c95f8a7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/df372e0c-7e39-4d4d-88a9-df1f52474453.png",
       achievements: ["Operational excellence", "Strategic planning", "Stakeholder relations"]
     },
     {
       name: "Adeola Emmanuel",
       role: "Business Development Manager",
       bio: "Dynamic business development leader focused on identifying and executing high-impact opportunities. Adeola has built strategic partnerships that have generated significant value creation.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/lovable-uploads/f5213e80-ea4e-4612-a412-2b4ecba22332.png",
       achievements: ["Partnership development", "Market expansion", "Value creation"]
     }
   ];

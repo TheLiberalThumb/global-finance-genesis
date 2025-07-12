@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
 import FloatingElements from '@/components/FloatingElements';
@@ -49,8 +50,11 @@ const ServicesCTA = () => {
                 ref={magneticRef}
                 variant="cta-primary" 
                 className="magnetic-button px-12"
+                asChild
               >
-                Schedule Consultation
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Schedule Consultation
+                </a>
               </Button>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 
 const Team = () => {
@@ -6,7 +7,7 @@ const Team = () => {
       name: "Mike Adesokan",
       title: "Chief Executive Officer",
       bio: "Visionary leader with over 15 years of experience in corporate finance and strategic investments. Mike has led billion-dollar transactions across multiple sectors.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: "/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png",
       linkedin: "#",
       expertise: ["Strategic Leadership", "M&A", "Corporate Finance", "Investment Strategy"]
     },
@@ -14,7 +15,7 @@ const Team = () => {
       name: "Rebecca Adesokan",
       title: "Executive Director",
       bio: "Strategic architect specializing in public-private partnerships and infrastructure financing. Rebecca brings deep expertise in complex capital structures.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612e2c3?w=400&h=400&fit=crop&crop=face",
+      image: "/lovable-uploads/df372e0c-7e39-4d4d-88a9-df1f52474453.png",
       linkedin: "#",
       expertise: ["PPP Structures", "Infrastructure Finance", "Risk Management", "Regulatory Affairs"]
     },
@@ -22,7 +23,7 @@ const Team = () => {
       name: "Adeola Emmanuel",
       title: "Business Development Manager",
       bio: "Dynamic business development professional focused on identifying and executing growth opportunities in emerging markets and innovative sectors.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+      image: "/lovable-uploads/f5213e80-ea4e-4612-a412-2b4ecba22332.png",
       linkedin: "#",
       expertise: ["Business Development", "Market Analysis", "Client Relations", "Emerging Markets"]
     }
@@ -110,11 +111,15 @@ const Team = () => {
               and unlock new opportunities for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button variant="cta-secondary">
-                Meet Full Team
+              <Button variant="cta-secondary" asChild>
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Meet Full Team
+                </a>
               </Button>
-              <Button variant="cta-primary">
-                Schedule Meeting
+              <Button variant="cta-primary" asChild>
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Schedule Meeting
+                </a>
               </Button>
             </div>
           </div>

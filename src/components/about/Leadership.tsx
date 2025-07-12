@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Users, Award, Globe } from 'lucide-react';
 
@@ -20,7 +21,7 @@ const Leadership = () => {
             <div className="relative mb-6">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-rich-gold/20 group-hover:border-rich-gold transition-all duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
+                  src="/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png" 
                   alt="Mike Adesokan" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -42,7 +43,7 @@ const Leadership = () => {
             <div className="relative mb-6">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-rich-gold/20 group-hover:border-rich-gold transition-all duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612e2c3?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
+                  src="/lovable-uploads/df372e0c-7e39-4d4d-88a9-df1f52474453.png" 
                   alt="Rebecca Adesokan" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -64,7 +65,7 @@ const Leadership = () => {
             <div className="relative mb-6">
               <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-rich-gold/20 group-hover:border-rich-gold transition-all duration-300">
                 <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
+                  src="/lovable-uploads/f5213e80-ea4e-4612-a412-2b4ecba22332.png" 
                   alt="Adeola Emmanuel" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
@@ -83,8 +84,10 @@ const Leadership = () => {
         </div>
 
         <div className="text-center scroll-fade-up scroll-stagger-3">
-          <Button variant="cta-secondary">
-            Meet Our Full Team
+          <Button variant="cta-secondary" asChild>
+            <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+              Meet Our Full Team
+            </a>
           </Button>
         </div>
       </div>

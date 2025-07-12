@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 
 const AboutCTA = () => {
@@ -19,8 +20,10 @@ const AboutCTA = () => {
           Join leading companies who trust us to accelerate growth through strategic capital solutions and expert financial guidance.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-up stagger-delay-2">
-          <Button variant="cta-primary">
-            Start Your Journey
+          <Button variant="cta-primary" asChild>
+            <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+              Start Your Journey
+            </a>
           </Button>
           <Button variant="cta-secondary">
             Download Our Brochure
