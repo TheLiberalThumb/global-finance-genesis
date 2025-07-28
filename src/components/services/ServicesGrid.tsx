@@ -1,63 +1,79 @@
-
 import { Button } from '@/components/ui/button';
 import FloatingElements from '@/components/FloatingElements';
 
 const ServicesGrid = () => {
   const services = [
     {
-      title: "Large-Scale Project Financing",
-      description: "From $50M infrastructure projects to $300M+ energy initiatives, we structure equity, debt, and blended finance solutions for transformative ventures.",
+      title: "Corporate Finance Advisory",
+      description: "End-to-end advisory services for complex financial transactions, strategic restructuring, and capital optimization initiatives.",
+      process: "Assessment → Strategy → Execution → Integration",
       icon: (
-        <svg className="w-16 h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
       ),
-      features: ["$50M+ Infrastructure Projects", "$300M+ Energy Initiatives", "Equity & Debt Structuring", "Blended Finance Solutions"]
+      features: ["M&A Advisory", "Capital Restructuring", "Business Valuation", "Financial Due Diligence"]
     },
     {
-      title: "Strategic Advisory Services",
-      description: "End-to-end support in mergers, property acquisitions, commodity sourcing, and capital restructuring for businesses navigating complex financial transactions.",
+      title: "Project Investment",
+      description: "Strategic financing solutions for high-impact infrastructure and development projects through innovative funding structures.",
+      process: "Evaluation → Structuring → Funding → Monitoring",
       icon: (
-        <svg className="w-16 h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
         </svg>
       ),
-      features: ["Mergers & Acquisitions", "Property Acquisitions", "Commodity Sourcing", "Capital Restructuring"]
+      features: ["Infrastructure Projects", "Energy Investments", "Real Estate Development", "Technology Ventures"]
     },
     {
-      title: "PPP Framework Development",
-      description: "Proven expertise in developing PPP structures that facilitate collaboration between government and private sectors for major infrastructure projects.",
+      title: "Capital Raising",
+      description: "Comprehensive funding solutions connecting businesses with institutional investors, private equity, and debt providers.",
+      process: "Preparation → Marketing → Negotiation → Closing",
       icon: (
-        <svg className="w-16 h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 5a2 2 0 114 0v6a2 2 0 11-4 0V5zM5 15a2 2 0 114 0v2a2 2 0 11-4 0v-2zM15 5a2 2 0 114 0v6a2 2 0 11-4 0V5zM13 15a2 2 0 114 0v2a2 2 0 11-4 0v-2z" />
         </svg>
       ),
-      features: ["Government Partnerships", "Private Sector Collaboration", "Infrastructure Development", "Regulatory Compliance"]
+      features: ["Equity Financing", "Debt Solutions", "Bridge Capital", "Growth Funding"]
     },
     {
-      title: "International Capital Access",
-      description: "Connecting clients with our network of Kuwait, Singapore, and Korean investors for equity and debt financing tailored to your risk profile.",
+      title: "Public-Private Partnerships",
+      description: "Expert guidance in structuring and executing complex PPP arrangements that deliver sustainable public infrastructure.",
+      process: "Analysis → Structuring → Procurement → Implementation",
       icon: (
-        <svg className="w-16 h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
         </svg>
       ),
-      features: ["Kuwait Investor Network", "Singapore Capital Markets", "Korean Consortium Access", "Risk-Tailored Financing"]
+      features: ["Infrastructure PPPs", "Government Relations", "Risk Allocation", "Performance Management"]
     },
     {
-      title: "Investment Strategy Optimization",
-      description: "Tailored advisory services guiding portfolio optimization and financial strategies that drive growth in emerging markets.",
+      title: "Strategic Consulting",
+      description: "Tailored strategic advisory services to optimize business performance, market positioning, and growth trajectories.",
+      process: "Analysis → Strategy → Planning → Execution",
       icon: (
-        <svg className="w-16 h-16 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       ),
-      features: ["Portfolio Optimization", "Emerging Market Strategy", "Risk Management", "Growth Acceleration"]
+      features: ["Market Analysis", "Strategic Planning", "Performance Optimization", "Digital Transformation"]
+    },
+    {
+      title: "Mergers & Acquisitions",
+      description: "Full-service M&A advisory from target identification through deal completion, ensuring optimal value creation.",
+      process: "Strategy → Sourcing → Due Diligence → Execution",
+      icon: (
+        <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+        </svg>
+      ),
+      features: ["Buy-Side Advisory", "Sell-Side Representation", "Valuation Services", "Integration Support"]
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden section-morph">
+      <FloatingElements />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-fade-up">
           <h2 className="heading-lg mb-4 sm:mb-6 text-foreground">
@@ -68,28 +84,30 @@ const ServicesGrid = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`wlf-card-premium h-full flex flex-col scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)} group hover:-translate-y-1 transition-all duration-500 hover:border-rich-gold hover:shadow-[0_0_30px_rgba(212,175,55,0.3)]`}
+              className={`wlf-card-premium h-full flex flex-col scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
-              {/* Icon */}
-              <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mb-6 hover:scale-110 transition-all duration-300 border-2 border-rich-gold">
                 {service.icon}
               </div>
 
-              {/* Content */}
-              <h3 className="heading-md text-card-foreground mb-4 font-playfair">
+              <h3 className="font-playfair font-semibold text-2xl leading-tight text-card-foreground mb-4">
                 {service.title}
               </h3>
               
-              <p className="body-text text-light-gray mb-6 flex-grow" style={{ lineHeight: '1.6' }}>
+              <p className="font-inter text-base leading-relaxed text-light-gray mb-4" style={{ lineHeight: '1.6' }}>
                 {service.description}
               </p>
 
-              {/* Features */}
-              <ul className="space-y-2 mb-8">
+              <div className="mb-6">
+                <h4 className="font-inter font-medium text-sm text-rich-gold mb-2">Process Flow:</h4>
+                <p className="font-inter text-sm text-light-gray">{service.process}</p>
+              </div>
+
+              <ul className="space-y-2 mb-8 flex-grow">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start font-inter text-sm text-light-gray">
                     <div className="w-1.5 h-1.5 bg-rich-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -98,7 +116,6 @@ const ServicesGrid = () => {
                 ))}
               </ul>
 
-              {/* Learn More Link */}
               <div className="mt-auto pt-4">
                 <Button variant="outline" className="w-full">
                   Learn More
