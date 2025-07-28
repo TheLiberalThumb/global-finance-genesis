@@ -25,6 +25,12 @@ const Leadership = () => {
                   alt="Mike Adesokan" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
+                  style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden'
+                  }}
                 />
               </div>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center floating-animation">
@@ -47,6 +53,12 @@ const Leadership = () => {
                   alt="Rebecca Adesokan" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
+                  style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden'
+                  }}
                 />
               </div>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center floating-animation stagger-delay-1">
@@ -69,6 +81,12 @@ const Leadership = () => {
                   alt="Adeola Emmanuel" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
+                  style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden'
+                  }}
                 />
               </div>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-rich-gold rounded-full flex items-center justify-center floating-animation stagger-delay-2">

@@ -1,3 +1,4 @@
+
 import FloatingElements from '@/components/FloatingElements';
 
 const ExecutiveLeadership = () => {
@@ -49,6 +50,13 @@ const ExecutiveLeadership = () => {
                   src={executive.image}
                   alt={executive.name}
                   className="w-full h-full rounded-full object-cover border-4 border-rich-gold/20 hover:border-rich-gold/50 transition-all duration-300"
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="high"
+                  style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden'
+                  }}
                 />
                 <div className="absolute inset-0 rounded-full bg-rich-gold/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
               </div>
