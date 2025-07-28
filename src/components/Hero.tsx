@@ -59,14 +59,14 @@ const Hero = () => {
             {/* Main Headline */}
             <div className="fade-in-up">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-playfair font-bold text-foreground leading-tight mb-3 sm:mb-4 lg:mb-6">
-                Empowering Africa's Growth Through <span className="text-rich-gold">Strategic Corporate Finance</span>
+                Building Africa's <span className="text-rich-gold">Future</span>
               </h1>
             </div>
             
             {/* Subheading */}
             <div className="fade-in-up stagger-delay-1">
               <p className="font-futura text-base sm:text-lg md:text-xl lg:text-2xl text-light-gray leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                From $300M waste-to-energy projects to major infrastructure initiatives, we connect visionary businesses with the capital needed to transform emerging markets across Africa and the Middle East.
+                Strategic corporate finance for visionary businesses. We've secured $2.5B+ in funding for transformative projects across emerging markets.
               </p>
             </div>
 
@@ -90,8 +90,7 @@ const Hero = () => {
               <div className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8 opacity-70 justify-center lg:justify-start">
                 <div className="font-futura font-medium text-sm text-light-gray">$2.5B+ Secured</div>
                 <div className="font-futura font-medium text-sm text-light-gray">100+ Projects</div>
-                <div className="font-futura font-medium text-sm text-light-gray">Lagos-Kuwait Partnership</div>
-                <div className="font-futura font-medium text-sm text-light-gray">PPP Specialist</div>
+                <div className="font-futura font-medium text-sm text-light-gray">15+ Years</div>
               </div>
             </div>
           </div>
