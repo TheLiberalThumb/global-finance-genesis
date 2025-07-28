@@ -1,8 +1,15 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 
 const Statistics = () => {
   const [inView, setInView] = useState(false);
+  const [counters, setCounters] = useState({
+    projects: 0,
+    funding: 0,
+    satisfaction: 0,
+    experience: 0
+  });
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -12,7 +19,7 @@ const Statistics = () => {
           setInView(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
 
     if (ref.current) {
@@ -22,24 +29,54 @@ const Statistics = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Counter animation effect
+  useEffect(() => {
+    if (!inView) return;
+
+    const targets = { projects: 100, funding: 2, satisfaction: 98, experience: 15 };
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepTime = duration / steps;
+
+    Object.keys(targets).forEach((key, index) => {
+      setTimeout(() => {
+        const target = targets[key as keyof typeof targets];
+        const increment = target / steps;
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          setCounters(prev => ({
+            ...prev,
+            [key]: key === 'funding' ? Number(current.toFixed(1)) : Math.floor(current)
+          }));
+        }, stepTime);
+      }, index * 200); // 0.2s stagger delay
+    });
+  }, [inView]);
+
   const stats = [
     {
-      number: "100+",
+      number: `${counters.projects}+`,
       label: "Projects Completed",
       description: "Successfully delivered across infrastructure, energy, and emerging sectors"
     },
     {
-      number: "$2B+",
+      number: `$${counters.funding}B+`,
       label: "In Funding Secured",
       description: "Capital raised for our clients through strategic partnerships"
     },
     {
-      number: "98%",
+      number: `${counters.satisfaction}%`,
       label: "Client Satisfaction Rate",
       description: "Proven track record of delivering exceptional results"
     },
     {
-      number: "15+",
+      number: `${counters.experience}+`,
       label: "Years of Experience",
       description: "Deep expertise in corporate finance and investment advisory"
     }
@@ -71,8 +108,7 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)} ${inView ? 'visible animate-count-up' : ''}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Icon */}
               <div className="w-16 h-16 bg-dark-navy rounded-full flex items-center justify-center mx-auto mb-6 hover:scale-110 transition-transform duration-300 border-2 border-rich-gold">
