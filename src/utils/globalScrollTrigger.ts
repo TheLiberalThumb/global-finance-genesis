@@ -1,3 +1,4 @@
+
 // Global scroll trigger utility for applying scroll animations across all pages
 
 // Extend Window interface for custom properties
@@ -15,7 +16,7 @@ export const initializeScrollAnimations = () => {
   }
 
   const observerOptions: IntersectionObserverInit = {
-    threshold: 0.2,
+    threshold: 0.3, // Trigger when 30% of element is visible
     rootMargin: '0px 0px -20px 0px',
   };
 

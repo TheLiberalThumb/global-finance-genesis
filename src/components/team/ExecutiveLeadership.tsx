@@ -39,50 +39,76 @@ const ExecutiveLeadership = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {executives.map((executive, index) => (
-            <div
-              key={executive.name}
-              className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${index + 1}`}
-            >
-              <div className="w-32 h-32 mx-auto mb-6 relative">
-                <img
-                  src={executive.image}
-                  alt={executive.name}
-                  className="w-full h-full rounded-full object-cover border-4 border-rich-gold/20 hover:border-rich-gold/50 transition-all duration-300"
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="high"
-                  style={{
-                    willChange: 'transform',
-                    backfaceVisibility: 'hidden'
-                  }}
-                />
-                <div className="absolute inset-0 rounded-full bg-rich-gold/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+        <div className="space-y-8 lg:space-y-12">
+          {executives.map((executive, index) => {
+            const isEven = index % 2 === 0;
+            const slideDirection = isEven ? 'left' : 'right';
+            
+            return (
+              <div
+                key={executive.name}
+                className={`group relative scroll-fade-${slideDirection} scroll-stagger-${index + 1}`}
+              >
+                <div className="wlf-card-premium p-6 sm:p-8 lg:p-10 hover:scale-[1.02] transition-all duration-500 hover:border-rich-gold/50 hover:shadow-lg hover:shadow-rich-gold/10">
+                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-6 lg:gap-8`}>
+                    
+                    {/* Profile Image */}
+                    <div className="flex-shrink-0 relative">
+                      <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 relative">
+                        {/* Loading Skeleton */}
+                        <div className="absolute inset-0 rounded-full bg-rich-gold/10 animate-pulse"></div>
+                        
+                        {/* Optimized Image */}
+                        <picture>
+                          <source srcSet={executive.image} type="image/webp" />
+                          <img
+                            src={executive.image}
+                            alt={executive.name}
+                            className="w-full h-full rounded-full object-cover border-4 border-rich-gold/30 group-hover:border-rich-gold/60 transition-all duration-500 shadow-lg shadow-rich-gold/10"
+                            loading="lazy"
+                            decoding="async"
+                            fetchPriority={index === 0 ? "high" : "low"}
+                            style={{
+                              willChange: 'transform',
+                              backfaceVisibility: 'hidden'
+                            }}
+                          />
+                        </picture>
+                        
+                        {/* Gold Ring Effect */}
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-rich-gold/20 to-rich-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      </div>
+                    </div>
 
-              <h3 className="font-playfair font-semibold text-2xl text-card-foreground mb-2">
-                {executive.name}
-              </h3>
-              
-              <div className="text-rich-gold font-medium text-sm uppercase tracking-wide mb-4">
-                {executive.role}
-              </div>
+                    {/* Content */}
+                    <div className={`flex-1 text-center ${isEven ? 'lg:text-left' : 'lg:text-right'}`}>
+                      <h3 className="font-playfair font-semibold text-2xl sm:text-3xl lg:text-4xl text-card-foreground mb-3">
+                        {executive.name}
+                      </h3>
+                      
+                      <div className="text-rich-gold font-medium text-base sm:text-lg uppercase tracking-wide mb-6">
+                        {executive.role}
+                      </div>
 
-              <p className="font-inter text-sm text-light-gray leading-relaxed mb-6">
-                {executive.bio}
-              </p>
+                      <p className="font-inter text-sm sm:text-base text-light-gray leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                        {executive.bio}
+                      </p>
 
-              <div className="space-y-2">
-                {executive.achievements.map((achievement, idx) => (
-                  <div key={idx} className="flex items-center justify-center font-inter text-xs text-light-gray">
-                    <div className="w-1.5 h-1.5 bg-rich-gold rounded-full mr-2"></div>
-                    <span>{achievement}</span>
+                      {/* Achievements */}
+                      <div className={`space-y-3 ${isEven ? 'lg:items-start' : 'lg:items-end'}`}>
+                        {executive.achievements.map((achievement, idx) => (
+                          <div key={idx} className={`flex items-center ${isEven ? 'justify-center lg:justify-start' : 'justify-center lg:justify-end'} font-inter text-sm text-light-gray`}>
+                            <div className="w-2 h-2 bg-rich-gold rounded-full mr-3 flex-shrink-0"></div>
+                            <span>{achievement}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
