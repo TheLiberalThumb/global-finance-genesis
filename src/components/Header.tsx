@@ -86,8 +86,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Button variant="cta-primary" className="text-xs sm:text-sm md:text-base lg:text-lg px-3 sm:px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 min-h-[40px] sm:min-h-[44px]">
-              Get Started
+            <Button variant="cta-primary" className="text-xs sm:text-sm md:text-base lg:text-lg px-3 sm:px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 min-h-[40px] sm:min-h-[44px]" asChild>
+              <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                Book Meeting
+              </a>
             </Button>
           </div>
 
@@ -137,8 +139,10 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="cta-primary" className="mt-6 w-full min-h-[48px] text-base">
-                Get Started
+              <Button variant="cta-primary" className="mt-6 w-full min-h-[48px] text-base" asChild>
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Book Meeting
+                </a>
               </Button>
             </nav>
           </div>

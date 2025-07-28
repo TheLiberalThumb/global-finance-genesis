@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import FloatingElements from '@/components/FloatingElements';
 
@@ -14,11 +15,13 @@ const ContactHero = () => {
             Ready to transform your business with innovative financial solutions? Connect with our expert team to discuss your unique challenges and discover opportunities for growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center scroll-fade-up scroll-stagger-2">
-            <Button variant="cta-primary" className="magnetic-button">
-              Schedule Consultation
+            <Button variant="cta-primary" className="magnetic-button" asChild>
+              <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                Schedule Consultation
+              </a>
             </Button>
             <Button variant="cta-secondary" className="magnetic-button">
-              Get Quick Quote
+              Discuss Your Project
             </Button>
           </div>
         </div>

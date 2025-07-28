@@ -1,7 +1,10 @@
+
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
+
 const AboutHero = () => {
-  return <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
+  return (
+    <section className="relative bg-background min-h-screen flex items-center overflow-hidden">
       {/* Background Pattern - Subtle */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-20 left-10 w-24 h-24 bg-rich-gold/20 rounded-full floating-animation"></div>
@@ -63,11 +66,13 @@ const AboutHero = () => {
             
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 hero-content-enter stagger-delay-2 mt-6 sm:mt-8 justify-center lg:justify-start">
-              <Button variant="cta-primary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
-                Start Your Journey
+              <Button variant="cta-primary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg" asChild>
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Schedule Consultation
+                </a>
               </Button>
               <Button variant="cta-secondary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
-                Learn More
+                View Case Studies
               </Button>
             </div>
             
@@ -90,6 +95,8 @@ const AboutHero = () => {
           
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutHero;
