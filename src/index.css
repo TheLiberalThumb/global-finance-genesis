@@ -1,67 +1,137 @@
+/* Wealthsimple Exact Typography System */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Futura:wght@400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* World Liberty Financial-Inspired Design System - Premium Gold & Navy Palette */
+
 @layer base {
+  /* Root smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
-    --background: 27 27 27; /* #1B1B1B - Dark Navy */
-    --foreground: 255 255 255; /* #FFFFFF - Pure White */
-    --card: 39 39 39; /* #272727 - Slightly lighter than background */
-    --card-foreground: 255 255 255; /* #FFFFFF - Pure White */
-    --popover: 27 27 27; /* #1B1B1B - Dark Navy */
-    --popover-foreground: 255 255 255; /* #FFFFFF - Pure White */
-    --primary: 255 215 0; /* #FFD700 - Rich Gold */
-    --primary-foreground: 27 27 27; /* #1B1B1B - Dark Navy */
-    --secondary: 60 60 60; /* #3C3C3C - Medium Gray */
-    --secondary-foreground: 255 255 255; /* #FFFFFF - Pure White */
-    --muted: 50 50 50; /* #323232 - Muted Gray */
-    --muted-foreground: 163 163 163; /* #A3A3A3 - Light Gray */
-    --accent: 255 215 0; /* #FFD700 - Rich Gold */
-    --accent-foreground: 27 27 27; /* #1B1B1B - Dark Navy */
-    --destructive: 239 68 68; /* #EF4444 - Red */
-    --destructive-foreground: 248 250 252; /* #F8FAFC - Light */
-    --border: 60 60 60; /* #3C3C3C - Medium Gray */
-    --input: 60 60 60; /* #3C3C3C - Medium Gray */
-    --ring: 255 215 0; /* #FFD700 - Rich Gold */
-    --chart-1: 12 74 110; /* #0C4A6E - Deep Blue */
-    --chart-2: 18 113 255; /* #1271FF - Bright Blue */
-    --chart-3: 34 197 94; /* #22C55E - Green */
-    --chart-4: 251 191 36; /* #FBBF24 - Yellow */
-    --chart-5: 239 68 68; /* #EF4444 - Red */
+    /* World Liberty Financial Premium Color Palette - Enhanced System */
+    --rich-gold: 51 100% 50%;            /* #FFD700 - Primary gold accent */
+    --dark-navy: 0 0% 11%;               /* #1B1B1B - Primary background */
+    --deep-navy: 285 6% 14%;             /* #242124 - Secondary background */
+    --pure-white: 0 0% 100%;             /* #FFFFFF - Text on dark backgrounds */
+    --light-gray: 43 8% 89%;             /* #E5E4E2 - Secondary text */
+    
+    /* WLF Enhanced Color System */
+    --primary-yellow: var(--rich-gold);
+    --primary-gold: var(--rich-gold);
+    --bg-primary: var(--dark-navy);
+    --bg-secondary: var(--deep-navy);
+    --text-primary: var(--pure-white);
+    --text-secondary: var(--light-gray);
+    --text-accent: var(--rich-gold);
+    --border-primary: var(--rich-gold);
+    --border-subtle: var(--rich-gold);
+    --hover-gold: var(--rich-gold);
+    
+    /* World Liberty Financial Design System Mappings */
+    --background: var(--dark-navy);
+    --foreground: var(--pure-white);
+
+    --card: var(--dark-navy);
+    --card-foreground: var(--pure-white);
+
+    --popover: var(--dark-navy);
+    --popover-foreground: var(--pure-white);
+
+    --primary: var(--rich-gold);
+    --primary-foreground: var(--dark-navy);
+
+    --secondary: var(--deep-navy);
+    --secondary-foreground: var(--pure-white);
+
+    --muted: var(--deep-navy);
+    --muted-foreground: var(--light-gray);
+
+    --accent: var(--rich-gold);
+    --accent-foreground: var(--dark-navy);
+    
+    /* Premium WLF Gradients - Enhanced System */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--dark-navy)) 0%, hsl(var(--deep-navy)) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(var(--rich-gold)) 0%, hsl(51 100% 85%) 100%);
+    --bg-gradient: linear-gradient(135deg, hsl(var(--dark-navy)) 0%, hsl(var(--deep-navy)) 100%);
+    --dark-section: var(--dark-navy);
+    
+    /* Premium Gold & Navy Shadows - Enhanced System */
+    --shadow-subtle: 0 2px 10px rgba(0,0,0,0.3);
+    --shadow-medium: 0 4px 20px rgba(0,0,0,0.4);
+    --shadow-large: 0 8px 32px rgba(0,0,0,0.5);
+    --shadow-gold: 0 4px 20px rgba(255, 215, 0, 0.3);
+    --shadow-enhanced: 0 8px 25px rgba(255, 215, 0, 0.4);
+    --focus-ring: rgba(255, 215, 0, 0.3);
+    --hover-glow: 0 0 20px rgba(255, 215, 0, 0.6);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 43 8% 89%;
+    --input: 285 6% 14%;
+    --ring: var(--rich-gold);
+
     --radius: 0.5rem;
 
-    /* Custom semantic tokens */
-    --dark-navy: 27 27 27; /* #1B1B1B */
-    --deep-navy: 35 35 35; /* #232323 */
-    --rich-gold: 255 215 0; /* #FFD700 */
-    --pure-white: 255 255 255; /* #FFFFFF */
-    --light-gray: 163 163 163; /* #A3A3A3 */
-    --medium-gray: 115 115 115; /* #737373 */
-    --card-bg: 39 39 39; /* #272727 */
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%; /* #0A0A0A */
-    --foreground: 210 40% 98%; /* #FAFAFA */
-    --card: 222.2 84% 4.9%; /* #0A0A0A */
-    --card-foreground: 210 40% 98%; /* #FAFAFA */
-    --popover: 222.2 84% 4.9%; /* #0A0A0A */
-    --popover-foreground: 210 40% 98%; /* #FAFAFA */
-    --primary: 210 40% 98%; /* #FAFAFA */
-    --primary-foreground: 222.2 84% 4.9%; /* #0A0A0A */
-    --secondary: 217.2 32.6% 17.5%; /* #1F2937 */
-    --secondary-foreground: 210 40% 98%; /* #FAFAFA */
-    --muted: 217.2 32.6% 17.5%; /* #1F2937 */
-    --muted-foreground: 215 20.2% 65.1%; /* #9CA3AF */
-    --accent: 217.2 32.6% 17.5%; /* #1F2937 */
-    --accent-foreground: 210 40% 98%; /* #FAFAFA */
-    --destructive: 0 62.8% 30.6%; /* #B91C1C */
-    --destructive-foreground: 210 40% 98%; /* #FAFAFA */
-    --border: 217.2 32.6% 17.5%; /* #1F2937 */
-    --input: 217.2 32.6% 17.5%; /* #1F2937 */
-    --ring: 212.7 26.8% 83.9%; /* #D1D5DB */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -69,114 +139,161 @@
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     line-height: 1.6;
-    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch; /* Momentum scrolling on iOS */
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Adobe Caslon Pro', 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
     line-height: 1.2;
+    letter-spacing: -0.02em;
   }
-  
-  .font-playfair {
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .font-inter {
-    font-family: 'Inter', system-ui, sans-serif;
-  }
-  
-  .font-futura {
-    font-family: 'Futura', 'Inter', system-ui, sans-serif;
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
   }
 }
 
 @layer components {
-  /* Typography System */
-  .heading-xl {
-    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-playfair tracking-tight;
+  /* Wealthsimple Design Components */
+  .hero-gradient {
+    background: var(--hero-gradient);
   }
   
-  .heading-lg {
-    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold font-playfair tracking-tight;
+  .dark-section {
+    background: hsl(var(--dark-section));
   }
   
-  .heading-md {
-    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold font-playfair tracking-tight;
+  /* Core Web Vitals Optimization Classes */
+  .optimize-lcp {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
   }
   
-  .heading-sm {
-    @apply text-xl sm:text-2xl lg:text-3xl font-semibold font-playfair tracking-tight;
+  .optimize-cls {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
   }
   
-  .body-text {
-    @apply text-base sm:text-lg lg:text-xl font-inter leading-relaxed;
+  .optimize-inp {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
   
-  .body-sm {
-    @apply text-sm sm:text-base font-inter leading-relaxed;
+  /* Loading State Animations */
+  .loading-shimmer {
+    background: linear-gradient(90deg, 
+      rgba(255, 215, 0, 0.1) 0%, 
+      rgba(255, 215, 0, 0.2) 50%, 
+      rgba(255, 215, 0, 0.1) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  /* Critical CSS for above-the-fold content */
+  .critical-content {
+    font-display: swap;
+    will-change: auto;
+  }
+  
+  /* Performance-first button interactions */
+  .perf-button {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  .perf-button:hover {
+    transform: translateZ(0) translateY(-2px);
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  .bounce-in {
+    animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  
+  .reveal-text {
+    animation: revealText 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  /* Page Load Sequence */
+  .header-enter {
+    animation: headerSlideDown 0.6s ease-out forwards;
+    transform: translateY(-100%);
+  }
+  
+  .hero-content-enter {
+    animation: heroContentFade 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  /* Advanced Scroll-Triggered Animations */
+  .scroll-triggered {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+  }
+  
+  .scroll-triggered.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  /* Card Components */
-  .wlf-card-premium {
-    @apply bg-card border border-rich-gold/10 rounded-2xl shadow-lg shadow-rich-gold/5 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-rich-gold/10 hover:border-rich-gold/20;
-  }
-  
-  .wlf-card-standard {
-    @apply bg-card border border-border rounded-lg shadow-sm transition-all duration-300 hover:shadow-md;
-  }
-
-  /* Section Morphing */
-  .section-morph {
-    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--deep-navy)) 100%);
-    position: relative;
-  }
-  
-  .section-morph::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, hsl(var(--rich-gold))/0.02 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  /* Floating Elements */
-  .floating-element {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.6;
-    filter: blur(1px);
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .floating-element:nth-child(2) {
-    animation-delay: -2s;
-  }
-  
-  .floating-element:nth-child(3) {
-    animation-delay: -4s;
-  }
-  
-  .floating-element:nth-child(4) {
-    animation-delay: -1s;
-  }
-
-  /* Magnetic Button Effect */
-  .magnetic-button {
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  /* Scroll Animations */
   .scroll-fade-up {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
   .scroll-fade-up.visible {
@@ -186,8 +303,9 @@
 
   .scroll-fade-left {
     opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
   .scroll-fade-left.visible {
@@ -197,8 +315,9 @@
 
   .scroll-fade-right {
     opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
   .scroll-fade-right.visible {
@@ -209,147 +328,703 @@
   .scroll-scale {
     opacity: 0;
     transform: scale(0.9);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
   }
 
   .scroll-scale.visible {
     opacity: 1;
     transform: scale(1);
   }
+  
+  .timeline-progress {
+    animation: timelineProgress 2s ease-out forwards;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  
+  .milestone-enter-left {
+    animation: milestoneSlideLeft 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  
+  .milestone-enter-right {
+    animation: milestoneSlideRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  
+  /* Counter Animation */
+  .counter-up {
+    animation: counterUp 2s ease-out forwards;
+    opacity: 0;
+  }
+  
+  /* Magnetic Button Effects */
+  .magnetic-button {
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+  }
 
-  /* Staggered Animation Delays */
+  /* Floating Background Elements */
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: floatGentle 12s ease-in-out infinite;
+    will-change: transform;
+    pointer-events: none;
+  }
+
+  .floating-element:nth-child(1) { animation-delay: 0s; }
+  .floating-element:nth-child(2) { animation-delay: 2s; }
+  .floating-element:nth-child(3) { animation-delay: 4s; }
+  .floating-element:nth-child(4) { animation-delay: 6s; }
+
+  /* Section Background Morphing */
+  .section-morph {
+    transition: background 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: background;
+  }
+
+  /* Content Reveal Blocks */
+  .reveal-block {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .reveal-block.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  .stagger-delay-1 { animation-delay: 0.1s; transition-delay: 0.1s; }
+  .stagger-delay-2 { animation-delay: 0.2s; transition-delay: 0.2s; }
+  .stagger-delay-3 { animation-delay: 0.3s; transition-delay: 0.3s; }
+  .stagger-delay-4 { animation-delay: 0.4s; transition-delay: 0.4s; }
+  .stagger-delay-5 { animation-delay: 0.5s; transition-delay: 0.5s; }
+  .stagger-delay-6 { animation-delay: 0.6s; transition-delay: 0.6s; }
+  .stagger-delay-7 { animation-delay: 0.7s; transition-delay: 0.7s; }
+  .stagger-delay-8 { animation-delay: 0.8s; transition-delay: 0.8s; }
+  .stagger-delay-9 { animation-delay: 0.9s; transition-delay: 0.9s; }
+  .stagger-delay-10 { animation-delay: 1.0s; transition-delay: 1.0s; }
+
+  /* Scroll-based stagger delays */
   .scroll-stagger-1 { transition-delay: 0.1s; }
   .scroll-stagger-2 { transition-delay: 0.2s; }
   .scroll-stagger-3 { transition-delay: 0.3s; }
   .scroll-stagger-4 { transition-delay: 0.4s; }
   .scroll-stagger-5 { transition-delay: 0.5s; }
   .scroll-stagger-6 { transition-delay: 0.6s; }
-
-  /* Hero Animations */
-  .hero-content-enter {
+  
+  /* Micro-Interactions */
+  .interactive-button {
+    @apply transition-all duration-300 hover:scale-105;
+    will-change: transform;
+  }
+  
+  .interactive-button:hover {
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px) scale(1.05);
+  }
+  
+  .interactive-button:active {
+    transform: translateY(0) scale(1.02);
+  }
+  
+  .interactive-card {
+    @apply transition-all duration-500 hover:-translate-y-2;
+    will-change: transform;
+  }
+  
+  .interactive-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .interactive-image {
+    @apply transition-all duration-500 overflow-hidden;
+    will-change: transform;
+  }
+  
+  .interactive-image:hover img {
+    transform: scale(1.1);
+  }
+  
+  .interactive-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), transparent);
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 0.3s ease;
   }
-
-  .hero-content-enter.visible {
+  
+  .interactive-image:hover::after {
     opacity: 1;
-    transform: translateY(0);
   }
-
-  /* Header Animation */
-  .header-enter {
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-
-  .header-enter.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Team Animations */
-  .team-animation-container {
+  
+  /* Timeline Interactions */
+  .timeline-dot {
+    @apply transition-all duration-300;
     position: relative;
-    width: 100%;
-    height: 100%;
   }
+  
+  .timeline-dot::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-dot.active::before {
+    opacity: 1;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+  }
+  
+  .timeline-dot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+  
+  /* Leadership Interactions */
+  .profile-card {
+    @apply transition-all duration-500;
+    will-change: transform;
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .profile-image {
+    @apply transition-all duration-500 overflow-hidden;
+    will-change: transform;
+  }
+  
+  .profile-image:hover img {
+    transform: scale(1.1) rotate(2deg);
+  }
+  
+  .profile-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-dark-navy/50 to-transparent 
+           opacity-0 transition-opacity duration-300;
+  }
+  
+  .profile-card:hover .profile-overlay {
+    opacity: 1;
+  }
+  
+  /* Text Animations */
+  .animate-text-reveal {
+    background: linear-gradient(90deg, transparent, hsl(var(--rich-gold)), transparent);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textReveal 2s ease-in-out forwards;
+  }
+  
+  .underline-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: hsl(var(--rich-gold));
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .underline-animation:hover::after {
+    transform: translateX(0);
+  }
+  
+  /* Floating Elements */
+  .floating-bg-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: floatingElement 12s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  .floating-bg-element:nth-child(1) { animation-delay: 0s; }
+  .floating-bg-element:nth-child(2) { animation-delay: 2s; }
+  .floating-bg-element:nth-child(3) { animation-delay: 4s; }
+  .floating-bg-element:nth-child(4) { animation-delay: 6s; }
 
+  /* Hero Floating Animations */
   .floating-animation {
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
   }
 
   .coin-float {
     animation: coinFloat 8s ease-in-out infinite;
+    will-change: transform;
   }
-
-  .stagger-delay-1 { animation-delay: -1s; }
-  .stagger-delay-2 { animation-delay: -2s; }
-  .stagger-delay-3 { animation-delay: -3s; }
-  .stagger-delay-4 { animation-delay: -4s; }
-
-  /* Timeline Animations */
-  .timeline-line {
-    position: relative;
-    overflow: hidden;
+  
+  /* Parallax Effect */
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
   }
-
-  .timeline-line::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, hsl(var(--rich-gold)) 0%, transparent 100%);
-    transform: translateX(-100%);
-    transition: transform 1s ease-out;
-  }
-
-  .timeline-line.timeline-progress::before {
-    transform: translateX(0);
-  }
-
-  .timeline-dot {
-    transition: all 0.3s ease-out;
-  }
-
-  .timeline-dot.active {
-    transform: scale(1.2);
-    background-color: hsl(var(--rich-gold));
-  }
-
-  /* Interactive Elements */
-  .interactive-card {
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-  }
-
-  .interactive-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px hsl(var(--rich-gold))/0.1;
-  }
-
-  /* Responsive Mobile Adjustments */
-  @media (max-width: 768px) {
-    .scroll-fade-left,
-    .scroll-fade-right {
-      transform: translateY(30px);
+  
+  /* Performance Optimizations */
+  @media (prefers-reduced-motion: reduce) {
+    .floating-animation,
+    .coin-float,
+    .floating-bg-element,
+    .floating-element,
+    .parallax-element {
+      animation: none;
+      transform: none;
     }
     
-    .scroll-fade-left.visible,
-    .scroll-fade-right.visible {
+    .fade-in-up,
+    .slide-in-left,
+    .slide-in-right,
+    .scale-in,
+    .bounce-in {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .floating-animation,
+    .coin-float,
+    .floating-bg-element,
+    .floating-element,
+    .floating-element {
+      animation-duration: 8s;
+    }
+    
+    .interactive-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    
+    .interactive-button:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .magnetic-button {
+      transform: none !important;
+      transition: none;
+    }
+  }
+  
+  /* World Liberty Financial Button System */
+  .btn-primary {
+    @apply bg-primary text-dark-navy hover:bg-primary/90 
+           px-8 py-4 rounded-3xl font-medium
+           transition-all duration-300 interactive-button 
+           min-h-[56px];
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    box-shadow: var(--shadow-medium);
+    border: none;
+  }
+  
+  .btn-secondary {
+    @apply border border-rich-gold text-rich-gold bg-dark-navy 
+           hover:bg-rich-gold hover:text-dark-navy
+           px-8 py-4 rounded-3xl font-medium
+           transition-all duration-300 interactive-button min-h-[56px];
+    font-family: 'Futura', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  /* Header Animations */
+  .header-shadow {
+    box-shadow: var(--shadow-subtle);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .logo-hover {
+    @apply transition-all duration-300 hover:scale-110;
+  }
+  
+  .logo-hover:hover {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .nav-link {
+    @apply relative overflow-hidden transition-colors duration-300 underline-animation;
+  }
+  
+  /* World Liberty Financial Card System */
+  .wlf-card-premium {
+    @apply bg-dark-navy rounded-xl p-6 sm:p-8 
+           transition-all duration-300;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wlf-card-premium:hover {
+    transform: translateY(-4px);
+    border: 1px solid #FFD700;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 215, 0, 0.4);
+  }
+  
+  .wealthsimple-card {
+    @apply wlf-card-premium;
+  }
+  
+  /* World Liberty Financial Typography System */
+  .heading-xl {
+    @apply text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-lg {
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground leading-tight;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .heading-md {
+    @apply text-xl lg:text-2xl font-semibold text-foreground;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .heading-sm {
+    @apply text-lg lg:text-xl font-medium text-foreground;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+  
+  .body-text {
+    @apply text-base lg:text-lg text-muted-foreground leading-relaxed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  .caption-text {
+    @apply text-sm text-muted-foreground/80;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Consistent spacing system */
+  .section-padding {
+    @apply py-24 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply px-6 lg:px-8;
+  }
+  
+  .content-width {
+    @apply max-w-6xl mx-auto;
+  }
+  
+  .wide-content {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Mobile Typography Adjustments */
+  @media (max-width: 768px) {
+    .heading-xl {
+      font-size: 48px;
+    }
+    
+    .heading-lg {
+      font-size: 32px;
+    }
+    
+    .heading-md {
+      font-size: 24px;
+    }
+    
+    .body-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@layer utilities {
+  /* Advanced Animation Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  @keyframes coinFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(5deg); }
+    50% { transform: translateY(-30px) rotate(0deg); }
+    75% { transform: translateY(-15px) rotate(-5deg); }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
       transform: translateY(0);
     }
   }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-10px) rotate(90deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-  75% { transform: translateY(-10px) rotate(270deg); }
-}
-
-@keyframes coinFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
-  25% { transform: translateY(-15px) rotate(90deg) scale(1.05); }
-  50% { transform: translateY(-25px) rotate(180deg) scale(1.1); }
-  75% { transform: translateY(-15px) rotate(270deg) scale(1.05); }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-/* Utility Classes */
-.parallax-element {
-  will-change: transform;
-}
-
-.optimized-image {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
+  
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* New Advanced Animations */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes revealText {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes headerSlideDown {
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes heroContentFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes timelineProgress {
+    to {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes milestoneSlideLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes milestoneSlideRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes counterUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translateY(-5px) scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes textReveal {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  
+  @keyframes floatGentle {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) translateX(8px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-25px) translateX(-4px) rotate(-1deg);
+    }
+    75% {
+      transform: translateY(-12px) translateX(-6px) rotate(3deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { 
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% { 
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% { 
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    50% { 
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+  }
+  
+  /* Bounce Animation */
+  @keyframes bounce {
+    0%, 20%, 53%, 80%, 100% { 
+      transform: translateY(0); 
+    }
+    40%, 43% { 
+      transform: translateY(-10px); 
+    }
+  }
+  
+  @keyframes floatingElement {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-15px) translateX(8px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-25px) translateX(-4px) rotate(-1deg);
+    }
+    75% {
+      transform: translateY(-12px) translateX(-6px) rotate(3deg);
+    }
+  }
+  
+  @keyframes floatingAnimation {
+    0%, 100% {
+      transform: translateY(0px) translateX(0px) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-12px) translateX(6px) rotate(1deg);
+    }
+    66% {
+      transform: translateY(-18px) translateX(-3px) rotate(-2deg);
+    }
+  }
+  
+  @keyframes coin-float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-8px) rotate(5deg);
+    }
+    50% {
+      transform: translateY(-16px) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-8px) rotate(-5deg);
+    }
+  }
+  
+  /* Animation Utilities */
+  .floating-animation {
+    animation: floatingAnimation 8s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  .coin-float {
+    animation: coin-float 6s ease-in-out infinite;
+    will-change: transform;
+  }
+  
+  .animate-count-up {
+    animation: counterUp 1.5s ease-out;
+  }
+  
+  .animate-pulse-custom {
+    animation: pulseCustom 2s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounceSlow 3s ease-in-out infinite;
+  }
+  
+  .animate-text-shimmer {
+    animation: textReveal 3s ease-in-out infinite;
+  }
+  
+  .animate-float-slow {
+    animation: floatingElement 15s ease-in-out infinite;
+  }
+  
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+  }
+  
+  @keyframes pulseCustom {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  
+  @keyframes bounceSlow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
 }
