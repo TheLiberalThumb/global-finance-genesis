@@ -1,7 +1,8 @@
+
 import { Button } from '@/components/ui/button';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
 import { useState } from 'react';
-import { CheckCircle, Send } from 'lucide-react';
+import { CheckCircle, Send, Phone, Mail, MapPin, MessageCircle, Calendar, Download } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm = () => {
@@ -10,9 +11,12 @@ const ContactForm = () => {
     name: '',
     email: '',
     company: '',
+    role: '',
     phone: '',
-    service: '',
-    budget: '',
+    projectType: '',
+    fundingRequirement: '',
+    timeline: '',
+    projectLocation: '',
     message: ''
   });
   
@@ -48,6 +52,26 @@ const ContactForm = () => {
       newErrors.email = 'Please enter a valid email address';
     }
     
+    if (!formData.company.trim()) {
+      newErrors.company = 'Company name is required';
+    }
+    
+    if (!formData.role.trim()) {
+      newErrors.role = 'Your role is required';
+    }
+    
+    if (!formData.projectType.trim()) {
+      newErrors.projectType = 'Please select a project type';
+    }
+    
+    if (!formData.fundingRequirement.trim()) {
+      newErrors.fundingRequirement = 'Please select funding requirement';
+    }
+    
+    if (!formData.timeline.trim()) {
+      newErrors.timeline = 'Please select project timeline';
+    }
+    
     if (!formData.message.trim()) {
       newErrors.message = 'Project details are required';
     }
@@ -74,9 +98,15 @@ const ContactForm = () => {
           email: formData.email,
           company: formData.company,
           phone: formData.phone,
-          service: formData.service,
-          budget: formData.budget,
-          message: formData.message
+          service: formData.projectType,
+          budget: formData.fundingRequirement,
+          message: formData.message,
+          // Store additional fields in a JSON column or add them to the table
+          additional_data: {
+            role: formData.role,
+            timeline: formData.timeline,
+            project_location: formData.projectLocation
+          }
         }]);
 
       if (error) {
@@ -92,22 +122,68 @@ const ContactForm = () => {
     }
   };
 
-  const services = [
-    "Corporate Finance Advisory",
-    "Project Investment", 
-    "Capital Raising",
+  const projectTypes = [
+    "Infrastructure Development",
+    "Energy Projects", 
     "Public-Private Partnerships",
-    "Strategic Consulting",
-    "Mergers & Acquisitions"
+    "Real Estate Development",
+    "Manufacturing & Industrial",
+    "Technology & Innovation",
+    "Healthcare & Medical",
+    "Other"
   ];
 
-  const budgetRanges = [
-    "Under $100K",
-    "$100K - $500K", 
-    "$500K - $1M",
-    "$1M - $5M",
-    "$5M - $10M",
-    "Over $10M"
+  const fundingRequirements = [
+    "Under $10M",
+    "$10M - $50M", 
+    "$50M - $100M",
+    "$100M - $300M",
+    "$300M+",
+    "To be determined"
+  ];
+
+  const timelines = [
+    "Immediate (Within 1 month)",
+    "3-6 months",
+    "6-12 months", 
+    "12+ months",
+    "Planning phase"
+  ];
+
+  const roles = [
+    "CEO/Managing Director",
+    "CFO/Finance Director",
+    "Project Manager",
+    "Business Development",
+    "Investment Manager",
+    "Other"
+  ];
+
+  const contactMethods = [
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      value: "+234 817 8740 277",
+      action: "tel:+2348178740277"
+    },
+    {
+      icon: <MessageCircle className="w-5 h-5" />,
+      label: "WhatsApp",
+      value: "+234 817 8740 277",
+      action: "https://wa.me/2348178740277"
+    },
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      value: "adesokankunle@gmail.com",
+      action: "mailto:adesokankunle@gmail.com"
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      label: "Office",
+      value: "3 Bayo Ajayi Street, Ikeja, Lagos",
+      action: "https://maps.google.com/?q=3+Bayo+Ajayi+Street,+Ikeja,+Lagos"
+    }
   ];
 
   return (
@@ -122,8 +198,31 @@ const ContactForm = () => {
           </p>
         </div>
 
+        {/* Contact Methods */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 scroll-fade-up scroll-stagger-2">
+          {contactMethods.map((method, index) => (
+            <a
+              key={method.label}
+              href={method.action}
+              target={method.action.startsWith('http') ? '_blank' : undefined}
+              rel={method.action.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className="bg-dark-navy/50 backdrop-blur-sm rounded-lg p-6 border border-rich-gold/30 hover:border-rich-gold/60 transition-all duration-300 hover:transform hover:scale-105 group"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="flex-shrink-0 w-10 h-10 bg-rich-gold/20 rounded-full flex items-center justify-center text-rich-gold group-hover:bg-rich-gold/30 transition-colors">
+                  {method.icon}
+                </div>
+                <div>
+                  <p className="text-sm font-medium text-rich-gold">{method.label}</p>
+                  <p className="text-xs text-pure-white/80 break-all">{method.value}</p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
         <div className="max-w-4xl mx-auto">
-          <div className="bg-dark-navy/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 border-2 border-rich-gold/30 scroll-fade-up scroll-stagger-2 shadow-2xl">
+          <div className="bg-dark-navy/50 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 border-2 border-rich-gold/30 scroll-fade-up scroll-stagger-3 shadow-2xl">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="w-20 h-20 bg-rich-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -133,13 +232,32 @@ const ContactForm = () => {
                 <p className="text-pure-white/80 max-w-md mx-auto mb-8">
                   Thank you for reaching out. Our team will review your message and respond within 24 hours.
                 </p>
-                <Button 
-                  onClick={() => setIsSubmitted(false)}
-                  variant="outline"
-                  className="border-rich-gold/50 text-rich-gold hover:bg-rich-gold/10"
-                >
-                  Send Another Message
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    onClick={() => setIsSubmitted(false)}
+                    variant="outline"
+                    className="border-rich-gold/50 text-rich-gold hover:bg-rich-gold/10"
+                  >
+                    Send Another Message
+                  </Button>
+                  <Button 
+                    variant="cta-primary"
+                    className="inline-flex items-center gap-2"
+                    asChild
+                  >
+                    <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                      <Calendar className="w-4 h-4" />
+                      Schedule Consultation
+                    </a>
+                  </Button>
+                  <Button 
+                    variant="outline"
+                    className="border-rich-gold/50 text-rich-gold hover:bg-rich-gold/10 inline-flex items-center gap-2"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Company Profile
+                  </Button>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -162,9 +280,10 @@ const ContactForm = () => {
                         onChange={handleInputChange}
                         className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="Your full name"
+                        aria-describedby={errors.name ? "name-error" : undefined}
                       />
                       {errors.name && (
-                        <p className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                        <p id="name-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
                           <span className="text-rich-gold">•</span> {errors.name}
                         </p>
                       )}
@@ -182,26 +301,20 @@ const ContactForm = () => {
                         onChange={handleInputChange}
                         className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="your@company.com"
+                        aria-describedby={errors.email ? "email-error" : undefined}
                       />
                       {errors.email && (
-                        <p className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                        <p id="email-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
                           <span className="text-rich-gold">•</span> {errors.email}
                         </p>
                       )}
                     </div>
                   </div>
-                </div>
 
-                {/* Company Information Section */}
-                <div className="space-y-6">
-                  <div className="border-l-4 border-rich-gold/50 pl-6">
-                    <h3 className="text-lg font-semibold text-rich-gold mb-4">Company Details</h3>
-                  </div>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="company" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
-                        Company Name
+                        Company Name *
                       </label>
                       <input
                         type="text"
@@ -211,9 +324,43 @@ const ContactForm = () => {
                         onChange={handleInputChange}
                         className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
                         placeholder="Your company name"
+                        aria-describedby={errors.company ? "company-error" : undefined}
                       />
+                      {errors.company && (
+                        <p id="company-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
+                          <span className="text-rich-gold">•</span> {errors.company}
+                        </p>
+                      )}
                     </div>
                     
+                    <div className="space-y-2">
+                      <label htmlFor="role" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Your Role *
+                      </label>
+                      <select
+                        id="role"
+                        name="role"
+                        value={formData.role}
+                        onChange={handleInputChange}
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
+                        aria-describedby={errors.role ? "role-error" : undefined}
+                      >
+                        <option value="" className="bg-card text-light-gray">Select your role</option>
+                        {roles.map((role) => (
+                          <option key={role} value={role} className="bg-card text-pure-white py-2">
+                            {role}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.role && (
+                        <p id="role-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
+                          <span className="text-rich-gold">•</span> {errors.role}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label htmlFor="phone" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
                         Phone Number
@@ -228,54 +375,107 @@ const ContactForm = () => {
                         placeholder="+234 (0) 806 123 4567"
                       />
                     </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="projectLocation" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Project Location
+                      </label>
+                      <input
+                        type="text"
+                        id="projectLocation"
+                        name="projectLocation"
+                        value={formData.projectLocation}
+                        onChange={handleInputChange}
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text"
+                        placeholder="City, State, Country"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                {/* Service & Budget Section */}
+                {/* Project Qualification Section */}
                 <div className="space-y-6">
                   <div className="border-l-4 border-rich-gold/50 pl-6">
-                    <h3 className="text-lg font-semibold text-rich-gold mb-4">Project Requirements</h3>
+                    <h3 className="text-lg font-semibold text-rich-gold mb-4">Project Qualification</h3>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="service" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
-                        Service of Interest
+                      <label htmlFor="projectType" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Project Type *
                       </label>
                       <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
+                        id="projectType"
+                        name="projectType"
+                        value={formData.projectType}
                         onChange={handleInputChange}
                         className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
+                        aria-describedby={errors.projectType ? "projectType-error" : undefined}
                       >
-                        <option value="" className="bg-card text-light-gray">Select a service</option>
-                        {services.map((service) => (
-                          <option key={service} value={service} className="bg-card text-pure-white py-2">
-                            {service}
+                        <option value="" className="bg-card text-light-gray">Select project type</option>
+                        {projectTypes.map((type) => (
+                          <option key={type} value={type} className="bg-card text-pure-white py-2">
+                            {type}
                           </option>
                         ))}
                       </select>
+                      {errors.projectType && (
+                        <p id="projectType-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
+                          <span className="text-rich-gold">•</span> {errors.projectType}
+                        </p>
+                      )}
                     </div>
                     
                     <div className="space-y-2">
-                      <label htmlFor="budget" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
-                        Project Budget
+                      <label htmlFor="fundingRequirement" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Funding Requirement *
                       </label>
                       <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
+                        id="fundingRequirement"
+                        name="fundingRequirement"
+                        value={formData.fundingRequirement}
                         onChange={handleInputChange}
                         className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
+                        aria-describedby={errors.fundingRequirement ? "fundingRequirement-error" : undefined}
                       >
-                        <option value="" className="bg-card text-light-gray">Select budget range</option>
-                        {budgetRanges.map((range) => (
+                        <option value="" className="bg-card text-light-gray">Select funding range</option>
+                        {fundingRequirements.map((range) => (
                           <option key={range} value={range} className="bg-card text-pure-white py-2">
                             {range}
                           </option>
                         ))}
                       </select>
+                      {errors.fundingRequirement && (
+                        <p id="fundingRequirement-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
+                          <span className="text-rich-gold">•</span> {errors.fundingRequirement}
+                        </p>
+                      )}
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <label htmlFor="timeline" className="block text-card-foreground font-futura font-semibold mb-3 text-base sm:text-lg">
+                        Timeline *
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full h-12 sm:h-14 px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura text-base sm:text-lg text-pure-white transition-all duration-300 cursor-pointer"
+                        aria-describedby={errors.timeline ? "timeline-error" : undefined}
+                      >
+                        <option value="" className="bg-card text-light-gray">Select timeline</option>
+                        {timelines.map((timeline) => (
+                          <option key={timeline} value={timeline} className="bg-card text-pure-white py-2">
+                            {timeline}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.timeline && (
+                        <p id="timeline-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
+                          <span className="text-rich-gold">•</span> {errors.timeline}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -298,9 +498,10 @@ const ContactForm = () => {
                       rows={6}
                       className="w-full min-h-[100px] sm:min-h-[120px] px-4 sm:px-5 py-3 sm:py-4 bg-card border-2 border-rich-gold/20 rounded-lg focus:border-rich-gold focus:ring-0 focus:shadow-[0_0_0_3px_rgba(255,215,0,0.2)] hover:border-rich-gold hover:shadow-[0_2px_8px_rgba(255,215,0,0.1)] font-futura resize-y text-base sm:text-lg text-pure-white placeholder:text-light-gray transition-all duration-300 cursor-text leading-relaxed"
                       placeholder="Tell us about your project objectives, timeline, specific requirements, and any other relevant details that will help us understand your needs..."
+                      aria-describedby={errors.message ? "message-error" : undefined}
                     />
                     {errors.message && (
-                      <p className="text-red-400 text-sm mt-1 flex items-center gap-1">
+                      <p id="message-error" className="text-red-400 text-sm mt-1 flex items-center gap-1" role="alert">
                         <span className="text-rich-gold">•</span> {errors.message}
                       </p>
                     )}
