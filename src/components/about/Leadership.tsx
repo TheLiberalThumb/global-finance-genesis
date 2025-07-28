@@ -104,7 +104,7 @@ const Leadership = () => {
         <div className="text-center scroll-fade-up scroll-stagger-3">
           <Button variant="cta-secondary" asChild>
             <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
-              Schedule Consultation
+              Meet Our Full Team
             </a>
           </Button>
         </div>

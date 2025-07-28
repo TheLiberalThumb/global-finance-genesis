@@ -22,11 +22,11 @@ const AboutCTA = () => {
         <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in-up stagger-delay-2">
           <Button variant="cta-primary" asChild>
             <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
-              Schedule Consultation
+              Start Your Journey
             </a>
           </Button>
           <Button variant="cta-secondary">
-            View Case Studies
+            Download Our Brochure
           </Button>
         </div>
         

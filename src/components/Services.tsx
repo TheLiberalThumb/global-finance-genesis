@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import React from 'react';
 import { useMagneticButton } from '@/hooks/useMagneticButton';
@@ -91,7 +90,7 @@ const Services = () => {
                   href="/services" 
                   className="inline-flex items-center font-inter text-sm font-medium text-card-foreground hover:text-rich-gold transition-colors duration-300 group"
                 >
-                  View Case Studies
+                  Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -110,11 +109,8 @@ const Services = () => {
             ref={magneticRef}
             variant="cta-primary" 
             className="magnetic-button"
-            asChild
           >
-            <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
-              Schedule Consultation
-            </a>
+            Schedule Consultation
           </Button>
         </div>
       </div>

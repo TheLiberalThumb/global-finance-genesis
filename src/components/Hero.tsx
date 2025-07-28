@@ -78,7 +78,7 @@ const Hero = () => {
                 </a>
               </Button>
               <Button variant="cta-secondary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
-                View Case Studies
+                View Our Projects
               </Button>
             </div>
 
