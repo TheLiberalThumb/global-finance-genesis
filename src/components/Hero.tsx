@@ -1,6 +1,9 @@
+
 import { Button } from '@/components/ui/button';
+
 const Hero = () => {
-  return <section id="hero" className="relative min-h-screen bg-background flex items-center overflow-hidden">
+  return (
+    <section id="hero" className="relative min-h-screen bg-background flex items-center overflow-hidden">
       {/* Background Pattern - Subtle */}
       <div className="absolute inset-0 overflow-hidden opacity-5">
         <div className="absolute top-20 left-10 w-24 h-24 bg-rich-gold/20 rounded-full floating-animation"></div>
@@ -56,38 +59,39 @@ const Hero = () => {
             {/* Main Headline */}
             <div className="fade-in-up">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-playfair font-bold text-foreground leading-tight mb-3 sm:mb-4 lg:mb-6">
-                Your business <span className="text-rich-gold">deserves</span> more
+                Empowering Africa's Growth Through <span className="text-rich-gold">Strategic Corporate Finance</span>
               </h1>
             </div>
             
             {/* Subheading */}
             <div className="fade-in-up stagger-delay-1">
               <p className="font-futura text-base sm:text-lg md:text-xl lg:text-2xl text-light-gray leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Get the most out of your capital with smart investment solutions and 
-                personalized advisory services to build long-term value.
+                From $300M waste-to-energy projects to major infrastructure initiatives, we connect visionary businesses with the capital needed to transform emerging markets across Africa and the Middle East.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 fade-in-up stagger-delay-2 mt-6 sm:mt-8 justify-center lg:justify-start">
-              <Button variant="cta-primary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
-                Start Your Journey
+              <Button variant="cta-primary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg" asChild>
+                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                  Schedule Consultation
+                </a>
               </Button>
               <Button variant="cta-secondary" className="min-h-[48px] sm:min-h-[56px] text-base sm:text-lg">
-                Learn More
+                View Our Projects
               </Button>
             </div>
 
             {/* Trust Indicators */}
             <div className="fade-in-up stagger-delay-3 pt-8">
               <p className="caption-text mb-6 font-futura">
-                Trusted by leading companies worldwide
+                Africa's premier corporate finance authority
               </p>
               <div className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8 opacity-70 justify-center lg:justify-start">
-                <div className="font-futura font-medium text-sm text-light-gray">Fortune 500</div>
-                <div className="font-futura font-medium text-sm text-light-gray">Infrastructure</div>
-                <div className="font-futura font-medium text-sm text-light-gray">Energy Sector</div>
-                <div className="font-futura font-medium text-sm text-light-gray">Government</div>
+                <div className="font-futura font-medium text-sm text-light-gray">$2.5B+ Secured</div>
+                <div className="font-futura font-medium text-sm text-light-gray">100+ Projects</div>
+                <div className="font-futura font-medium text-sm text-light-gray">Lagos-Kuwait Partnership</div>
+                <div className="font-futura font-medium text-sm text-light-gray">PPP Specialist</div>
               </div>
             </div>
           </div>
@@ -101,6 +105,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
