@@ -1,3 +1,4 @@
+
 import FloatingElements from '@/components/FloatingElements';
 
 const OfficeLocations = () => {
@@ -5,28 +6,28 @@ const OfficeLocations = () => {
     {
       city: "Lagos",
       country: "Nigeria",
-      address: "Plot 123, Ozumba Mbadiwe Avenue\nVictoria Island, Lagos 106104",
-      phone: "+234 (0) 806 123 4567",
-      email: "lagos@gissionglobal.com",
+      address: "3 Bayo Ajayi Street\nOff Lateef Jakande Road\nIkeja, Lagos, Nigeria",
+      phone: "+234 817 8740 277",
+      email: "adesokankunle@gmail.com",
       hours: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 2:00 PM",
       isHeadquarters: true
     },
     {
-      city: "Abuja",
-      country: "Nigeria", 
-      address: "Suite 45, Central Business District\nGarki Area 11, Abuja 900108",
-      phone: "+234 (0) 809 987 6543",
-      email: "abuja@gissionglobal.com",
+      city: "London",
+      country: "United Kingdom", 
+      address: "Waterman House\n1 Lord Street\nGravesend DA12 1AW\nKent, United Kingdom",
+      phone: "+234 817 8740 277",
+      email: "adesokankunle@gmail.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
     },
     {
-      city: "Accra",
-      country: "Ghana",
-      address: "East Legon Executive Offices\nAccra, Greater Accra Region",
-      phone: "+233 (0) 302 123 456",
-      email: "accra@gissionglobal.com", 
-      hours: "Monday - Friday: 8:00 AM - 5:00 PM",
+      city: "Abuja",
+      country: "Nigeria",
+      address: "Flat 5, 34/36 Okotie Ebo Crescent\nUtako, Abuja, Nigeria",
+      phone: "+234 817 8740 277",
+      email: "adesokankunle@gmail.com", 
+      hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
     }
   ];
@@ -40,7 +41,7 @@ const OfficeLocations = () => {
             Our Locations
           </h2>
           <p className="body-text text-light-gray max-w-3xl mx-auto scroll-fade-up scroll-stagger-1">
-            Visit us at any of our strategically located offices across West Africa. Each location is staffed with experienced professionals ready to serve you.
+            Visit us at any of our strategically located offices across Nigeria and the United Kingdom. Each location is staffed with experienced professionals ready to serve you.
           </p>
         </div>
 

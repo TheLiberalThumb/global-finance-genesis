@@ -5,24 +5,24 @@ const ExecutiveLeadership = () => {
   const executives = [
     {
       name: "Mike Adesokan",
-      role: "Chief Executive Officer",
-      bio: "Visionary leader with over 20 years of experience in global finance and strategic investment. Mike has successfully led transformational deals worth over $2B across emerging markets.",
+      role: "CEO & Managing Director",
+      bio: "Mike Adesokan brings 28+ years of Oil & Gas industry expertise to corporate finance leadership. Beginning his career at the National Examinations Council, he transitioned to become a Business Development Manager overseeing retail operations across two indigenous oil companies and one international firm. As founder and CEO of Gission Global Investment Ltd, Mike leverages his deep industry experience to drive strategic initiatives and facilitate funding for operational strengthening across multiple sectors.",
       image: "/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png",
-      achievements: ["$2B+ in transactions", "20+ years experience", "Global market expertise"]
+      achievements: ["28+ years Oil & Gas expertise", "CEO & Founder", "Multi-sector funding specialist"]
     },
     {
       name: "Rebecca Adesokan",
       role: "Executive Director",
-      bio: "Strategic operations expert specializing in organizational excellence and sustainable growth. Rebecca drives operational efficiency and stakeholder engagement across all business units.",
+      bio: "Rebecca Adesokan combines diverse industry expertise spanning automotive and aviation sectors. Her career began as a Marketing Officer coordinating logistics services and driving sales growth, before advancing to aviation as a trained Air Hostess and Cabin Crew Coordinator. With proven expertise in customer experience management, sales promotion, and operational logistics, Rebecca now serves as Executive Director, expertly managing Gission Global's investment portfolio and strategic decision-making.",
       image: "/lovable-uploads/df372e0c-7e39-4d4d-88a9-df1f52474453.png",
-      achievements: ["Operational excellence", "Strategic planning", "Stakeholder relations"]
+      achievements: ["Aviation & automotive expertise", "Investment portfolio management", "Strategic decision-making"]
     },
     {
       name: "Adeola Emmanuel",
       role: "Business Development Manager",
-      bio: "Dynamic business development leader focused on identifying and executing high-impact opportunities. Adeola has built strategic partnerships that have generated significant value creation.",
+      bio: "Adeola Emmanuel brings a unique blend of technical expertise and business acumen to corporate finance development. Starting as an Information Technology Officer, he expanded into automotive business development, managing digital platforms and web presence for indigenous automotive firms. Currently serving as Business Development Manager at Gission Global Investment Ltd, Adeola drives growth initiatives and strategic partnerships, combining his technical background with sharp business development skills.",
       image: "/lovable-uploads/f5213e80-ea4e-4612-a412-2b4ecba22332.png",
-      achievements: ["Partnership development", "Market expansion", "Value creation"]
+      achievements: ["Technical & business expertise", "Strategic partnerships", "Growth initiatives leadership"]
     }
   ];
 

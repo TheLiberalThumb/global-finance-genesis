@@ -5,8 +5,8 @@ const ContactMethods = () => {
   const contactMethods = [
     {
       title: "Office Visit",
-      description: "Visit our headquarters for in-person consultations and detailed project discussions.",
-      details: "Lagos Business District\nMonday - Friday, 9 AM - 6 PM",
+      description: "Visit our headquarters in Lagos or our international offices for in-person consultations and detailed project discussions.",
+      details: "Lagos (Primary): 3 Bayo Ajayi Street, Ikeja\nLondon: Waterman House, Gravesend\nAbuja: Flat 5, Utako\nMonday - Friday, 9 AM - 6 PM",
       icon: (
         <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -16,8 +16,8 @@ const ContactMethods = () => {
     },
     {
       title: "Phone & Email",
-      description: "Reach out directly through traditional channels for immediate assistance and inquiries.",
-      details: "+234 (0) 806 123 4567\nhello@gissionglobal.com",
+      description: "Reach out directly through traditional channels for immediate assistance and inquiries across all our locations.",
+      details: "+234 817 8740 277\nadesokankunle@gmail.com\nAvailable across all offices",
       icon: (
         <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -27,8 +27,8 @@ const ContactMethods = () => {
     },
     {
       title: "Schedule Meeting",
-      description: "Book a dedicated session with our experts to discuss your specific financial objectives.",
-      details: "Virtual or In-Person\n30-60 minute sessions\nAvailable worldwide",
+      description: "Book a dedicated session with our experts to discuss your specific financial objectives at any of our office locations.",
+      details: "Virtual or In-Person\n30-60 minute sessions\nAvailable from all office locations\nGlobal coverage",
       icon: (
         <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -37,15 +37,15 @@ const ContactMethods = () => {
       action: "Book Meeting"
     },
     {
-      title: "Emergency Contact",
-      description: "For urgent matters requiring immediate attention outside regular business hours.",
-      details: "24/7 Emergency Line\n+234 (0) 807 999 8888\nFor existing clients only",
+      title: "WhatsApp Contact",
+      description: "Connect instantly through WhatsApp for quick consultations and project inquiries with our team.",
+      details: "WhatsApp: +234 817 8740 277\nInstant messaging support\nDocument sharing capability\nMultimedia communication",
       icon: (
         <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
       ),
-      action: "Emergency Call"
+      action: "Chat on WhatsApp"
     }
   ];
 
@@ -58,7 +58,7 @@ const ContactMethods = () => {
             Multiple Ways to Connect
           </h2>
           <p className="body-text text-light-gray max-w-3xl mx-auto scroll-fade-up scroll-stagger-1">
-            Choose the most convenient method to reach our team. We're committed to providing exceptional service through every channel.
+            Choose the most convenient method to reach our team across our global offices. We're committed to providing exceptional service through every channel.
           </p>
         </div>
 
