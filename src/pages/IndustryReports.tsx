@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -190,35 +189,6 @@ const IndustryReports = () => {
             </ScrollAnimatedSection>
           ))}
         </div>
-
-        {/* Newsletter Subscription */}
-        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-br from-dark-navy via-background to-dark-navy">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-rich-gold mb-6">
-              Stay Updated with Latest Reports
-            </h2>
-            <p className="text-light-gray text-lg mb-8 leading-relaxed">
-              Subscribe to receive our latest industry reports and market insights directly in your inbox. 
-              Be the first to access new research and analysis.
-            </p>
-            
-            <div className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-dark-navy/60 backdrop-blur-sm border border-rich-gold/30 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold focus:ring-2 focus:ring-rich-gold/20 transition-colors duration-300"
-                />
-                <Button variant="cta-primary" className="px-6 py-3">
-                  Subscribe
-                </Button>
-              </div>
-              <p className="text-light-gray text-xs mt-3">
-                No spam. Unsubscribe at any time. We respect your privacy.
-              </p>
-            </div>
-          </div>
-        </ScrollAnimatedSection>
       </main>
 
       <Footer />

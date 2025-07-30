@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -135,7 +134,7 @@ const InvestmentInsights = () => {
                     <img
                       src={`https://images.unsplash.com/${featuredInsight.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                       alt={featuredInsight.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover filter contrast-125 brightness-110 saturate-105"
                     />
                     <div className="absolute inset-0 bg-dark-navy/40"></div>
                     <div className="absolute top-6 left-6">
@@ -203,7 +202,7 @@ const InvestmentInsights = () => {
                     <img
                       src={`https://images.unsplash.com/${insight.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
                       alt={insight.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover filter contrast-125 brightness-110 saturate-105"
                     />
                     <div className="absolute inset-0 bg-dark-navy/40"></div>
                     <div className="absolute top-4 left-4">
@@ -249,35 +248,6 @@ const InvestmentInsights = () => {
             ))}
           </div>
         </div>
-
-        {/* Newsletter CTA */}
-        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-br from-dark-navy via-background to-dark-navy">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-rich-gold mb-6">
-              Never Miss an Insight
-            </h2>
-            <p className="text-light-gray text-lg mb-8 leading-relaxed">
-              Subscribe to our newsletter and receive the latest investment insights, 
-              market analysis, and expert perspectives delivered directly to your inbox.
-            </p>
-            
-            <div className="max-w-md mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-dark-navy/60 backdrop-blur-sm border border-rich-gold/30 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold focus:ring-2 focus:ring-rich-gold/20 transition-colors duration-300"
-                />
-                <Button variant="cta-primary" className="px-6 py-3">
-                  Subscribe
-                </Button>
-              </div>
-              <p className="text-light-gray text-xs mt-3">
-                Weekly insights, no spam. Unsubscribe anytime.
-              </p>
-            </div>
-          </div>
-        </ScrollAnimatedSection>
       </main>
 
       <Footer />

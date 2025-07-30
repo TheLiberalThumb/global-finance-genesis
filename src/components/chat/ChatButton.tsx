@@ -1,3 +1,4 @@
+
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -11,9 +12,12 @@ export const ChatButton = ({ onClick, hasUnread }: ChatButtonProps) => {
     <div className="fixed bottom-6 right-6 z-50">
       <Button
         onClick={onClick}
-        className="w-16 h-16 rounded-full bg-gradient-to-r from-rich-gold via-yellow-400 to-rich-gold 
-          hover:shadow-[0_0_30px_rgba(255,215,0,0.6)] shadow-lg transition-all duration-300 
-          hover:scale-110 group border-2 border-rich-gold/20"
+        className="w-16 h-16 rounded-full bg-rich-gold text-dark-navy 
+          hover:bg-rich-gold/90 shadow-lg hover:shadow-xl transition-all duration-300 
+          hover:scale-110 group border-2 border-rich-gold/20 hover:-translate-y-1"
+        style={{
+          boxShadow: '0 4px 12px rgba(255, 215, 0, 0.3)'
+        }}
       >
         <MessageCircle className="w-6 h-6 text-dark-navy group-hover:scale-110 transition-transform duration-300" />
         {hasUnread && (

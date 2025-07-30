@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 
 const CaseStudies = () => {
@@ -36,12 +37,12 @@ const CaseStudies = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {caseStudies.map((study, index) => (
-            <div key={study.title} className={`wlf-card-premium scroll-fade-up scroll-stagger-${index + 1}`}>
+            <div key={study.title} className={`bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 rounded-xl p-6 hover:border-rich-gold/50 transition-all duration-300 hover:shadow-lg hover:shadow-rich-gold/10 scroll-fade-up scroll-stagger-${index + 1}`}>
               <div className="mb-4">
                 <div className="text-2xl font-bold text-rich-gold mb-2">{study.metric}</div>
                 <div className="text-xs font-medium text-rich-gold uppercase tracking-wide">{study.category}</div>
               </div>
-              <h3 className="font-playfair font-semibold text-xl text-card-foreground mb-4">
+              <h3 className="font-playfair font-semibold text-xl text-pure-white mb-4">
                 {study.title}
               </h3>
               <p className="font-inter text-sm text-light-gray leading-relaxed mb-6">
