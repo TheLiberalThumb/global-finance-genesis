@@ -49,9 +49,9 @@ const Leadership = () => {
               </a>
             </div>
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Mike Adesokan</h3>
-            <p className="text-rich-gold mb-4 font-semibold text-lg">Chief Executive Officer</p>
+            <p className="text-rich-gold mb-4 font-semibold text-lg">CEO & Managing Director</p>
             <p className="text-light-gray">
-              Visionary leader with over 15 years of experience in corporate finance and strategic investments. Mike has led billion-dollar transactions across multiple sectors.
+              Mike Adesokan brings 28+ years of Oil & Gas industry expertise to corporate finance leadership. Beginning his career at the National Examinations Council, he transitioned to become a Business Development Manager, overseeing retail operations across two indigenous oil companies and one international firm.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ const Leadership = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Rebecca Adesokan</h3>
             <p className="text-rich-gold mb-4 font-semibold text-lg">Executive Director</p>
             <p className="text-light-gray">
-              Strategic architect specializing in public-private partnerships and infrastructure financing. Rebecca brings deep expertise in complex capital structures.
+              Rebecca Adesokan combines diverse industry expertise spanning automotive and aviation sectors. Her career began as a Marketing Officer coordinating logistics services and driving sales growth, before advancing to aviation as a trained Air Hostess and Cabin Crew Coordinator.
             </p>
           </div>
 
@@ -129,7 +129,7 @@ const Leadership = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Adeola Emmanuel</h3>
             <p className="text-rich-gold mb-4 font-semibold text-lg">Business Development Manager</p>
             <p className="text-light-gray">
-              Dynamic business development professional focused on identifying and executing growth opportunities in emerging markets and innovative sectors.
+              Adeola Emmanuel brings a unique blend of technical expertise and business acumen to corporate finance development. Starting as an Information Technology Officer, he expanded into automotive business development, managing digital platforms and web presence for indigenous automotive firms.
             </p>
           </div>
         </div>

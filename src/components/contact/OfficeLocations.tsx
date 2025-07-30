@@ -15,7 +15,7 @@ const OfficeLocations = () => {
       city: "London",
       country: "United Kingdom", 
       address: "Waterman House\n1 Lord Street\nGravesend DA12 1AW\nKent, United Kingdom",
-      phone: "+234 817 8740 277",
+      phone: "+44 7455 551196",
       email: "hello@gissionglobal.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
@@ -24,7 +24,7 @@ const OfficeLocations = () => {
       city: "Abuja",
       country: "Nigeria",
       address: "Flat 5, 34/36 Okotie Ebo Crescent\nUtako, Abuja, Nigeria",
-      phone: "+234 817 8740 277",
+      phone: "+234 803 380 1950",
       email: "hello@gissionglobal.com", 
       hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
