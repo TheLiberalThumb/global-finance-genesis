@@ -39,6 +39,43 @@ const ImageSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`scroll-fade-up ${inView ? 'animate-fade-in' : ''}`}>
+          {/* Global Presence Section */}
+          <div className="text-center mb-16">
+            <h2 className="heading-lg text-rich-gold mb-6">Global Presence</h2>
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="bg-card rounded-lg p-8 border border-rich-gold/20">
+                <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-dark-navy" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <h3 className="heading-md text-foreground font-semibold mb-2">Lagos</h3>
+                <p className="text-light-gray mb-1">Nigeria</p>
+                <p className="text-rich-gold font-medium text-sm">Headquarters</p>
+              </div>
+              <div className="bg-card rounded-lg p-8 border border-rich-gold/20">
+                <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-dark-navy" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <h3 className="heading-md text-foreground font-semibold mb-2">London, United Kingdom</h3>
+                <p className="text-light-gray mb-1">Kuwait</p>
+                <p className="text-rich-gold font-medium text-sm">Regional Office</p>
+              </div>
+              <div className="bg-card rounded-lg p-8 border border-rich-gold/20">
+                <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-dark-navy" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <h3 className="heading-md text-foreground font-semibold mb-2">Singapore</h3>
+                <p className="text-light-gray mb-1">Singapore</p>
+                <p className="text-rich-gold font-medium text-sm">Advisory Hub</p>
+              </div>
+            </div>
+          </div>
+
           {/* Embed Container */}
           <div className="relative w-full max-w-5xl mx-auto">
             {/* Professional shadow and border styling */}

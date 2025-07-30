@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import TrustIndicators from '@/components/TrustIndicators';
+import ImageSection from '@/components/ImageSection';
 import Team from '@/components/Team';
 import ContactCTA from '@/components/ContactCTA';
 import Footer from '@/components/Footer';
@@ -15,6 +16,7 @@ const Index = () => {
         <Hero />
         <Services />
         <TrustIndicators />
+        <ImageSection />
         <Team />
         <ContactCTA />
       </main>
