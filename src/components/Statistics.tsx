@@ -81,7 +81,7 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              ref={index === 0 ? stat.ref : undefined}
+              ref={stat.ref}
               className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Icon */}
