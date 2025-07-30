@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import Header from '@/components/Header';
@@ -8,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useToast } from '@/hooks/use-toast';
+import { sanitizeHtml } from '@/utils/inputSanitization';
 
 interface Contact {
   id: string;
@@ -20,6 +22,7 @@ interface Contact {
   urgency: string | null;
   message: string;
   created_at: string;
+  additional_data: any;
 }
 
 const Admin = () => {
@@ -41,12 +44,22 @@ const Admin = () => {
 
       if (error) {
         console.error('Error fetching contacts:', error);
+        toast({
+          title: "Error",
+          description: "Failed to load contact submissions. You may not have admin access.",
+          variant: "destructive",
+        });
         return;
       }
 
       setContacts(data || []);
     } catch (error) {
       console.error('Error:', error);
+      toast({
+        title: "Error",
+        description: "An error occurred while loading data.",
+        variant: "destructive",
+      });
     } finally {
       setLoading(false);
     }
@@ -91,7 +104,7 @@ const Admin = () => {
                   Contact Submissions
                 </CardTitle>
                 <CardDescription>
-                  View and manage contact form submissions
+                  View and manage contact form submissions (Admin Access)
                 </CardDescription>
               </div>
               <Button onClick={handleSignOut} variant="outline">
@@ -118,6 +131,7 @@ const Admin = () => {
                       <TableHead>Name</TableHead>
                       <TableHead>Email</TableHead>
                       <TableHead>Company</TableHead>
+                      <TableHead>Phone</TableHead>
                       <TableHead>Service</TableHead>
                       <TableHead>Budget</TableHead>
                       <TableHead>Urgency</TableHead>
@@ -131,18 +145,19 @@ const Admin = () => {
                           {formatDate(contact.created_at)}
                         </TableCell>
                         <TableCell className="font-medium">
-                          {contact.name}
+                          {sanitizeHtml(contact.name)}
                         </TableCell>
-                        <TableCell>{contact.email}</TableCell>
-                        <TableCell>{contact.company || '-'}</TableCell>
+                        <TableCell>{sanitizeHtml(contact.email)}</TableCell>
+                        <TableCell>{contact.company ? sanitizeHtml(contact.company) : '-'}</TableCell>
+                        <TableCell>{contact.phone ? sanitizeHtml(contact.phone) : '-'}</TableCell>
                         <TableCell>
                           {contact.service ? (
                             <Badge variant="secondary" className="text-xs">
-                              {contact.service}
+                              {sanitizeHtml(contact.service)}
                             </Badge>
                           ) : '-'}
                         </TableCell>
-                        <TableCell>{contact.budget || '-'}</TableCell>
+                        <TableCell>{contact.budget ? sanitizeHtml(contact.budget) : '-'}</TableCell>
                         <TableCell>
                           {contact.urgency ? (
                             <Badge 
@@ -152,13 +167,13 @@ const Admin = () => {
                               }
                               className="text-xs"
                             >
-                              {contact.urgency}
+                              {sanitizeHtml(contact.urgency)}
                             </Badge>
                           ) : '-'}
                         </TableCell>
                         <TableCell className="max-w-xs">
                           <div className="truncate" title={contact.message}>
-                            {contact.message}
+                            {sanitizeHtml(contact.message)}
                           </div>
                         </TableCell>
                       </TableRow>

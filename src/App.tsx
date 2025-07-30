@@ -22,7 +22,7 @@ import PerformanceOptimizer from "./components/PerformanceOptimizer";
 import AccessibilityEnhancements from "./components/AccessibilityEnhancements";
 import SEOOptimizer from "./components/SEOOptimizer";
 import { AuthProvider } from "./contexts/AuthContext";
-import ProtectedRoute from "./components/ProtectedRoute";
+import AdminProtectedRoute from "./components/AdminProtectedRoute";
 
 const queryClient = new QueryClient();
 
@@ -50,9 +50,9 @@ const App = () => (
               <Route path="/insights" element={<InvestmentInsights />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={
-                <ProtectedRoute>
+                <AdminProtectedRoute>
                   <Admin />
-                </ProtectedRoute>
+                </AdminProtectedRoute>
               } />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
