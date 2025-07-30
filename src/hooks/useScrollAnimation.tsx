@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 
 interface UseScrollAnimationOptions {
@@ -49,21 +50,22 @@ export const useCounterAnimation = (
 ) => {
   const [count, setCount] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.3 });
 
   useEffect(() => {
     if (isVisible && !isActive) {
       setIsActive(true);
       
-      const timer = setTimeout(() => {
-        const startTime = Date.now();
-        const animate = () => {
-          const elapsed = Date.now() - startTime;
+      const startAnimation = () => {
+        const startTime = performance.now();
+        
+        const animate = (currentTime: number) => {
+          const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
           
-          // Easing function for smooth animation
+          // Smooth easing function
           const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-          const currentCount = Math.floor(easeOutQuart * endValue);
+          const currentCount = easeOutQuart * endValue;
           
           setCount(currentCount);
           
@@ -75,9 +77,13 @@ export const useCounterAnimation = (
         };
         
         requestAnimationFrame(animate);
-      }, startDelay);
+      };
 
-      return () => clearTimeout(timer);
+      if (startDelay > 0) {
+        setTimeout(startAnimation, startDelay);
+      } else {
+        startAnimation();
+      }
     }
   }, [isVisible, isActive, endValue, duration, startDelay]);
 

@@ -1,4 +1,5 @@
 
+
 import { useCounterAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
 
@@ -8,27 +9,46 @@ const Statistics = () => {
   const satisfactionCounter = useCounterAnimation(98, 2000, 400);
   const experienceCounter = useCounterAnimation(15, 2000, 600);
 
+  const formatNumber = (value: number, type: 'projects' | 'funding' | 'satisfaction' | 'experience') => {
+    switch (type) {
+      case 'projects':
+        return `${Math.floor(value)}+`;
+      case 'funding':
+        return `$${value.toFixed(1)}B+`;
+      case 'satisfaction':
+        return `${Math.floor(value)}%`;
+      case 'experience':
+        return `${Math.floor(value)}+`;
+      default:
+        return Math.floor(value).toString();
+    }
+  };
+
   const stats = [
     {
-      number: `${projectsCounter.count}+`,
+      count: projectsCounter.count,
+      number: formatNumber(projectsCounter.count, 'projects'),
       label: "Projects Completed",
       description: "Successfully delivered across infrastructure, energy, and emerging sectors",
       ref: projectsCounter.ref
     },
     {
-      number: `$${fundingCounter.count.toFixed(1)}B+`,
+      count: fundingCounter.count,
+      number: formatNumber(fundingCounter.count, 'funding'),
       label: "In Funding Secured",
       description: "Capital raised for our clients through strategic partnerships",
       ref: fundingCounter.ref
     },
     {
-      number: `${satisfactionCounter.count}%`,
+      count: satisfactionCounter.count,
+      number: formatNumber(satisfactionCounter.count, 'satisfaction'),
       label: "Client Satisfaction Rate",
       description: "Proven track record of delivering exceptional results",
       ref: satisfactionCounter.ref
     },
     {
-      number: `${experienceCounter.count}+`,
+      count: experienceCounter.count,
+      number: formatNumber(experienceCounter.count, 'experience'),
       label: "Years of Experience",
       description: "Deep expertise in corporate finance and investment advisory",
       ref: experienceCounter.ref
@@ -61,7 +81,7 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              ref={stat.ref}
+              ref={index === 0 ? stat.ref : undefined}
               className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Icon */}
@@ -132,3 +152,4 @@ const Statistics = () => {
 };
 
 export default Statistics;
+
