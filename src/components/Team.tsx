@@ -1,11 +1,10 @@
-
 import { Button } from '@/components/ui/button';
 
 const Team = () => {
   const teamMembers = [
     {
       name: "Mike Adesokan",
-      title: "Chief Executive Officer",
+      title: "Chief Executive Officer", 
       bio: "Visionary leader with over 15 years of experience in corporate finance and strategic investments. Mike has led billion-dollar transactions across multiple sectors.",
       image: "/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png",
       linkedin: "#",
@@ -108,7 +107,7 @@ const Team = () => {
         </div>
 
         {/* Team CTA */}
-        <div className="text-center mt-24 scroll-fade-up scroll-stagger-4">
+        <div className="text-center mt-20 scroll-fade-up scroll-stagger-4">
           <div className="wlf-card-premium max-w-5xl mx-auto">
             <h3 className="heading-md mb-6 text-card-foreground">
               Ready to Work with Our Team?
@@ -119,13 +118,13 @@ const Team = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button variant="cta-secondary" asChild>
-                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+                <a href="/team">
                   Meet Full Team
                 </a>
               </Button>
               <Button variant="cta-primary" asChild>
-                <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
-                  Schedule Meeting
+                <a href="mailto:hello@gissionglobal.com">
+                  Contact Us
                 </a>
               </Button>
             </div>

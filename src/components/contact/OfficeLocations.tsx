@@ -1,4 +1,3 @@
-
 import FloatingElements from '@/components/FloatingElements';
 
 const OfficeLocations = () => {
@@ -8,7 +7,7 @@ const OfficeLocations = () => {
       country: "Nigeria",
       address: "3 Bayo Ajayi Street\nOff Lateef Jakande Road\nIkeja, Lagos, Nigeria",
       phone: "+234 817 8740 277",
-      email: "adesokankunle@gmail.com",
+      email: "hello@gissionglobal.com",
       hours: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 2:00 PM",
       isHeadquarters: true
     },
@@ -17,7 +16,7 @@ const OfficeLocations = () => {
       country: "United Kingdom", 
       address: "Waterman House\n1 Lord Street\nGravesend DA12 1AW\nKent, United Kingdom",
       phone: "+234 817 8740 277",
-      email: "adesokankunle@gmail.com",
+      email: "hello@gissionglobal.com",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
     },
@@ -26,7 +25,7 @@ const OfficeLocations = () => {
       country: "Nigeria",
       address: "Flat 5, 34/36 Okotie Ebo Crescent\nUtako, Abuja, Nigeria",
       phone: "+234 817 8740 277",
-      email: "adesokankunle@gmail.com", 
+      email: "hello@gissionglobal.com", 
       hours: "Monday - Friday: 9:00 AM - 5:00 PM",
       isHeadquarters: false
     }

@@ -40,7 +40,7 @@ const Leadership = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Mike Adesokan</h3>
             <p className="text-rich-gold mb-4 font-semibold text-lg">Chief Executive Officer</p>
             <p className="text-light-gray">
-              15+ years in corporate finance and strategic investments across emerging markets.
+              Visionary leader with over 15 years of experience in corporate finance and strategic investments. Mike has led billion-dollar transactions across multiple sectors.
             </p>
           </div>
 
@@ -68,7 +68,7 @@ const Leadership = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Rebecca Adesokan</h3>
             <p className="text-rich-gold mb-4 font-semibold text-lg">Executive Director</p>
             <p className="text-light-gray">
-              Expert in public-private partnerships and infrastructure financing.
+              Strategic architect specializing in public-private partnerships and infrastructure financing. Rebecca brings deep expertise in complex capital structures.
             </p>
           </div>
 
@@ -96,14 +96,14 @@ const Leadership = () => {
             <h3 className="text-2xl md:text-3xl font-playfair font-semibold mb-2 text-foreground">Adeola Emmanuel</h3>
             <p className="text-rich-gold mb-4 font-semibold text-lg">Business Development Manager</p>
             <p className="text-light-gray">
-              Specialist in emerging markets and innovative sector growth opportunities.
+              Dynamic business development professional focused on identifying and executing growth opportunities in emerging markets and innovative sectors.
             </p>
           </div>
         </div>
 
         <div className="text-center scroll-fade-up scroll-stagger-3">
           <Button variant="cta-secondary" asChild>
-            <a href="https://calendly.com/adesokankunle" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:hello@gissionglobal.com">
               Discuss Your Project
             </a>
           </Button>
