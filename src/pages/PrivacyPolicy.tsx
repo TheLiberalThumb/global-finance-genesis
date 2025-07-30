@@ -304,47 +304,49 @@ const PrivacyPolicy = () => {
           ))}
 
           {/* Modern Contact Section */}
-          <ScrollAnimatedSection className="mt-20" id="contact">
-            <Card className="bg-gradient-to-r from-rich-gold/10 via-rich-gold/5 to-transparent border-rich-gold/20 overflow-hidden">
-              <CardContent className="p-8 sm:p-12">
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-rich-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Phone className="w-8 h-8 text-rich-gold" />
+          <div id="contact">
+            <ScrollAnimatedSection className="mt-20">
+              <Card className="bg-gradient-to-r from-rich-gold/10 via-rich-gold/5 to-transparent border-rich-gold/20 overflow-hidden">
+                <CardContent className="p-8 sm:p-12">
+                  <div className="text-center mb-8">
+                    <div className="w-16 h-16 bg-rich-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Phone className="w-8 h-8 text-rich-gold" />
+                    </div>
+                    <h2 className="font-playfair text-3xl sm:text-4xl font-semibold text-rich-gold mb-4">
+                      Questions About Your Privacy?
+                    </h2>
+                    <p className="text-light-gray leading-relaxed mb-8 max-w-2xl mx-auto">
+                      Our privacy team is here to help. Contact us about your privacy rights, data handling, or any concerns you may have.
+                    </p>
                   </div>
-                  <h2 className="font-playfair text-3xl sm:text-4xl font-semibold text-rich-gold mb-4">
-                    Questions About Your Privacy?
-                  </h2>
-                  <p className="text-light-gray leading-relaxed mb-8 max-w-2xl mx-auto">
-                    Our privacy team is here to help. Contact us about your privacy rights, data handling, or any concerns you may have.
-                  </p>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                  <div className="text-center">
-                    <h3 className="font-semibold text-pure-white mb-2">Email</h3>
-                    <p className="text-rich-gold">privacy@gissionglobal.com</p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div className="text-center">
+                      <h3 className="font-semibold text-pure-white mb-2">Email</h3>
+                      <p className="text-rich-gold">privacy@gissionglobal.com</p>
+                    </div>
+                    <div className="text-center">
+                      <h3 className="font-semibold text-pure-white mb-2">Phone</h3>
+                      <p className="text-rich-gold">+1 (555) 123-4567</p>
+                    </div>
+                    <div className="text-center">
+                      <h3 className="font-semibold text-pure-white mb-2">Office</h3>
+                      <p className="text-rich-gold">New York, London, Lagos</p>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <h3 className="font-semibold text-pure-white mb-2">Phone</h3>
-                    <p className="text-rich-gold">+1 (555) 123-4567</p>
-                  </div>
-                  <div className="text-center">
-                    <h3 className="font-semibold text-pure-white mb-2">Office</h3>
-                    <p className="text-rich-gold">New York, London, Lagos</p>
-                  </div>
-                </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="cta-primary" asChild>
-                    <a href="/contact">Contact Privacy Team</a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a href="/terms">View Terms of Service</a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </ScrollAnimatedSection>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button variant="cta-primary" asChild>
+                      <a href="/contact">Contact Privacy Team</a>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <a href="/terms">View Terms of Service</a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
+          </div>
         </div>
 
         {/* Back to Top Button */}
