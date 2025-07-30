@@ -114,8 +114,9 @@ const InvestmentInsights = () => {
         {/* Hero Section */}
         <ScrollAnimatedSection className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-rich-gold mb-6">
-              Investment Insights
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-pure-white">Investment </span>
+              <span className="text-rich-gold">Insights</span>
             </h1>
             <p className="text-light-gray text-xl leading-relaxed">
               Expert perspectives on corporate finance and strategic investments from our leadership team. 
@@ -128,7 +129,7 @@ const InvestmentInsights = () => {
         {featuredInsight && (
           <ScrollAnimatedSection className="mb-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="bg-card border border-rich-gold/20 rounded-lg overflow-hidden">
+              <div className="bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 rounded-lg overflow-hidden hover:shadow-lg hover:shadow-rich-gold/10 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="relative h-64 lg:h-auto">
                     <img
@@ -197,7 +198,7 @@ const InvestmentInsights = () => {
                 animationType="fade-up"
                 delay={index % 3}
               >
-                <article className="bg-card border border-rich-gold/20 rounded-lg overflow-hidden hover:border-rich-gold/40 transition-colors duration-300 h-full flex flex-col">
+                <article className="bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 rounded-lg overflow-hidden hover:border-rich-gold/50 transition-all duration-300 h-full flex flex-col hover:shadow-lg hover:shadow-rich-gold/10">
                   <div className="relative h-48">
                     <img
                       src={`https://images.unsplash.com/${insight.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80`}
@@ -250,7 +251,7 @@ const InvestmentInsights = () => {
         </div>
 
         {/* Newsletter CTA */}
-        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-r from-dark-navy to-background">
+        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-br from-dark-navy via-background to-dark-navy">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-rich-gold mb-6">
               Never Miss an Insight
@@ -265,7 +266,7 @@ const InvestmentInsights = () => {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-card border border-rich-gold/20 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold transition-colors duration-300"
+                  className="flex-1 px-4 py-3 bg-dark-navy/60 backdrop-blur-sm border border-rich-gold/30 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold focus:ring-2 focus:ring-rich-gold/20 transition-colors duration-300"
                 />
                 <Button variant="cta-primary" className="px-6 py-3">
                   Subscribe

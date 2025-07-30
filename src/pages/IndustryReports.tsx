@@ -122,8 +122,9 @@ const IndustryReports = () => {
         {/* Hero Section */}
         <ScrollAnimatedSection className="py-12 sm:py-16 lg:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-rich-gold mb-6">
-              Industry Reports
+            <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-pure-white">Industry </span>
+              <span className="text-rich-gold">Reports</span>
             </h1>
             <p className="text-light-gray text-xl leading-relaxed">
               Insights and analysis on corporate finance trends in emerging markets. 
@@ -154,7 +155,7 @@ const IndustryReports = () => {
                 {category.reports.map((report, reportIndex) => (
                   <div 
                     key={report.title}
-                    className="bg-card border border-rich-gold/20 rounded-lg p-6 hover:border-rich-gold/40 transition-colors duration-300"
+                    className="bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 rounded-lg p-6 hover:border-rich-gold/50 transition-all duration-300 hover:shadow-lg hover:shadow-rich-gold/10"
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-2 text-rich-gold">
@@ -191,7 +192,7 @@ const IndustryReports = () => {
         </div>
 
         {/* Newsletter Subscription */}
-        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-r from-dark-navy to-background">
+        <ScrollAnimatedSection className="py-16 lg:py-24 bg-gradient-to-br from-dark-navy via-background to-dark-navy">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-rich-gold mb-6">
               Stay Updated with Latest Reports
@@ -206,7 +207,7 @@ const IndustryReports = () => {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="flex-1 px-4 py-3 bg-card border border-rich-gold/20 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold transition-colors duration-300"
+                  className="flex-1 px-4 py-3 bg-dark-navy/60 backdrop-blur-sm border border-rich-gold/30 rounded-lg text-pure-white placeholder:text-light-gray focus:outline-none focus:border-rich-gold focus:ring-2 focus:ring-rich-gold/20 transition-colors duration-300"
                 />
                 <Button variant="cta-primary" className="px-6 py-3">
                   Subscribe

@@ -140,7 +140,7 @@ const CaseStudies = () => {
         {/* Modern Hero Section */}
         <ScrollAnimatedSection className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-navy via-background to-dark-navy"></div>
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc=')] opacity-40"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
@@ -149,9 +149,9 @@ const CaseStudies = () => {
                 <span className="text-rich-gold font-medium">Transformational Results</span>
               </div>
               
-              <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-pure-white mb-6 leading-tight">
-                Success
-                <span className="block text-rich-gold">Stories</span>
+              <h1 className="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                <span className="text-pure-white">Case</span>
+                <span className="block text-rich-gold">Studies</span>
               </h1>
               
               <p className="text-light-gray text-xl sm:text-2xl leading-relaxed max-w-3xl mx-auto mb-12">
@@ -226,7 +226,7 @@ const CaseStudies = () => {
                 animationType="fade-up"
                 delay={index % 2}
               >
-                <Card className="group overflow-hidden bg-gradient-to-br from-dark-navy to-background border border-rich-gold/20 hover:border-rich-gold/40 transition-all duration-500 hover:shadow-2xl hover:shadow-rich-gold/10">
+                <Card className="group overflow-hidden bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 hover:border-rich-gold/50 transition-all duration-500 hover:shadow-2xl hover:shadow-rich-gold/10 shadow-lg">
                   <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
                     {/* Image Section */}
                     <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -290,7 +290,7 @@ const CaseStudies = () => {
                         {/* Results Grid */}
                         <div className="grid grid-cols-2 gap-4">
                           {study.results.slice(0, 4).map((result, idx) => (
-                            <div key={idx} className="bg-background/30 backdrop-blur-sm rounded-lg p-4 border border-rich-gold/10">
+                            <div key={idx} className="bg-rich-gold/10 backdrop-blur-sm rounded-lg p-4 border border-rich-gold/40">
                               <result.icon className="w-5 h-5 text-rich-gold mb-2" />
                               <div className="text-2xl font-bold text-pure-white">{result.metric}</div>
                               <div className="text-light-gray text-xs">{result.label}</div>
@@ -315,7 +315,7 @@ const CaseStudies = () => {
 
                   {/* Expandable Details */}
                   {expandedCard === study.id && (
-                    <div className="border-t border-rich-gold/20 p-8 lg:p-12 bg-background/50 backdrop-blur-sm">
+                    <div className="border-t border-rich-gold/20 p-8 lg:p-12 bg-dark-navy/60 backdrop-blur-sm">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
                           <h4 className="font-semibold text-pure-white mb-4 text-lg">Our Solution</h4>
@@ -367,14 +367,14 @@ const CaseStudies = () => {
         {/* Modern CTA Section */}
         <ScrollAnimatedSection className="py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Card className="overflow-hidden bg-gradient-to-br from-dark-navy via-background to-dark-navy border border-rich-gold/20">
+            <Card className="overflow-hidden bg-gradient-to-br from-dark-navy via-background to-dark-navy border border-rich-gold/20 shadow-2xl">
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                   {/* Content Side */}
                   <div className="p-8 lg:p-16 flex flex-col justify-center">
                     <div className="mb-8">
-                      <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-pure-white mb-6 leading-tight">
-                        Ready to Create Your
+                      <h2 className="font-playfair text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                        <span className="text-pure-white">Ready to Create Your</span>
                         <span className="block text-rich-gold">Success Story?</span>
                       </h2>
                       <p className="text-light-gray text-lg leading-relaxed mb-8">
@@ -400,25 +400,25 @@ const CaseStudies = () => {
                     <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSI0Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
                     
                     <div className="grid grid-cols-2 gap-6 w-full max-w-sm relative z-10">
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center">
+                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
                         <TrendingUp className="w-8 h-8 text-rich-gold mx-auto mb-3" />
                         <div className="text-2xl font-bold text-pure-white">98%</div>
                         <div className="text-light-gray text-sm">Success Rate</div>
                       </div>
                       
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center">
+                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
                         <DollarSign className="w-8 h-8 text-rich-gold mx-auto mb-3" />
                         <div className="text-2xl font-bold text-pure-white">$5B+</div>
                         <div className="text-light-gray text-sm">Deployed</div>
                       </div>
                       
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center">
+                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
                         <Users className="w-8 h-8 text-rich-gold mx-auto mb-3" />
                         <div className="text-2xl font-bold text-pure-white">50+</div>
                         <div className="text-light-gray text-sm">Projects</div>
                       </div>
                       
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center">
+                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
                         <MapPin className="w-8 h-8 text-rich-gold mx-auto mb-3" />
                         <div className="text-2xl font-bold text-pure-white">15+</div>
                         <div className="text-light-gray text-sm">Countries</div>
