@@ -127,7 +127,7 @@ const Footer = () => {
         { name: "Case Studies", href: "/case-studies" },
         { name: "Industry Reports", href: "/reports" },
         { name: "Investment Insights", href: "/insights" },
-        { name: "FAQ", href: "/faq" }
+        { name: "FAQ", href: "/contact#faq" }
       ]
     }
   };
@@ -200,7 +200,9 @@ const Footer = () => {
 
             <div className="flex items-center space-x-6">
               <a
-                href="#"
+                href="https://www.linkedin.com/in/gission-global-investment-ltd-007561377/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-light-gray hover:text-rich-gold transition-colors duration-300"
                 aria-label="LinkedIn"
               >
@@ -209,7 +211,9 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://x.com/GissionGlobal?t=w1Eq5pA1M2097mtB9lGtyg&s=09"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-light-gray hover:text-rich-gold transition-colors duration-300"
                 aria-label="Twitter"
               >

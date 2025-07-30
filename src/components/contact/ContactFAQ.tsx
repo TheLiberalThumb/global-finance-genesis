@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -43,7 +44,7 @@ const ContactFAQ = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden section-morph">
+    <section id="faq" className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden section-morph">
       <FloatingElements />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20 scroll-fade-up">

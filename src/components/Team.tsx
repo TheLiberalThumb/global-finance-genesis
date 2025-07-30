@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 
 const Team = () => {
@@ -7,7 +8,7 @@ const Team = () => {
       title: "Chief Executive Officer", 
       bio: "Visionary leader with over 15 years of experience in corporate finance and strategic investments. Mike has led billion-dollar transactions across multiple sectors.",
       image: "/lovable-uploads/af57b1b8-2c82-480b-a009-f3cb347529a7.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/mike-adesokan-684a7878/",
       expertise: ["Strategic Leadership", "M&A", "Corporate Finance", "Investment Strategy"]
     },
     {
@@ -15,7 +16,7 @@ const Team = () => {
       title: "Executive Director",
       bio: "Strategic architect specializing in public-private partnerships and infrastructure financing. Rebecca brings deep expertise in complex capital structures.",
       image: "/lovable-uploads/df372e0c-7e39-4d4d-88a9-df1f52474453.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rebecca-adesokan-8a39b6374/",
       expertise: ["PPP Structures", "Infrastructure Finance", "Risk Management", "Regulatory Affairs"]
     },
     {
@@ -23,7 +24,7 @@ const Team = () => {
       title: "Business Development Manager",
       bio: "Dynamic business development professional focused on identifying and executing growth opportunities in emerging markets and innovative sectors.",
       image: "/lovable-uploads/f5213e80-ea4e-4612-a412-2b4ecba22332.png",
-      linkedin: "#",
+      linkedin: "http://www.linkedin.com/in/adeola-emmanuel-087947193",
       expertise: ["Business Development", "Market Analysis", "Client Relations", "Emerging Markets"]
     }
   ];
@@ -68,6 +69,8 @@ const Team = () => {
                 {/* LinkedIn Icon */}
                 <a
                   href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute bottom-0 right-1/2 transform translate-x-1/2 translate-y-1/2 w-12 h-12 bg-dark-navy rounded-full flex items-center justify-center text-pure-white hover:bg-rich-gold hover:text-dark-navy hover:scale-110 transition-all duration-300"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
