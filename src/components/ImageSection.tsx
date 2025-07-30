@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 
 const ImageSection = () => {
   const [inView, setInView] = useState(false);
+  const [embedLoaded, setEmbedLoaded] = useState(false);
+  const [embedError, setEmbedError] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,6 +24,14 @@ const ImageSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleIframeLoad = () => {
+    setEmbedLoaded(true);
+  };
+
+  const handleIframeError = () => {
+    setEmbedError(true);
+  };
+
   return (
     <section 
       ref={ref}
@@ -29,30 +39,93 @@ const ImageSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`scroll-fade-up ${inView ? 'animate-fade-in' : ''}`}>
-          {/* Image Container */}
+          {/* Embed Container */}
           <div className="relative w-full max-w-5xl mx-auto">
             {/* Professional shadow and border styling */}
             <div className="relative overflow-hidden rounded-lg shadow-2xl border border-gray-200/10">
-              {/* Aspect ratio container - 16:9 for corporate content */}
-              <div className="aspect-[16/9] w-full bg-gray-100 flex items-center justify-center">
-                {/* Placeholder content */}
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 bg-rich-gold rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-dark-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
+              
+              {/* Loading State */}
+              {!embedLoaded && !embedError && (
+                <div className="absolute inset-0 bg-gray-100 flex items-center justify-center z-10">
+                  <div className="text-center p-8">
+                    <div className="w-16 h-16 bg-rich-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                      <svg className="w-8 h-8 text-rich-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-5-4v4m3-4v4" />
+                      </svg>
+                    </div>
+                    <p className="font-inter text-sm text-gray-500">Loading presentation...</p>
                   </div>
-                  <h3 className="font-playfair font-semibold text-xl text-gray-600 mb-2">
-                    Professional Image Placeholder
-                  </h3>
-                  <p className="font-inter text-sm text-gray-500">
-                    Replace with your custom Canva image
-                  </p>
                 </div>
+              )}
+
+              {/* Error State */}
+              {embedError && (
+                <div className="aspect-[16/10] w-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                      </svg>
+                    </div>
+                    <h3 className="font-playfair font-semibold text-lg text-gray-600 mb-2">
+                      Content Unavailable
+                    </h3>
+                    <p className="font-inter text-sm text-gray-500">
+                      Unable to load the presentation. Please try refreshing the page.
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Canva Embed */}
+              <div 
+                style={{ 
+                  position: 'relative', 
+                  width: '100%', 
+                  height: 0, 
+                  paddingTop: '62.5%',
+                  paddingBottom: 0, 
+                  overflow: 'hidden',
+                  borderRadius: '8px', 
+                  willChange: 'transform' 
+                }}
+                className={embedError ? 'hidden' : ''}
+              >
+                <iframe 
+                  loading="lazy" 
+                  style={{ 
+                    position: 'absolute', 
+                    width: '100%', 
+                    height: '100%', 
+                    top: 0, 
+                    left: 0, 
+                    border: 'none', 
+                    padding: 0,
+                    margin: 0 
+                  }}
+                  src="https://www.canva.com/design/DAGuohvkGDk/og6iAkmCTjzG-d3uHxtBtA/watch?embed" 
+                  allowFullScreen
+                  allow="fullscreen"
+                  title="Gission Global Corporate Finance Presentation"
+                  onLoad={handleIframeLoad}
+                  onError={handleIframeError}
+                />
               </div>
               
               {/* Gold accent border */}
               <div className="absolute inset-0 border-2 border-rich-gold/20 rounded-lg pointer-events-none"></div>
+            </div>
+
+            {/* Attribution Link */}
+            <div className="mt-4 text-center">
+              <a 
+                href="https://www.canva.com/design/DAGuohvkGDk/og6iAkmCTjzG-d3uHxtBtA/watch?utm_content=DAGuohvkGDk&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xs text-light-gray hover:text-rich-gold transition-colors duration-300 font-inter"
+              >
+                Design by Termux Code
+              </a>
             </div>
 
             {/* Optional: Subtle background elements */}
