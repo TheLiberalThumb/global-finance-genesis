@@ -56,7 +56,7 @@ const GlobalPresence = () => {
           </Card>
           <Card className="bg-card rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-l-4 border-rich-gold group">
             <CardContent className="space-y-6">
-              <h3 className="heading-md text-foreground font-semibold group-hover:text-rich-gold transition-colors duration-300">London, United Kingdom</h3>
+              <h3 className="heading-md text-foreground font-semibold group-hover:text-rich-gold transition-colors duration-300">United Kingdom</h3>
               <p className="body-text text-rich-gold font-medium text-lg">Regional Office</p>
               <p className="body-text text-light-gray/80">Strategic partnerships and funding solutions for European market expansion</p>
             </CardContent>
