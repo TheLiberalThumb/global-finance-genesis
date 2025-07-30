@@ -1,89 +1,42 @@
 
-import { useState, useEffect, useRef } from 'react';
+import { useCounterAnimation } from '@/hooks/useScrollAnimation';
 import { Button } from '@/components/ui/button';
 
 const Statistics = () => {
-  const [inView, setInView] = useState(false);
-  const [counters, setCounters] = useState({
-    projects: 0,
-    funding: 0,
-    satisfaction: 0,
-    experience: 0
-  });
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Counter animation effect
-  useEffect(() => {
-    if (!inView) return;
-
-    const targets = { projects: 100, funding: 2, satisfaction: 98, experience: 15 };
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepTime = duration / steps;
-
-    Object.keys(targets).forEach((key, index) => {
-      setTimeout(() => {
-        const target = targets[key as keyof typeof targets];
-        const increment = target / steps;
-        let current = 0;
-        
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          setCounters(prev => ({
-            ...prev,
-            [key]: key === 'funding' ? Number(current.toFixed(1)) : Math.floor(current)
-          }));
-        }, stepTime);
-      }, index * 200); // 0.2s stagger delay
-    });
-  }, [inView]);
+  const projectsCounter = useCounterAnimation(100, 2000, 0);
+  const fundingCounter = useCounterAnimation(2.4, 2000, 200);
+  const satisfactionCounter = useCounterAnimation(98, 2000, 400);
+  const experienceCounter = useCounterAnimation(15, 2000, 600);
 
   const stats = [
     {
-      number: `${counters.projects}+`,
+      number: `${projectsCounter.count}+`,
       label: "Projects Completed",
-      description: "Successfully delivered across infrastructure, energy, and emerging sectors"
+      description: "Successfully delivered across infrastructure, energy, and emerging sectors",
+      ref: projectsCounter.ref
     },
     {
-      number: `$${counters.funding}B+`,
+      number: `$${fundingCounter.count.toFixed(1)}B+`,
       label: "In Funding Secured",
-      description: "Capital raised for our clients through strategic partnerships"
+      description: "Capital raised for our clients through strategic partnerships",
+      ref: fundingCounter.ref
     },
     {
-      number: `${counters.satisfaction}%`,
+      number: `${satisfactionCounter.count}%`,
       label: "Client Satisfaction Rate",
-      description: "Proven track record of delivering exceptional results"
+      description: "Proven track record of delivering exceptional results",
+      ref: satisfactionCounter.ref
     },
     {
-      number: `${counters.experience}+`,
+      number: `${experienceCounter.count}+`,
       label: "Years of Experience",
-      description: "Deep expertise in corporate finance and investment advisory"
+      description: "Deep expertise in corporate finance and investment advisory",
+      ref: experienceCounter.ref
     }
   ];
 
   return (
-    <section ref={ref} className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 xl:py-32 bg-background relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 bg-deep-navy rounded-full hidden sm:block"></div>
@@ -108,6 +61,7 @@ const Statistics = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
+              ref={stat.ref}
               className={`wlf-card-premium text-center scroll-fade-up scroll-stagger-${Math.min(index + 1, 6)}`}
             >
               {/* Icon */}

@@ -1,6 +1,24 @@
+
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const Team = () => {
+  const [expandedBios, setExpandedBios] = useState<{ [key: string]: boolean }>({});
+
+  const toggleBio = (memberName: string) => {
+    setExpandedBios(prev => ({
+      ...prev,
+      [memberName]: !prev[memberName]
+    }));
+  };
+
+  const truncateText = (text: string, wordLimit: number = 20) => {
+    const words = text.split(' ');
+    return words.length > wordLimit 
+      ? words.slice(0, wordLimit).join(' ') + '...'
+      : text;
+  };
+
   const teamMembers = [
     {
       name: "Mike Adesokan",
@@ -88,9 +106,20 @@ const Team = () => {
                   {member.title}
                 </p>
 
-                <p className="body-text text-light-gray mb-8">
-                  {member.bio}
+                <p className="body-text text-light-gray mb-4">
+                  {expandedBios[member.name] 
+                    ? member.bio 
+                    : truncateText(member.bio, 20)
+                  }
                 </p>
+
+                {/* Read More Button */}
+                <button
+                  onClick={() => toggleBio(member.name)}
+                  className="text-rich-gold hover:text-rich-gold/80 font-medium text-sm mb-6 underline underline-offset-2 transition-colors duration-200"
+                >
+                  {expandedBios[member.name] ? 'Read Less' : 'Read More'}
+                </button>
 
                 {/* Expertise Tags */}
                 <div className="flex flex-wrap gap-3 justify-center">
