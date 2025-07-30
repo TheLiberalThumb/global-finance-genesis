@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +11,11 @@ import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CaseStudies from "./pages/CaseStudies";
+import IndustryReports from "./pages/IndustryReports";
+import InvestmentInsights from "./pages/InvestmentInsights";
 import NotFound from "./pages/NotFound";
 import ChatWidget from "./components/ChatWidget";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
@@ -37,6 +43,11 @@ const App = () => (
               <Route path="/services" element={<Services />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/reports" element={<IndustryReports />} />
+              <Route path="/insights" element={<InvestmentInsights />} />
               <Route path="/admin/login" element={<AdminLogin />} />
               <Route path="/admin" element={
                 <ProtectedRoute>
