@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ImageSection from '@/components/ImageSection';
 import Services from '@/components/Services';
-import Statistics from '@/components/Statistics';
 import TrustIndicators from '@/components/TrustIndicators';
 import Team from '@/components/Team';
 import ContactCTA from '@/components/ContactCTA';
@@ -17,7 +16,6 @@ const Index = () => {
         <Hero />
         <ImageSection />
         <Services />
-        <Statistics />
         <TrustIndicators />
         <Team />
         <ContactCTA />
