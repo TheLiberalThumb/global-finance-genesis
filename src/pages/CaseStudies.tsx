@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { ChevronDown, Calendar, DollarSign, TrendingUp, Users, MapPin, ArrowRight, Filter, Search } from 'lucide-react';
 import Header from '@/components/Header';
@@ -226,7 +225,7 @@ const CaseStudies = () => {
                 animationType="fade-up"
                 delay={index % 2}
               >
-                <Card className="group overflow-hidden bg-dark-navy/80 backdrop-blur-sm border border-rich-gold/30 hover:border-rich-gold/50 transition-all duration-500 hover:shadow-2xl hover:shadow-rich-gold/10 shadow-lg">
+                <Card className="group overflow-hidden bg-dark-navy/90 backdrop-blur-sm border border-rich-gold/30 hover:border-rich-gold/50 transition-all duration-500 hover:shadow-2xl hover:shadow-rich-gold/10 shadow-lg">
                   <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
                     {/* Image Section */}
                     <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
@@ -234,16 +233,17 @@ const CaseStudies = () => {
                         <img
                           src={`https://images.unsplash.com/${study.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                           alt={study.title}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter contrast-110 brightness-110"
+                          style={{ filter: 'contrast(1.2) brightness(1.1) saturate(1.05)' }}
                         />
-                        <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-85 group-hover:opacity-75 transition-opacity duration-300`}></div>
+                        <div className="absolute inset-0 bg-dark-navy/70 group-hover:bg-dark-navy/60 transition-all duration-300"></div>
                       </div>
                       
                       {/* Floating Elements */}
                       <div className="absolute top-8 left-8 right-8 z-10">
                         <div className="flex justify-between items-start mb-6">
-                          <div className="bg-pure-white/90 backdrop-blur-sm rounded-full px-4 py-2">
-                            <span className="text-dark-navy font-semibold text-sm">{study.category}</span>
+                          <div className="bg-dark-navy/90 backdrop-blur-sm rounded-full px-4 py-2 border border-rich-gold/30">
+                            <span className="text-rich-gold font-semibold text-sm">{study.category}</span>
                           </div>
                           <div className="bg-rich-gold/90 backdrop-blur-sm rounded-full px-4 py-2">
                             <span className="text-dark-navy font-bold">{study.duration}</span>
@@ -253,7 +253,7 @@ const CaseStudies = () => {
 
                       <div className="absolute bottom-8 left-8 right-8 z-10">
                         <div className="text-pure-white">
-                          <div className="text-5xl sm:text-6xl font-bold mb-2">{study.value}</div>
+                          <div className="text-5xl sm:text-6xl font-bold mb-2 text-rich-gold">{study.value}</div>
                           <div className="flex items-center gap-2 text-pure-white/90">
                             <MapPin className="w-4 h-4" />
                             <span>{study.location}</span>
@@ -263,7 +263,7 @@ const CaseStudies = () => {
                     </div>
 
                     {/* Content Section */}
-                    <CardContent className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                    <CardContent className={`p-8 lg:p-12 flex flex-col justify-center bg-dark-navy/80 ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
                       <div className="space-y-6">
                         <div>
                           <h3 className="font-playfair text-3xl lg:text-4xl font-bold text-pure-white mb-3 leading-tight">
@@ -274,7 +274,7 @@ const CaseStudies = () => {
                           </p>
                         </div>
 
-                        {/* Challenge & Solution Preview */}
+                        {/* Challenge Preview */}
                         <div className="space-y-4">
                           <div>
                             <h4 className="font-semibold text-pure-white mb-2 flex items-center gap-2">
@@ -287,12 +287,12 @@ const CaseStudies = () => {
                           </div>
                         </div>
 
-                        {/* Results Grid */}
+                        {/* Results Grid - Dark with Gold Accents */}
                         <div className="grid grid-cols-2 gap-4">
                           {study.results.slice(0, 4).map((result, idx) => (
-                            <div key={idx} className="bg-rich-gold/10 backdrop-blur-sm rounded-lg p-4 border border-rich-gold/40">
+                            <div key={idx} className="bg-dark-navy/90 backdrop-blur-sm rounded-lg p-4 border border-rich-gold/40 hover:border-rich-gold/60 transition-colors">
                               <result.icon className="w-5 h-5 text-rich-gold mb-2" />
-                              <div className="text-2xl font-bold text-pure-white">{result.metric}</div>
+                              <div className="text-2xl font-bold text-rich-gold mb-1">{result.metric}</div>
                               <div className="text-light-gray text-xs">{result.label}</div>
                             </div>
                           ))}
@@ -301,7 +301,7 @@ const CaseStudies = () => {
                         {/* Expand Button */}
                         <Button 
                           variant="outline" 
-                          className="w-full group/btn"
+                          className="w-full group/btn border-rich-gold/40 text-rich-gold hover:bg-rich-gold hover:text-dark-navy"
                           onClick={() => setExpandedCard(expandedCard === study.id ? null : study.id)}
                         >
                           {expandedCard === study.id ? 'Show Less' : 'View Full Case Study'}
@@ -315,7 +315,7 @@ const CaseStudies = () => {
 
                   {/* Expandable Details */}
                   {expandedCard === study.id && (
-                    <div className="border-t border-rich-gold/20 p-8 lg:p-12 bg-dark-navy/60 backdrop-blur-sm">
+                    <div className="border-t border-rich-gold/20 p-8 lg:p-12 bg-dark-navy/90 backdrop-blur-sm">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <div>
                           <h4 className="font-semibold text-pure-white mb-4 text-lg">Our Solution</h4>
@@ -335,7 +335,7 @@ const CaseStudies = () => {
                         </div>
                         
                         <div className="space-y-6">
-                          <div className="bg-dark-navy/50 rounded-lg p-6 border border-rich-gold/20">
+                          <div className="bg-dark-navy/70 rounded-lg p-6 border border-rich-gold/20">
                             <h5 className="font-semibold text-rich-gold mb-4">Project Metrics</h5>
                             <div className="space-y-4">
                               {study.results.map((result, idx) => (
@@ -364,70 +364,62 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        {/* Modern CTA Section */}
-        <ScrollAnimatedSection className="py-20 lg:py-32">
+        {/* Modern CTA Section - Fully Dark Background */}
+        <ScrollAnimatedSection className="py-20 lg:py-32 bg-dark-navy">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Card className="overflow-hidden bg-gradient-to-br from-dark-navy via-background to-dark-navy border border-rich-gold/20 shadow-2xl">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  {/* Content Side */}
-                  <div className="p-8 lg:p-16 flex flex-col justify-center">
-                    <div className="mb-8">
-                      <h2 className="font-playfair text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                        <span className="text-pure-white">Ready to Create Your</span>
-                        <span className="block text-rich-gold">Success Story?</span>
-                      </h2>
-                      <p className="text-light-gray text-lg leading-relaxed mb-8">
-                        Let's discuss how our proven expertise can drive transformational results for your business. 
-                        Every great partnership starts with a conversation.
-                      </p>
-                    </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Content Side */}
+              <div>
+                <div className="mb-8">
+                  <h2 className="font-playfair text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    <span className="text-pure-white">Ready to Create Your </span>
+                    <span className="text-rich-gold">Success Story?</span>
+                  </h2>
+                  <p className="text-light-gray text-lg leading-relaxed mb-8">
+                    Let's discuss how our proven expertise can drive transformational results for your business. 
+                    Every great partnership starts with a conversation.
+                  </p>
+                </div>
 
-                    <div className="space-y-4">
-                      <Button variant="cta-primary" className="w-full sm:w-auto" asChild>
-                        <a href="/contact">Discuss Your Project</a>
-                      </Button>
-                      <div className="flex items-center gap-4 text-sm text-light-gray">
-                        <span>✓ Free consultation</span>
-                        <span>✓ Confidential discussion</span>
-                        <span>✓ Expert guidance</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Visual Side */}
-                  <div className="relative bg-gradient-to-br from-rich-gold/10 to-rich-gold/5 p-8 lg:p-16 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkQ3MDAiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSI0Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
-                    
-                    <div className="grid grid-cols-2 gap-6 w-full max-w-sm relative z-10">
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
-                        <TrendingUp className="w-8 h-8 text-rich-gold mx-auto mb-3" />
-                        <div className="text-2xl font-bold text-pure-white">98%</div>
-                        <div className="text-light-gray text-sm">Success Rate</div>
-                      </div>
-                      
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
-                        <DollarSign className="w-8 h-8 text-rich-gold mx-auto mb-3" />
-                        <div className="text-2xl font-bold text-pure-white">$5B+</div>
-                        <div className="text-light-gray text-sm">Deployed</div>
-                      </div>
-                      
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
-                        <Users className="w-8 h-8 text-rich-gold mx-auto mb-3" />
-                        <div className="text-2xl font-bold text-pure-white">50+</div>
-                        <div className="text-light-gray text-sm">Projects</div>
-                      </div>
-                      
-                      <div className="bg-dark-navy/50 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/20 text-center shadow-lg">
-                        <MapPin className="w-8 h-8 text-rich-gold mx-auto mb-3" />
-                        <div className="text-2xl font-bold text-pure-white">15+</div>
-                        <div className="text-light-gray text-sm">Countries</div>
-                      </div>
-                    </div>
+                <div className="space-y-6">
+                  <Button variant="cta-primary" className="w-full sm:w-auto" asChild>
+                    <a href="/contact">Discuss Your Project</a>
+                  </Button>
+                  <div className="flex items-center gap-4 text-sm text-light-gray">
+                    <span>✓ Free consultation</span>
+                    <span>✓ Confidential discussion</span>
+                    <span>✓ Expert guidance</span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              {/* Visual Side - Dark Stats Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-dark-navy/80 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/30 text-center shadow-lg hover:border-rich-gold/50 transition-colors">
+                  <TrendingUp className="w-8 h-8 text-rich-gold mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-rich-gold">98%</div>
+                  <div className="text-light-gray text-sm">Success Rate</div>
+                </div>
+                
+                <div className="bg-dark-navy/80 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/30 text-center shadow-lg hover:border-rich-gold/50 transition-colors">
+                  <DollarSign className="w-8 h-8 text-rich-gold mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-rich-gold">$5B+</div>
+                  <div className="text-light-gray text-sm">Deployed</div>
+                </div>
+                
+                <div className="bg-dark-navy/80 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/30 text-center shadow-lg hover:border-rich-gold/50 transition-colors">
+                  <Users className="w-8 h-8 text-rich-gold mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-rich-gold">50+</div>
+                  <div className="text-light-gray text-sm">Projects</div>
+                </div>
+                
+                <div className="bg-dark-navy/80 backdrop-blur-sm rounded-xl p-6 border border-rich-gold/30 text-center shadow-lg hover:border-rich-gold/50 transition-colors">
+                  <MapPin className="w-8 h-8 text-rich-gold mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-rich-gold">15+</div>
+                  <div className="text-light-gray text-sm">Countries</div>
+                </div>
+              </div>
+            </div>
           </div>
         </ScrollAnimatedSection>
       </main>
